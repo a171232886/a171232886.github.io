@@ -233,10 +233,13 @@ href="https://www.cnblogs.com/objectDetect/p/5947169.html">图片来源</a></p>
 <span id="more"></span>
 <h1 id="计算公式">计算公式</h1>
 <p>第k层的的感受野：</p>
-<p><span class="math display">\[{l_k}={l_{k-1}} + ( ( {f_k}-1 ) \sum_{i
-= 1}^{k - 1} s_i )\]</span></p>
-<p>其中，<span class="math inline">\(f_k\)</span> 表示卷积核大小，<span
-class="math inline">\(s_i\)</span>表示步长。<strong>注意连乘中只到k-1，不包含k</strong>。</p>
+<p><span class="math display">\[{l_i}={l_{i-1}} + (\prod_{n = 1}^{i - 1}
+s_n )( {k_i}-1 )\]</span></p>
+<p>其中，<span class="math inline">\(k_i\)</span> 表示第<span
+class="math inline">\(i\)</span>层卷积核大小，<span
+class="math inline">\(s_n\)</span>表示步长。<strong>注意连乘中只到<span
+class="math inline">\(i-1\)</span>，不包含<span
+class="math inline">\(i\)</span></strong>。</p>
 做一道题
 <div data-align="center">
 <p><img src="https://img-blog.csdnimg.cn/8ab1b767797a460db1ccfcbbe59810a6.png" width="80%"></p>
@@ -245,10 +248,14 @@ class="math inline">\(s_i\)</span>表示步长。<strong>注意连乘中只到k-
 <table>
 <thead>
 <tr class="header">
-<th style="text-align: center;">k</th>
-<th style="text-align: center;">f-1</th>
-<th style="text-align: center;">s</th>
-<th style="text-align: center;">l</th>
+<th style="text-align: center;"><span
+class="math inline">\(i\)</span></th>
+<th style="text-align: center;"><span
+class="math inline">\(k_i-1\)</span></th>
+<th style="text-align: center;"><span
+class="math inline">\(s_i\)</span></th>
+<th style="text-align: center;"><span
+class="math inline">\(l_i\)</span></th>
 </tr>
 </thead>
 <tbody>
@@ -2167,6 +2174,8 @@ class="math inline">\(p&#39;\ne0\)</span>是不可整除情况。</p>
 <li>https://www.cnblogs.com/kk17/p/10111768.html</li>
 <li>https://www.zhihu.com/question/48279880</li>
 <li>https://pytorch.org/docs/1.4.0/nn.html?highlight=torch%20nn%20convtranspose2d#torch.nn.ConvTranspose2d</li>
+<li><a href="https://arxiv.org/abs/1603.07285">A guide to convolution
+arithmetic for deep learning</a></li>
 </ol>
 ]]></content>
       <categories>

@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 5.4.2">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"a171232886.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.10.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2}},"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+
+
+<link rel="canonical" href="https://a171232886.github.io/2022/01/19/vot-toolkit-python%E7%9A%84%E4%BD%BF%E7%94%A8/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://a171232886.github.io/2022/01/19/vot-toolkit-python%E7%9A%84%E4%BD%BF%E7%94%A8/","path":"2022/01/19/vot-toolkit-python的使用/","title":"vot-toolkit-python的使用"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>vot-toolkit-python的使用 | 小王同学</title>
+  
+
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.css"><style>
+#needsharebutton-postbottom {
+  cursor: pointer;
+  height: 26px;
+  margin-top: 10px;
+  position: relative;
+}
+#needsharebutton-postbottom .btn {
+  border: 1px solid $btn-default-border-color;
+  border-radius: 3px;
+  display: initial;
+  padding: 1px 4px;
+}
+</style><link rel="stylesheet" type="text/css" href="/css/injector/main.css" /><link rel="preload" as="style" href="/css/injector/light.css" /><link rel="preload" as="style" href="/css/injector/dark.css" />
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+  <a target="_blank" rel="noopener" href="https://github.com/a171232886" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">小王同学</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E5%92%8C%E5%AE%89%E8%A3%85"><span class="nav-text">下载和安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%87%E7%94%A8%E6%96%B9%E6%A1%88"><span class="nav-text">备用方案</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E5%AE%98%E6%96%B9%E7%9A%84%E6%A0%B7%E4%BE%8Btracker"><span class="nav-text">测试官方的样例tracker</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#initialize"><span class="nav-text">initialize</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E6%96%87%E4%BB%B6%E5%A4%B9%E5%92%8C%E4%B8%8B%E8%BD%BD%E6%95%B0%E6%8D%AE%E9%9B%86"><span class="nav-text">初始化文件夹和下载数据集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9trackers-ini%E6%96%87%E4%BB%B6"><span class="nav-text">修改trackers.ini文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#test"><span class="nav-text">test</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#evaluate"><span class="nav-text">evaluate</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#analysis"><span class="nav-text">analysis</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-text">参考</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="小王同学"
+      src="/images/header.jpg">
+  <p class="site-author-name" itemprop="name">小王同学</p>
+  <div class="site-description" itemprop="description">进步源于记录</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">38</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/a171232886" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;a171232886" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://blog.csdn.net/a171232886" title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;a171232886" rel="noopener" target="_blank"><i class="fa fa-book-open fa-fw"></i>CSDN</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      友情链接
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://hexo.io/" title="https:&#x2F;&#x2F;hexo.io" rel="noopener" target="_blank">Hexo</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://theme-next.js.org/" title="https:&#x2F;&#x2F;theme-next.js.org&#x2F;" rel="noopener" target="_blank">NexT</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://a171232886.github.io/2022/01/19/vot-toolkit-python%E7%9A%84%E4%BD%BF%E7%94%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="小王同学">
+      <meta itemprop="description" content="进步源于记录">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小王同学">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          vot-toolkit-python的使用
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-01-19 20:32:13" itemprop="dateCreated datePublished" datetime="2022-01-19T20:32:13+08:00">2022-01-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-02-14 19:54:17" itemprop="dateModified" datetime="2022-02-14T19:54:17+08:00">2022-02-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AC%94%E8%AE%B0/%E7%9B%AE%E6%A0%87%E8%B7%9F%E8%B8%AA/" itemprop="url" rel="index"><span itemprop="name">目标跟踪</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>可能<a target="_blank" rel="noopener" href="https://www.votchallenge.net/">VOT官方</a>心里是这么想的：你们这群连工具都配不好的菜鸡，不配使用我们的数据集。就你们这个技术，更不必参与比赛。</p>
+<p>这个数据集的<a target="_blank" rel="noopener" href="https://www.votchallenge.net/howto/tutorial_python.html">Python版教程</a>，一个是写的过于简略，一个没有及时更新，一些东西已经不对应了。不过人家最开始的Matlab教程写的还挺好，但现在Python兴起，用Matlab研究跟踪的人越来越少了。</p>
+<p>下面内容，没必要指出和官方的区别在哪。我直接写一份正确的教程。标红的地方，都是我踩过的坑。</p>
+<span id="more"></span>
+
+<h1 id="下载和安装"><a href="#下载和安装" class="headerlink" title="下载和安装"></a>下载和安装</h1><p>假设你的电脑可以翻墙或者现在恰好可以畅通无阻的访问Github，那我推荐你直接执行以下命令，确实是下载安装一条龙服务</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip <span class="token function">install</span> git+https://github.com/votchallenge/vot-toolkit-python<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="备用方案"><a href="#备用方案" class="headerlink" title="备用方案"></a>备用方案</h2><p><font face="黑体"  color=#FF0000 size=4> 那要这台电脑连不到Github呢？</font><br>也就是如何离线安装。达到和<code>pip install git+url</code>同样的效果，需要分三步：</p>
+<ol>
+<li>想办法下载<a target="_blank" rel="noopener" href="https://github.com/votchallenge/toolkit">官方工具包</a>，拷贝到当前电脑（服务器）上 <pre class="line-numbers language-Download" data-language="Download"><div class="caption"><span>Zip```或者</span></div><code class="language-Download">&#96;&#96;&#96;bash
+git clone https:&#x2F;&#x2F;github.com&#x2F;votchallenge&#x2F;toolkit.git<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+<li>安装所需环境<br> 进入文件夹目录下（文件夹我重命名为“vot_toolkit”） <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> vot_toolkit
+pip <span class="token function">install</span> <span class="token parameter variable">-r</span> requirements.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+<li>安装这个库 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">python setup.py <span class="token function">install</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+附：如果你以这种方式，可以查看<code>./build/lib/vot/utilities/cli.py</code>下面的输入参数的含义。<font face="黑体"  color=#FF0000 size=4> 这是vot-toolkit定义输入参数的地方。</font></li>
+</ol>
+<p>为了方便，我粘贴出来放在这</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">parser <span class="token operator">=</span> argparse<span class="token punctuation">.</span>ArgumentParser<span class="token punctuation">(</span>description<span class="token operator">=</span><span class="token string">'VOT Toolkit Command Line Utility'</span><span class="token punctuation">,</span> prog<span class="token operator">=</span><span class="token string">"vot"</span><span class="token punctuation">)</span>
+parser<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"--debug"</span><span class="token punctuation">,</span> <span class="token string">"-d"</span><span class="token punctuation">,</span> default<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> <span class="token builtin">help</span><span class="token operator">=</span><span class="token string">"Backup backend"</span><span class="token punctuation">,</span> required<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> action<span class="token operator">=</span><span class="token string">'store_true'</span><span class="token punctuation">)</span>
+parser<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"--registry"</span><span class="token punctuation">,</span> default<span class="token operator">=</span><span class="token string">"."</span><span class="token punctuation">,</span> <span class="token builtin">help</span><span class="token operator">=</span><span class="token string">'Tracker registry paths'</span><span class="token punctuation">,</span> required<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> action<span class="token operator">=</span>EnvDefault<span class="token punctuation">,</span> \
+    separator<span class="token operator">=</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>pathsep<span class="token punctuation">,</span> envvar<span class="token operator">=</span><span class="token string">'VOT_REGISTRY'</span><span class="token punctuation">)</span>
+
+subparsers <span class="token operator">=</span> parser<span class="token punctuation">.</span>add_subparsers<span class="token punctuation">(</span><span class="token builtin">help</span><span class="token operator">=</span><span class="token string">'commands'</span><span class="token punctuation">,</span> dest<span class="token operator">=</span><span class="token string">'action'</span><span class="token punctuation">,</span> title<span class="token operator">=</span><span class="token string">"Commands"</span><span class="token punctuation">)</span>
+
+test_parser <span class="token operator">=</span> subparsers<span class="token punctuation">.</span>add_parser<span class="token punctuation">(</span><span class="token string">'test'</span><span class="token punctuation">,</span> <span class="token builtin">help</span><span class="token operator">=</span><span class="token string">'Test a tracker integration on a synthetic sequence'</span><span class="token punctuation">)</span>
+test_parser<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"tracker"</span><span class="token punctuation">,</span> <span class="token builtin">help</span><span class="token operator">=</span><span class="token string">'Tracker identifier'</span><span class="token punctuation">,</span> nargs<span class="token operator">=</span><span class="token string">"?"</span><span class="token punctuation">)</span>
+test_parser<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"--visualize"</span><span class="token punctuation">,</span> <span class="token string">"-g"</span><span class="token punctuation">,</span> default<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> required<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> <span class="token builtin">help</span><span class="token operator">=</span><span class="token string">'Visualize results of the test session'</span><span class="token punctuation">,</span> action<span class="token operator">=</span><span class="token string">'store_true'</span><span class="token punctuation">)</span>
+test_parser<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"--sequence"</span><span class="token punctuation">,</span> <span class="token string">"-s"</span><span class="token punctuation">,</span> required<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> <span class="token builtin">help</span><span class="token operator">=</span><span class="token string">'Path to sequence to use instead of dummy'</span><span class="token punctuation">)</span>
+
+workspace_parser <span class="token operator">=</span> subparsers<span class="token punctuation">.</span>add_parser<span class="token punctuation">(</span><span class="token string">'initialize'</span><span class="token punctuation">,</span> <span class="token builtin">help</span><span class="token operator">=</span><span class="token string">'Setup a new workspace and download data'</span><span class="token punctuation">)</span>
+workspace_parser<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"--workspace"</span><span class="token punctuation">,</span> default<span class="token operator">=</span>os<span class="token punctuation">.</span>getcwd<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">help</span><span class="token operator">=</span><span class="token string">'Workspace path'</span><span class="token punctuation">)</span>
+workspace_parser<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"--nodownload"</span><span class="token punctuation">,</span> default<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> required<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> <span class="token builtin">help</span><span class="token operator">=</span><span class="token string">"Do not download dataset if specified in stack"</span><span class="token punctuation">,</span> action<span class="token operator">=</span><span class="token string">'store_true'</span><span class="token punctuation">)</span>
+workspace_parser<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"stack"</span><span class="token punctuation">,</span> nargs<span class="token operator">=</span><span class="token string">"?"</span><span class="token punctuation">,</span> <span class="token builtin">help</span><span class="token operator">=</span><span class="token string">'Experiment stack'</span><span class="token punctuation">)</span>
+
+evaluate_parser <span class="token operator">=</span> subparsers<span class="token punctuation">.</span>add_parser<span class="token punctuation">(</span><span class="token string">'evaluate'</span><span class="token punctuation">,</span> <span class="token builtin">help</span><span class="token operator">=</span><span class="token string">'Evaluate one or more trackers in a given workspace'</span><span class="token punctuation">)</span>
+evaluate_parser<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"trackers"</span><span class="token punctuation">,</span> nargs<span class="token operator">=</span><span class="token string">'+'</span><span class="token punctuation">,</span> default<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> <span class="token builtin">help</span><span class="token operator">=</span><span class="token string">'Tracker identifiers'</span><span class="token punctuation">)</span>
+evaluate_parser<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"--force"</span><span class="token punctuation">,</span> <span class="token string">"-f"</span><span class="token punctuation">,</span> default<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> <span class="token builtin">help</span><span class="token operator">=</span><span class="token string">"Force rerun of the entire evaluation"</span><span class="token punctuation">,</span> required<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> action<span class="token operator">=</span><span class="token string">'store_true'</span><span class="token punctuation">)</span>
+evaluate_parser<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"--persist"</span><span class="token punctuation">,</span> <span class="token string">"-p"</span><span class="token punctuation">,</span> default<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> <span class="token builtin">help</span><span class="token operator">=</span><span class="token string">"Persist execution even in case of an error"</span><span class="token punctuation">,</span> required<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> action<span class="token operator">=</span><span class="token string">'store_true'</span><span class="token punctuation">)</span>
+evaluate_parser<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"--workspace"</span><span class="token punctuation">,</span> default<span class="token operator">=</span>os<span class="token punctuation">.</span>getcwd<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">help</span><span class="token operator">=</span><span class="token string">'Workspace path'</span><span class="token punctuation">)</span>
+
+analysis_parser <span class="token operator">=</span> subparsers<span class="token punctuation">.</span>add_parser<span class="token punctuation">(</span><span class="token string">'analysis'</span><span class="token punctuation">,</span> <span class="token builtin">help</span><span class="token operator">=</span><span class="token string">'Run analysis of results'</span><span class="token punctuation">)</span>
+analysis_parser<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"trackers"</span><span class="token punctuation">,</span> nargs<span class="token operator">=</span><span class="token string">'*'</span><span class="token punctuation">,</span> <span class="token builtin">help</span><span class="token operator">=</span><span class="token string">'Tracker identifiers'</span><span class="token punctuation">)</span>
+analysis_parser<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"--workspace"</span><span class="token punctuation">,</span> default<span class="token operator">=</span>os<span class="token punctuation">.</span>getcwd<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">help</span><span class="token operator">=</span><span class="token string">'Workspace path'</span><span class="token punctuation">)</span>
+analysis_parser<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"--format"</span><span class="token punctuation">,</span> choices<span class="token operator">=</span><span class="token punctuation">(</span><span class="token string">"html"</span><span class="token punctuation">,</span> <span class="token string">"latex"</span><span class="token punctuation">,</span> <span class="token string">"pdf"</span><span class="token punctuation">,</span> <span class="token string">"json"</span><span class="token punctuation">,</span> <span class="token string">"yaml"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> default<span class="token operator">=</span><span class="token string">"html"</span><span class="token punctuation">,</span> <span class="token builtin">help</span><span class="token operator">=</span><span class="token string">'Analysis output format'</span><span class="token punctuation">)</span>
+analysis_parser<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"--name"</span><span class="token punctuation">,</span> required<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> <span class="token builtin">help</span><span class="token operator">=</span><span class="token string">'Analysis output name'</span><span class="token punctuation">)</span>
+analysis_parser<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"--workers"</span><span class="token punctuation">,</span> default<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> required<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> <span class="token builtin">help</span><span class="token operator">=</span><span class="token string">'Number of parallel workers'</span><span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token operator">=</span><span class="token builtin">int</span><span class="token punctuation">)</span>
+analysis_parser<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"--nocache"</span><span class="token punctuation">,</span> default<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> required<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> <span class="token builtin">help</span><span class="token operator">=</span><span class="token string">"Do not cache data to disk"</span><span class="token punctuation">,</span> action<span class="token operator">=</span><span class="token string">'store_true'</span><span class="token punctuation">)</span>
+
+pack_parser <span class="token operator">=</span> subparsers<span class="token punctuation">.</span>add_parser<span class="token punctuation">(</span><span class="token string">'pack'</span><span class="token punctuation">,</span> <span class="token builtin">help</span><span class="token operator">=</span><span class="token string">'Package results for submission'</span><span class="token punctuation">)</span>
+pack_parser<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"--workspace"</span><span class="token punctuation">,</span> default<span class="token operator">=</span>os<span class="token punctuation">.</span>getcwd<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">help</span><span class="token operator">=</span><span class="token string">'Workspace path'</span><span class="token punctuation">)</span>
+pack_parser<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"tracker"</span><span class="token punctuation">,</span> <span class="token builtin">help</span><span class="token operator">=</span><span class="token string">'Tracker identifier'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="测试官方的样例tracker"><a href="#测试官方的样例tracker" class="headerlink" title="测试官方的样例tracker"></a>测试官方的样例tracker</h1><p>分为四步，主要难在initialize：</p>
+<h2 id="initialize"><a href="#initialize" class="headerlink" title="initialize"></a>initialize</h2><p>初始化环境，并进行配置，以vot2016为例</p>
+<h3 id="初始化文件夹和下载数据集"><a href="#初始化文件夹和下载数据集" class="headerlink" title="初始化文件夹和下载数据集"></a>初始化文件夹和下载数据集</h3><ol>
+<li>任意地方新建一个空文件夹，比如名为<code>vot-test</code>，进入 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> vot-test
+vot initialize vot2016<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+ 此时或自动初始化该文件夹并下载数据集。文件结构为</li>
+</ol>
+<div align="center"> 
+<img src="https://img-blog.csdnimg.cn/d2dc168a03564806aa31cf44005d4b27.png#pic_center =50%x50%" width="40%"> 
+</div> 
+sequences```文件夹下就是对应的vot2016视频序列，每个视频对应一个文件夹
+<div align="center"> 
+<img src="https://img-blog.csdnimg.cn/563397b907b04f49affc45f295b15560.png#pic_center =80%x80%" width="80%"> 
+</div> 
+    <font  face="黑体"  color=#FF0000 size=4> 因此每个initialize只能对应一个数据集。</font> 
+    
+<ol start="2">
+<li><p>如果之前已经下载好了数据集，在初始化文件夹时执行以下命令，不再重复下载数据集。</p>
+ <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> vot-test
+vot initialize vot2016 <span class="token parameter variable">--nodownload</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p> 按照上文&#96;&#96;&#96;</p>
+</li>
+</ol>
+<p>sequences&#96;&#96;&#96;的文件夹格式重命名数据集。<br><font  face="黑体"  color=#FF0000 size=4> 注意大小写，VOT2016和vot2016不同</font> </p>
+<h3 id="修改trackers-ini文件"><a href="#修改trackers-ini文件" class="headerlink" title="修改trackers.ini文件"></a>修改trackers.ini文件</h3><p>相当于告诉vot关于tracker的信息</p>
+<ol>
+<li><p>下载<a target="_blank" rel="noopener" href="https://github.com/votchallenge/integration">官方样例</a>，我们只用python文件夹下面的<code>python_ncc.py</code>和<code>vot.py</code></p>
+<p> <font  face="黑体"  color=#FF0000 size=4> 需要把<code>vot.py</code>重命名，否则和已安装的vot工具包冲突</font> </p>
+<p> 比如重命名为<code>vot_py.py</code><br> 同时把python_ncc.py中的<code>import vot</code>改为<code>import vot_py as vot</code></p>
+</li>
+<li><p>配置trackers.init<br> 严格按照以下格式写</p>
+ <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>pytest<span class="token punctuation">]</span>
+label <span class="token operator">=</span> pytest
+protocol <span class="token operator">=</span> traxpython  
+<span class="token builtin class-name">command</span> <span class="token operator">=</span> python_ncc.py     
+paths <span class="token operator">=</span> /media/HardDisk_new/wh/others/pysot-master/vot-test/   
+env_PATH <span class="token operator">=</span> /home/wh/anaconda3/envs/others/bin/python<span class="token punctuation">;</span><span class="token variable">$&#123;<span class="token environment constant">PATH</span>&#125;</span>  <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p> <font  face="黑体"  color=#FF0000 size=4> 千万不要在每行后加注释，会报错。<code>command</code>后面不要加‘.py’，在文件结构复杂情况下会报错。</font></p>
+</li>
+</ol>
+<h2 id="test"><a href="#test" class="headerlink" title="test"></a>test</h2><p>执行</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">vot <span class="token builtin class-name">test</span> pytest<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>会看到以下信息（结尾部分），恭喜你测试成功！</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Updating on frame <span class="token number">49</span>/49
+@@TRAX:frame <span class="token string">"file:///tmp/vot_dummy_50_640_480/color/00000050.jpg"</span> 
+@@TRAX:state <span class="token string">"395.0000,167.0000,100.0000,113.0000"</span> <span class="token string">"confidence=0.9970868825912476"</span> 
+Stopping tracker
+@@TRAX:quit 
+Test concluded successfuly<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>如果只能测一轮，并看到</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Error during tracker execution: Server terminated the session<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>在trackers.ini中添加下面一行，即可解决<br><code>restart = true</code></p>
+<h2 id="evaluate"><a href="#evaluate" class="headerlink" title="evaluate"></a>evaluate</h2><p>一般来说测试成功后，vot-toolkit和代码的配置就没问题了。执行，在vot2016上进行评估</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">vot evaluate pytest<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>运行结束后会得到一个<code>results</code>的文件夹</p>
+<h2 id="analysis"><a href="#analysis" class="headerlink" title="analysis"></a>analysis</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">vot analysis pytest <span class="token parameter variable">--nocache</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>运行结束后会得到一个<code>analysis</code>的文件夹，包含刚运行的分析结果文件夹，找到<code>report.html</code>，即为结果。</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_33890822/article/details/112379934">vot-toolkit-python运行</a></li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer"><div class="post-widgets">
+      <div id="needsharebutton-postbottom">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
+    </div>
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>小王同学
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://a171232886.github.io/2022/01/19/vot-toolkit-python%E7%9A%84%E4%BD%BF%E7%94%A8/" title="vot-toolkit-python的使用">https://a171232886.github.io/2022/01/19/vot-toolkit-python的使用/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/01/11/md%E6%96%87%E4%BB%B6%E5%9B%BE%E7%89%87%E5%BC%95%E7%94%A8%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2%E5%8F%8A%E4%B8%8B%E8%BD%BD/" rel="prev" title="md文件图片引用格式转换及下载">
+                  <i class="fa fa-chevron-left"></i> md文件图片引用格式转换及下载
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/01/19/pysot%E5%92%8Cvot-toolkit%E7%9A%84%E7%BB%93%E5%90%88/" rel="next" title="pysot和vot-toolkit的结合">
+                  pysot和vot-toolkit的结合 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">小王同学</span>
+</div>
+
+
+
+
+<div>
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("12/1/2021 00:00:00");
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+</div>
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@8.13.10/dist/mermaid.min.js","integrity":"sha256-CmZCFVnvol9YL23PfjDflGY5nJwE+Mf/JN+8v+tD/34="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.js"></script>
+  <script>
+      pbOptions = {};
+        pbOptions.iconStyle = "default";
+        pbOptions.boxForm = "horizontal";
+        pbOptions.position = "bottomCenter";
+        pbOptions.networks = "Wechat,QQZone,Weibo,Douban,Twitter,Facebook";
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+  </script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"a171232886","repo":"a171232886.github.io","client_id":"7db126fef08edb747111","client_secret":"10b3181737137f93813d578729875281ac61edd9","admin_user":"a171232886","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"23d1268ec7bf930ba8fc4fcb1a018f1f"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+<div class="moon-menu">
+  <div class="moon-menu-items">
+    
+    <div id="moon-menu-item-back2bottom" class="moon-menu-item">
+      <i class='fas fa-chevron-down'></i>    </div>
+    
+    <div id="moon-menu-item-back2top" class="moon-menu-item">
+      <i class='fas fa-chevron-up'></i>    </div>
+    
+  </div>
+  <div class="moon-menu-button">
+    <svg class="moon-menu-bg">
+      <circle class="moon-menu-cricle" cx="50%" cy="50%" r="44%"></circle>
+      <circle class="moon-menu-border" cx="50%" cy="50%" r="48%"></circle>
+    </svg>
+    <div class="moon-menu-content">
+      <div class="moon-menu-icon"><i class='fas fa-ellipsis-v'></i></div>
+      <div class="moon-menu-text"></div>
+    </div>
+  </div>
+</div><script src="/js/injector.js"></script>
+</body>
+</html>

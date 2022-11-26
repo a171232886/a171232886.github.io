@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 5.4.2">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"a171232886.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.10.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2}},"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+
+
+<link rel="canonical" href="https://a171232886.github.io/2022/02/14/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://a171232886.github.io/2022/02/14/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/","path":"2022/02/14/Linux学习笔记/","title":"Linux学习笔记"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Linux学习笔记 | 小王同学</title>
+  
+
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.css"><style>
+#needsharebutton-postbottom {
+  cursor: pointer;
+  height: 26px;
+  margin-top: 10px;
+  position: relative;
+}
+#needsharebutton-postbottom .btn {
+  border: 1px solid $btn-default-border-color;
+  border-radius: 3px;
+  display: initial;
+  padding: 1px 4px;
+}
+</style><link rel="stylesheet" type="text/css" href="/css/injector/main.css" /><link rel="preload" as="style" href="/css/injector/light.css" /><link rel="preload" as="style" href="/css/injector/dark.css" />
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+  <a target="_blank" rel="noopener" href="https://github.com/a171232886" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">小王同学</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="nav-text">一、操作系统</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81Linux%E5%9F%BA%E7%A1%80"><span class="nav-text">二、Linux基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84"><span class="nav-text">（一）文件结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-text">（二）常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%B0%8F%E6%8A%80%E5%B7%A7"><span class="nav-text">1. 小技巧</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-cd-%E8%B7%AF%E5%BE%84%E5%88%87%E6%8D%A2%E6%96%87%E4%BB%B6%E5%A4%B9%EF%BC%8C"><span class="nav-text">2. cd 路径切换文件夹，</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-ls%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E8%B7%AF%E5%BE%84%E4%B8%8B%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95"><span class="nav-text">3. ls查看当前路径下文件目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-mkdir-%E8%B7%AF%E5%BE%84-%E6%96%87%E4%BB%B6%E5%A4%B9%E5%90%8D%E5%88%9B%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="nav-text">4. mkdir 路径+文件夹名创建文件夹</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-touch-%E6%96%87%E4%BB%B6%E5%90%8D%E5%88%9B%E5%BB%BA%E6%96%87%E4%BB%B6"><span class="nav-text">5. touch 文件名创建文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-rm-%E6%96%87%E4%BB%B6%E5%90%8D%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6"><span class="nav-text">6.rm 文件名删除文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-cp%E5%A4%8D%E5%88%B6%E5%91%BD%E4%BB%A4"><span class="nav-text">7. cp复制命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-mv%E7%A7%BB%E5%8A%A8%E5%91%BD%E4%BB%A4%EF%BC%88%E5%89%AA%E5%88%87%EF%BC%89%E5%92%8C%E9%87%8D%E5%91%BD%E5%90%8D%EF%BC%8C"><span class="nav-text">8.mv移动命令（剪切）和重命名，</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-cat%E5%92%8C%E9%87%8D%E5%AE%9A%E5%90%91"><span class="nav-text">9. cat和重定向</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-more-%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6"><span class="nav-text">10. more 查看文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-%E7%AE%A1%E9%81%93"><span class="nav-text">11. 管道|</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E4%B8%89%EF%BC%89%E6%9D%83%E9%99%90%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4"><span class="nav-text">（三）权限相关命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-rwx%E6%9D%83%E9%99%90"><span class="nav-text">1.  rwx权限</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-chmod"><span class="nav-text">2. chmod</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E5%9B%9B%EF%BC%89%E9%93%BE%E6%8E%A5%E5%92%8C%E6%90%9C%E7%B4%A2"><span class="nav-text">（四）链接和搜索</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E8%BD%AF%E9%93%BE%E6%8E%A5-%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F"><span class="nav-text">1. 软链接(快捷方式)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E7%A1%AC%E9%93%BE%E6%8E%A5%EF%BC%88%E9%9A%8F%E6%97%B6%E5%90%8C%E6%AD%A5%E7%9A%84%E5%A4%87%E4%BB%BD%EF%BC%89"><span class="nav-text">2. 硬链接（随时同步的备份）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-grep-%E6%90%9C%E7%B4%A2%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9"><span class="nav-text">3. grep 搜索文件内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-find%E6%89%BE%E6%96%87%E4%BB%B6"><span class="nav-text">4. find找文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E4%BA%94%EF%BC%89%E6%89%93%E5%8C%85%E4%B8%8E%E5%8E%8B%E7%BC%A9"><span class="nav-text">（五）打包与压缩</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-tar%E6%89%93%E5%8C%85"><span class="nav-text">1. tar打包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-gzip-%E5%8E%8B%E7%BC%A9"><span class="nav-text">2. gzip 压缩</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E4%B8%80%E6%AD%A5%E5%88%B0%E4%BD%8D%E7%9A%84%E6%89%93%E5%8C%85%E5%92%8C%E5%8E%8B%E7%BC%A9%EF%BC%88%E5%8F%82%E6%95%B0z%EF%BC%89"><span class="nav-text">3.一步到位的打包和压缩（参数z）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-bzip2"><span class="nav-text">4. bzip2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-zip%E5%92%8Cunzip"><span class="nav-text">5. zip和unzip</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E5%85%AD%EF%BC%89%E8%B4%A6%E6%88%B7%E7%9B%B8%E5%85%B3"><span class="nav-text">（六）账户相关</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E4%B8%83%EF%BC%89vim%E8%AE%B0%E4%BA%8B%E6%9C%AC"><span class="nav-text">（七）vim记事本</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="小王同学"
+      src="/images/header.jpg">
+  <p class="site-author-name" itemprop="name">小王同学</p>
+  <div class="site-description" itemprop="description">进步源于记录</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">38</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/a171232886" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;a171232886" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://blog.csdn.net/a171232886" title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;a171232886" rel="noopener" target="_blank"><i class="fa fa-book-open fa-fw"></i>CSDN</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      友情链接
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://hexo.io/" title="https:&#x2F;&#x2F;hexo.io" rel="noopener" target="_blank">Hexo</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://theme-next.js.org/" title="https:&#x2F;&#x2F;theme-next.js.org&#x2F;" rel="noopener" target="_blank">NexT</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://a171232886.github.io/2022/02/14/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="小王同学">
+      <meta itemprop="description" content="进步源于记录">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小王同学">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Linux学习笔记
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-02-14 12:49:29" itemprop="dateCreated datePublished" datetime="2022-02-14T12:49:29+08:00">2022-02-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-02-17 23:47:36" itemprop="dateModified" datetime="2022-02-17T23:47:36+08:00">2022-02-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AC%94%E8%AE%B0/Ubuntu%E4%B8%8E%E6%9C%8D%E5%8A%A1%E5%99%A8/" itemprop="url" rel="index"><span itemprop="name">Ubuntu与服务器</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="一、操作系统"><a href="#一、操作系统" class="headerlink" title="一、操作系统"></a>一、操作系统</h1><ol>
+<li>概念：硬件上的第一层软件。</li>
+</ol>
+<pre class="mermaid">   graph LR
+   硬件-->操作系统-->应用软件</pre>
+
+<ol start="2">
+<li><p>分类：</p>
+<ul>
+<li>桌面操作系统：Windows、macOS、linux</li>
+<li>移动移动端操作系统：Android、IOS</li>
+<li>服务器操作系统：Linux、Windows</li>
+<li>嵌入式操作系统：Android（底层为Linux）</li>
+</ul>
+<p>Linux免费、稳定、高效。</p>
+</li>
+</ol>
+<span id="more"></span>
+<ol start="3">
+<li><p>Linux的分类<br>内核：硬件和应用程序之间。</p>
+<ul>
+<li>稳定版：稳</li>
+<li>开发版：新</li>
+</ul>
+<p>发行版：在内核上加了一些软件。<br>内核和发行版本之间的关系，类似于原生安卓和华为&#x2F;小米系统之间关系。</p>
+</li>
+</ol>
+<pre class="mermaid">graph LR
+Linux-->Redhat系列
+Redhat系列-->RHEL
+Redhat系列-->CentOS
+Redhat系列-->Fedora
+
+Linux-->Debian系列
+Debian系列-->Debian
+Debian系列-->Ubuntu</pre>
+
+
+
+<h1 id="二、Linux基础"><a href="#二、Linux基础" class="headerlink" title="二、Linux基础"></a>二、Linux基础</h1><h2 id="（一）文件结构"><a href="#（一）文件结构" class="headerlink" title="（一）文件结构"></a>（一）文件结构</h2><ol>
+<li><p>根目录<code>/</code></p>
+</li>
+<li><p><code>/home</code>普通用户的家目录，<code>/root</code>系统管理员（超级用户）</p>
+</li>
+<li><p><code>/bin</code>可执行二进制文件目录（软件安装目录）</p>
+</li>
+<li><p><code>/media</code>(<code>/mnt</code>)挂载点</p>
+</li>
+<li><p><code>/etc</code>系统配置文件</p>
+</li>
+<li><p><code>/var</code>日志文件</p>
+</li>
+</ol>
+<h2 id="（二）常用命令"><a href="#（二）常用命令" class="headerlink" title="（二）常用命令"></a>（二）常用命令</h2><h3 id="1-小技巧"><a href="#1-小技巧" class="headerlink" title="1. 小技巧"></a>1. 小技巧</h3><ul>
+<li><p><code>clear</code>命令行清屏；</p>
+</li>
+<li><p><code>tab</code>键自动补全；</p>
+</li>
+<li><p>↑↓找命令，ctrl+c终止；</p>
+</li>
+<li><p><code>命令 --help</code>显示帮助；</p>
+</li>
+</ul>
+<h3 id="2-cd-路径切换文件夹，"><a href="#2-cd-路径切换文件夹，" class="headerlink" title="2. cd 路径切换文件夹，"></a>2. <code>cd 路径</code>切换文件夹，</h3><ul>
+<li><p><code>pwd</code>查看当前路径，</p>
+</li>
+<li><p><code>./</code>当前目录下一层，<code>../</code>当前目录上一层。<code>cd ../</code></p>
+</li>
+</ul>
+<p>注：<code>cd ~</code>回到自己家，<code>cd -</code>相当于电视频道回看</p>
+<h3 id="3-ls查看当前路径下文件目录"><a href="#3-ls查看当前路径下文件目录" class="headerlink" title="3. ls查看当前路径下文件目录"></a>3. <code>ls</code>查看当前路径下文件目录</h3><ul>
+<li><code>ls -a</code>显示所有文件目录（包括隐藏文件）</li>
+<li><code>ls -l</code>或<code>ls -lh</code>显示文件目录，包括权限、所有者、创建时间</li>
+<li><code>ls 路径</code> 显示这个路径下的文件</li>
+<li><code>ls a*</code>查看名以a开头的文件，<code>ls *d</code>查看名以d结尾的文件。*称为通配符，可代表多个字符</li>
+</ul>
+<p>不太重要的提示</p>
+<ul>
+<li><p><code>ls a?</code>中?表示任意的一个字符</p>
+</li>
+<li><p><code>ls [abc]d </code>列出名为abc中任意一个且以d结尾的文件，<code>ls [a-x]d</code>和之前的区别是从a到x的任意一个字符</p>
+</li>
+<li><p>当文件名为*x，查看时使用<code>ls \*x</code></p>
+</li>
+</ul>
+<h3 id="4-mkdir-路径-文件夹名创建文件夹"><a href="#4-mkdir-路径-文件夹名创建文件夹" class="headerlink" title="4. mkdir 路径+文件夹名创建文件夹"></a>4. <code>mkdir 路径+文件夹名</code>创建文件夹</h3><ul>
+<li><p><code>mkdir 路径+文件夹名 -p</code> 自动创建父目录</p>
+</li>
+<li><p><code>mkdir 路径+文件夹名 路径+文件夹名</code>或者<code>mkdir 路径/&#123;文件夹名1,文件夹名2&#125;</code>同时创建两个文件夹</p>
+<p><code>mkdir 2/&#123;3,4&#125;</code></p>
+</li>
+<li><p><code>mkdir .4</code>创建一个名称为4的隐藏文件夹</p>
+</li>
+</ul>
+<h3 id="5-touch-文件名创建文件"><a href="#5-touch-文件名创建文件" class="headerlink" title="5. touch 文件名创建文件"></a>5. <code>touch 文件名</code>创建文件</h3><p>如<code>touch 1.txt</code>，但推荐<code>gedit 1.txt</code>创建并打开</p>
+<h3 id="6-rm-文件名删除文件"><a href="#6-rm-文件名删除文件" class="headerlink" title="6.rm 文件名删除文件"></a>6.<code>rm 文件名</code>删除文件</h3><ul>
+<li><code>rm 文件夹名 -r</code> 删除文件夹</li>
+<li><code>rm *</code> 删除所有文件，不包括隐藏文件</li>
+</ul>
+<h3 id="7-cp复制命令"><a href="#7-cp复制命令" class="headerlink" title="7. cp复制命令"></a>7. cp复制命令</h3><ul>
+<li><code>cp 1.txt a</code>将1.txt复制到文件夹a中</li>
+<li><code>cp 1.txt a/2.txt</code>将1.txt复制到文件夹a中，命名为2.txt</li>
+<li><code>cp a b -r</code>拷贝文件夹</li>
+</ul>
+<p>不太重要的提示</p>
+<div align="center"> 
+<img src="https://img-blog.csdnimg.cn/0efbb43c17ae4c85acb5237ef2d50260.png" width="80%"> 
+</div> 
+
+<h3 id="8-mv移动命令（剪切）和重命名，"><a href="#8-mv移动命令（剪切）和重命名，" class="headerlink" title="8.mv移动命令（剪切）和重命名，"></a>8.mv移动命令（剪切）和重命名，</h3><p>可直接参考cp命令，包含-f，-i，-v</p>
+<ul>
+<li><p><code>mv 1.txt 2.txt</code>相当于将1.txt&#x3D;&#x3D;重命名&#x3D;&#x3D;为2.txt</p>
+</li>
+<li><p>移动文件夹不需要-r</p>
+</li>
+</ul>
+<h3 id="9-cat和重定向"><a href="#9-cat和重定向" class="headerlink" title="9. cat和重定向"></a>9. cat和重定向</h3><ul>
+<li>重定向：将结果返回到其他地方，<code>&gt;</code>覆盖，<code>&gt;&gt;</code>追加。</li>
+</ul>
+<p>​		ls &gt;1.txt&#96;&#96;&#96;将本该显示在终端中的结果返回到1.txt中，若1.txt不存在，直接创建。</p>
+<ul>
+<li>cat：将文件的内容直接显示在终端中</li>
+</ul>
+<p>​		<code>cat 1.txt</code>，<code>cat  1.txt 2.txt</code></p>
+<p>两个联合使用：<code>cat  1.txt 2.txt &gt; 3.txt</code> 将两个文件内容合并到3.txt中。</p>
+<h3 id="10-more-查看文件"><a href="#10-more-查看文件" class="headerlink" title="10. more 查看文件"></a>10. more 查看文件</h3><p>如<code>more 1.txt</code> 当1.txt文件内容比较多的时候，分页显示。空格\回车下滑，b上划，q退出</p>
+<h3 id="11-管道"><a href="#11-管道" class="headerlink" title="11. 管道|"></a>11. 管道<code>|</code></h3><p>将线左边的命令的输出作为线右边的命令的输入</p>
+<p>比如<code>ls -l | more</code>，但b上划无效</p>
+<h2 id="（三）权限相关命令"><a href="#（三）权限相关命令" class="headerlink" title="（三）权限相关命令"></a>（三）权限相关命令</h2><h3 id="1-rwx权限"><a href="#1-rwx权限" class="headerlink" title="1.  rwx权限"></a>1.  rwx权限</h3><p>当使用<code>ls -l</code>查看时</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 权限 相同文件数 用户 组	大小	创建时间	文件夹名</span>
+drwxrwxr-x <span class="token number">2</span> wh wh <span class="token number">4096</span> <span class="token number">2</span>月  <span class="token number">12</span> <span class="token number">20</span>:53 howaa
+-rw-rw-r-- <span class="token number">1</span> wh wh    <span class="token number">4</span> <span class="token number">2</span>月  <span class="token number">12</span> <span class="token number">22</span>:58 test.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>权限中d代表文件夹，-代表文件</li>
+<li>rwx rwx r-x，r可读，w可写，x可执行（若为目录，x表示是否可进入），-表示非。比如最后一个，可读不可写可执行。</li>
+<li>权限分为三部分：文件拥有者的，文件拥有组的，当前组之外的用户</li>
+<li>相同文件数是指文件内容相同，在硬链接处会用到</li>
+</ul>
+<h3 id="2-chmod"><a href="#2-chmod" class="headerlink" title="2. chmod"></a>2. chmod</h3><p>（1） chmod u&#x2F;g&#x2F;o&#x2F;a +&#x2F;-&#x2F;&#x3D; 文件名</p>
+<ul>
+<li><p>u：用户，g：组，o：其他，a：所有</p>
+</li>
+<li><p>+：添加权限，-：减少权限，&#x3D;：制定权限</p>
+</li>
+</ul>
+<p>例如<code>chmod g+w 1.txt</code></p>
+<p>（2）数字法</p>
+<ul>
+<li>将rwx看成三位二进制数，1表示拥有该权限，0表示没有。如二进制的111表示可读可写可执行，而$(111)<em>2&#x3D;(7)</em>{10}$</li>
+<li>有三组权限，所以有三个十进制数字。如<code>chmod 777 1.txt</code>表示用户、组、其他用户均拥有读写执行权限。</li>
+<li>对文件夹<code>-R</code>，<code>chmod 777 -R test</code>表示对test文件夹下所有文件的权限均变成777。</li>
+</ul>
+<p>​	</p>
+<h2 id="（四）链接和搜索"><a href="#（四）链接和搜索" class="headerlink" title="（四）链接和搜索"></a>（四）链接和搜索</h2><h3 id="1-软链接-快捷方式"><a href="#1-软链接-快捷方式" class="headerlink" title="1. 软链接(快捷方式)"></a>1. 软链接(快捷方式)</h3><p><code>ln -s 1.txt 1_soft</code>给1.txt创建一个名为1_soft的快捷方式。</p>
+<p>快捷方式仅仅记录给出文件的名称。当名称相同的文件覆盖后，不影响快捷方式。</p>
+<p>注意：</p>
+<ul>
+<li>若不在本文件所在路径下创建，需要在源文件和软连接处&#x3D;&#x3D;均使用绝对路径&#x3D;&#x3D;。	</li>
+<li>可给文件夹创建软连接</li>
+</ul>
+<h3 id="2-硬链接（随时同步的备份）"><a href="#2-硬链接（随时同步的备份）" class="headerlink" title="2. 硬链接（随时同步的备份）"></a>2. 硬链接（随时同步的备份）</h3><p><code>ln 1.txt 1_hard</code>给1.txt创建一个名为1_hard的快捷方式，但保存内容。</p>
+<div align="center"> 
+<img src="https://img-blog.csdnimg.cn/f377bc5d65864b6f9ef9fd874f8cc7e7.png" width="80%"> 
+</div> 
+
+<p>注意：</p>
+<ul>
+<li>硬链接内容和源文件内容会同步变化</li>
+<li>在源文件丢失后，硬链接内容不受影响</li>
+<li>硬连接不能给目录创建</li>
+</ul>
+<h3 id="3-grep-搜索文件内容"><a href="#3-grep-搜索文件内容" class="headerlink" title="3. grep 搜索文件内容"></a>3. grep 搜索文件内容</h3><ul>
+<li><code>grep hello 1.txt</code>在1.txt中寻找”hello’’</li>
+</ul>
+<div align="center"> 
+<img src="https://img-blog.csdnimg.cn/74af5e2888f44b5abb726d8a3f018b25.png" width="80%"> 
+</div> 
+
+<ul>
+<li><code>grep hello a -r</code>在文件夹a下的所有文件中寻找”hello’’</li>
+<li><code>grep -n ^h 1.txt</code>查找以h开头的，<code>grep -n h$ 1.txt</code>查找以h结尾的。&#x3D;&#x3D;空格也算字符。&#x3D;&#x3D;</li>
+</ul>
+<div align="center"> 
+<img src="https://img-blog.csdnimg.cn/0bc6ab110f624d048f8b482d4c55030d.png" width="80%"> 
+</div> 
+
+
+
+<h3 id="4-find找文件"><a href="#4-find找文件" class="headerlink" title="4. find找文件"></a>4. find找文件</h3><p><code>find a -name  1.txt</code>在目录a下查找1.txt</p>
+<p><code>find a -name  &#39;*.txt&#39;</code>在目录a下查找名尾为”.txt”的文件</p>
+<h2 id="（五）打包与压缩"><a href="#（五）打包与压缩" class="headerlink" title="（五）打包与压缩"></a>（五）打包与压缩</h2><h3 id="1-tar打包"><a href="#1-tar打包" class="headerlink" title="1. tar打包"></a>1. tar打包</h3><ul>
+<li><code>tar -cvf txt.tar 1.txt 2</code>将1.txt和文件夹2打包成名为txt.tar的文件，且显示进度</li>
+<li><code>tar -cvf txt.tar *.txt</code>将所有txt文件。。。</li>
+<li><code>tar -tf txt.tar</code>查看打包中的文件名单</li>
+<li><code>tar -xf txt.tar -C t2</code>将文件解包到t2文件夹中（但必须现有t2文件夹）</li>
+</ul>
+<div align="center"> 
+<img src="https://img-blog.csdnimg.cn/6746b71c1afd46bebd8e0deb6d979c08.png" width="80%"> 
+</div> 
+
+
+
+<p>注意:</p>
+<ul>
+<li><p>f要在参数最后且必须包含，v在打包或解包都可用，t仅列出不解包</p>
+</li>
+<li><p>-C解包指定目录</p>
+</li>
+</ul>
+<h3 id="2-gzip-压缩"><a href="#2-gzip-压缩" class="headerlink" title="2. gzip 压缩"></a>2. gzip 压缩</h3><ul>
+<li><code>gzip -r txt.tar</code> 压缩txt.tar生成txt.tar.gz</li>
+<li><code>gzip -d txt.tar.gz</code> 解压txt.tar.gz生成txt.tar</li>
+</ul>
+<h3 id="3-一步到位的打包和压缩（参数z）"><a href="#3-一步到位的打包和压缩（参数z）" class="headerlink" title="3.一步到位的打包和压缩（参数z）"></a>3.一步到位的打包和压缩（参数z）</h3><ul>
+<li><p><code>tar -czf txt.tar.gz *txt</code>直接生成txt.tar.gz</p>
+</li>
+<li><p><code>tar -xzf txt.tar.gz -C tar</code>解压到tar</p>
+</li>
+</ul>
+<h3 id="4-bzip2"><a href="#4-bzip2" class="headerlink" title="4. bzip2"></a>4. bzip2</h3><ul>
+<li>用法和gzip相同，生成的是<code>.tar.bz2</code>文件</li>
+<li>与tar结合一步到位时，使用参数j：<ul>
+<li><code>tar -cjf txt.tar.bz2 *txt</code></li>
+<li><code>tar -xjf txt.tar.bz2 *txt</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="5-zip和unzip"><a href="#5-zip和unzip" class="headerlink" title="5. zip和unzip"></a>5. zip和unzip</h3><ul>
+<li><p><code>zip -r zz *txt</code>将所有txt文件压缩到名为<code>zz.zip</code>的压缩包下</p>
+</li>
+<li><p><code>unzip -d zz zz.zip</code>将<code>zz.zip</code>解压到zz文件夹下（文件夹若不存在直接创建）</p>
+</li>
+</ul>
+<p>压缩率：zip&lt;gzip&lt;bzip2，bz2最好</p>
+<p>通用性：zip&gt;gzip&gt;bzip2</p>
+<h2 id="（六）账户相关"><a href="#（六）账户相关" class="headerlink" title="（六）账户相关"></a>（六）账户相关</h2><ol>
+<li><p>which 查看可执行程序位置，如<code>which vim</code></p>
+</li>
+<li><p>添加账户<code>sudo adduser username</code></p>
+</li>
+<li><p>删除账户<code>sudo userdel -r username </code> </p>
+</li>
+<li><p>切换到username用户<code>su username</code></p>
+</li>
+<li><p>设置账户密码<code>passwd</code></p>
+<p><code>sudo passwd root</code>直接设置root账户密码</p>
+</li>
+<li><p><code>exit</code>退出当前账户（或终端）</p>
+</li>
+<li><p>关闭某个用户<code>sudo pkill -u username</code></p>
+</li>
+<li><p><code>who</code>查看当前所有登录的账户（或终端），ubuntu下只查看当前登录的账户</p>
+</li>
+<li><p>关机与重启</p>
+</li>
+</ol>
+<div align="center"> 
+<img src="https://img-blog.csdnimg.cn/5fcfaca9ec6844fbb492d9507702b4ed.png" width="80%"> 
+</div> 
+
+<p>​	一般来说就是用<code>sudo reboot</code></p>
+<h2 id="（七）vim记事本"><a href="#（七）vim记事本" class="headerlink" title="（七）vim记事本"></a>（七）vim记事本</h2><ol>
+<li><code>vim 1.txt</code>打开1.txt</li>
+<li>在准备修改前，输入<code>i</code></li>
+<li>编辑结束后，按<code>Esc</code>，退出编辑模式</li>
+<li>输入<code>:wq</code>（或<code>:wq!</code>），保存退出。</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer"><div class="post-widgets">
+      <div id="needsharebutton-postbottom">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
+    </div>
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>小王同学
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://a171232886.github.io/2022/02/14/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Linux学习笔记">https://a171232886.github.io/2022/02/14/Linux学习笔记/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/02/12/Ubuntu20.04%E6%9B%B4%E6%8D%A2%E9%95%9C%E5%83%8F%E6%BA%90%E8%A7%A3%E5%86%B3%E4%B8%8B%E8%BD%BD%E5%A4%B1%E8%B4%A5/" rel="prev" title="Ubuntu20.04更换镜像源解决下载失败">
+                  <i class="fa fa-chevron-left"></i> Ubuntu20.04更换镜像源解决下载失败
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">小王同学</span>
+</div>
+
+
+
+
+<div>
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("12/1/2021 00:00:00");
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+</div>
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@8.13.10/dist/mermaid.min.js","integrity":"sha256-CmZCFVnvol9YL23PfjDflGY5nJwE+Mf/JN+8v+tD/34="}}</script>
+  <script src="/js/third-party/tags/mermaid.js"></script>
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.js"></script>
+  <script>
+      pbOptions = {};
+        pbOptions.iconStyle = "default";
+        pbOptions.boxForm = "horizontal";
+        pbOptions.position = "bottomCenter";
+        pbOptions.networks = "Wechat,QQZone,Weibo,Douban,Twitter,Facebook";
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+  </script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"a171232886","repo":"a171232886.github.io","client_id":"7db126fef08edb747111","client_secret":"10b3181737137f93813d578729875281ac61edd9","admin_user":"a171232886","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js","integrity":"sha256-Pmj85ojLaPOWwRtlMJwmezB/Qg8BzvJp5eTzvXaYAfA="},"path_md5":"f3aedc10a2f1b6686364ced533ea4c93"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+<div class="moon-menu">
+  <div class="moon-menu-items">
+    
+    <div id="moon-menu-item-back2bottom" class="moon-menu-item">
+      <i class='fas fa-chevron-down'></i>    </div>
+    
+    <div id="moon-menu-item-back2top" class="moon-menu-item">
+      <i class='fas fa-chevron-up'></i>    </div>
+    
+  </div>
+  <div class="moon-menu-button">
+    <svg class="moon-menu-bg">
+      <circle class="moon-menu-cricle" cx="50%" cy="50%" r="44%"></circle>
+      <circle class="moon-menu-border" cx="50%" cy="50%" r="48%"></circle>
+    </svg>
+    <div class="moon-menu-content">
+      <div class="moon-menu-icon"><i class='fas fa-ellipsis-v'></i></div>
+      <div class="moon-menu-text"></div>
+    </div>
+  </div>
+</div><script src="/js/injector.js"></script>
+</body>
+</html>

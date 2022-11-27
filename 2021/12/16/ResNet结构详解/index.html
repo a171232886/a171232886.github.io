@@ -149,7 +149,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ResNet%E7%9A%84%E5%B1%82%E6%95%B034-50-101%E5%88%B0%E5%BA%95%E6%8C%87%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-text">ResNet的层数34,50,101到底指什么？</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A6%96%E5%85%88%E7%9C%8BResNet34%E7%9A%84%E5%AF%B9%E6%AF%94%E5%9B%BE"><span class="nav-text">首先看ResNet34的对比图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%84%B6%E5%90%8E%E5%86%8D%E7%9C%8B%E8%BF%99%E4%B8%AA%E8%A1%A8"><span class="nav-text">然后再看这个表</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ResNet-%E5%88%B0%E5%BA%95%E6%98%AF%E4%B8%AA%E4%BB%80%E4%B9%88%E7%BB%93%E6%9E%84"><span class="nav-text">ResNet 到底是个什么结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ResNet-34"><span class="nav-text">ResNet-34</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%99%9A%E7%BA%BF%E7%BB%93%E6%9E%84"><span class="nav-text">虚线结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ResNet-50"><span class="nav-text">ResNet-50</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%A7%8D%EF%BC%9A%E5%8F%AA%E7%94%A8%E4%BA%8Econv2-1"><span class="nav-text">第一种：只用于conv2_1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%A7%8D%EF%BC%9A%E6%89%80%E6%9C%89%E7%9A%84Block%E4%B8%AD%E7%9A%84%E9%9D%9E%E7%AC%AC%E4%B8%80%E4%B8%AA"><span class="nav-text">第二种：所有的Block中的非第一个</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%A7%8D%EF%BC%9Aconv3-1%E5%92%8Cconv4-1%E5%92%8Cconv5-1"><span class="nav-text">第三种：conv3_1和conv4_1和conv5_1</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-text">参考</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#resnet%E7%9A%84%E5%B1%82%E6%95%B03450101%E5%88%B0%E5%BA%95%E6%8C%87%E4%BB%80%E4%B9%88"><span class="nav-text"> ResNet的层数34,50,101到底指什么？</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A6%96%E5%85%88%E7%9C%8Bresnet34%E7%9A%84%E5%AF%B9%E6%AF%94%E5%9B%BE"><span class="nav-text"> 首先看ResNet34的对比图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%84%B6%E5%90%8E%E5%86%8D%E7%9C%8B%E8%BF%99%E4%B8%AA%E8%A1%A8"><span class="nav-text"> 然后再看这个表</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#resnet-%E5%88%B0%E5%BA%95%E6%98%AF%E4%B8%AA%E4%BB%80%E4%B9%88%E7%BB%93%E6%9E%84"><span class="nav-text"> ResNet 到底是个什么结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#resnet-34"><span class="nav-text"> ResNet-34</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%99%9A%E7%BA%BF%E7%BB%93%E6%9E%84"><span class="nav-text"> 虚线结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#resnet-50"><span class="nav-text"> ResNet-50</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%A7%8D%E5%8F%AA%E7%94%A8%E4%BA%8Econv2_1"><span class="nav-text"> 第一种：只用于conv2_1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%A7%8D%E6%89%80%E6%9C%89%E7%9A%84block%E4%B8%AD%E7%9A%84%E9%9D%9E%E7%AC%AC%E4%B8%80%E4%B8%AA"><span class="nav-text"> 第二种：所有的Block中的非第一个</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%A7%8Dconv3_1%E5%92%8Cconv4_1%E5%92%8Cconv5_1"><span class="nav-text"> 第三种：conv3_1和conv4_1和conv5_1</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text"> 总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-text"> 参考</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -257,7 +257,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-02-14 17:52:56" itemprop="dateModified" datetime="2022-02-14T17:52:56+08:00">2022-02-14</time>
+      <time title="修改时间：2022-11-27 10:43:37" itemprop="dateModified" datetime="2022-11-27T10:43:37+08:00">2022-11-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -290,26 +290,28 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="ResNet的层数34-50-101到底指什么？"><a href="#ResNet的层数34-50-101到底指什么？" class="headerlink" title="ResNet的层数34,50,101到底指什么？"></a>ResNet的层数34,50,101到底指什么？</h1><p>答案并不直接，得分两步来看。</p>
+        <h1 id="resnet的层数3450101到底指什么"><a class="markdownIt-Anchor" href="#resnet的层数3450101到底指什么"></a> ResNet的层数34,50,101到底指什么？</h1>
+<p>答案并不直接，得分两步来看。</p>
 <span id="more"></span>
-
-<h2 id="首先看ResNet34的对比图"><a href="#首先看ResNet34的对比图" class="headerlink" title="首先看ResNet34的对比图"></a>首先看ResNet34的对比图</h2><p>不用看细节，也不用自己数。</p>
+<h2 id="首先看resnet34的对比图"><a class="markdownIt-Anchor" href="#首先看resnet34的对比图"></a> 首先看ResNet34的对比图</h2>
+<p>不用看细节，也不用自己数。</p>
 <div align="center"> 
 <img src="https://img-blog.csdnimg.cn/49c75f083d2a4ea4b53d6f05238b296d.JPG" width="30%"> 
 </div> 
-
 <p>这里的34层实际上是指左面的“34-layer-plain”中有34个层需要有可训练参数（卷积层和全连接层）。那么直接对比过来，ResNet34是指<strong>除去残差连接中的卷积层</strong>中的卷积层和全连接层。</p>
 <p>你可能会问，残差连接不就一条线吗，哪来的可训练参数？但事实是，实线处没有，虚线处是有卷积层的，为了保证尺度相等。</p>
-<h2 id="然后再看这个表"><a href="#然后再看这个表" class="headerlink" title="然后再看这个表"></a>然后再看这个表</h2><div align="center"> 
+<h2 id="然后再看这个表"><a class="markdownIt-Anchor" href="#然后再看这个表"></a> 然后再看这个表</h2>
+<div align="center"> 
 <img src="https://img-blog.csdnimg.cn/c39c2f6e76da405294ffbff21139bca1.JPG#pic_center=100%x100%" width="80%"> 
 </div> 
 以34为例，34=1+2*（3+4+6+3）+1。
 也就是，最上面的多少层是在**不考虑残差连接层中的卷积层**下，数出来“plain结构”中的可训练网络层，包含卷积层和全连接层；**而不是ResNet中所有的可训练网络层**。
-
 <p>这一点搞了好久才搞清楚。</p>
-<h1 id="ResNet-到底是个什么结构"><a href="#ResNet-到底是个什么结构" class="headerlink" title="ResNet 到底是个什么结构"></a>ResNet 到底是个什么结构</h1><p>你可能像我一样天真地认为，不就一个残差连接吗？那么好，有以下两个问题：（1）尺度不同怎么相加（2）如果采用Padding，具体参数是多少，是否一样？</p>
+<h1 id="resnet-到底是个什么结构"><a class="markdownIt-Anchor" href="#resnet-到底是个什么结构"></a> ResNet 到底是个什么结构</h1>
+<p>你可能像我一样天真地认为，不就一个残差连接吗？那么好，有以下两个问题：（1）尺度不同怎么相加（2）如果采用Padding，具体参数是多少，是否一样？</p>
 <p>事实上，ResNet-34和ResNet-50的基础结构是不一样的，这一点论文中明确指出了</p>
-<h2 id="ResNet-34"><a href="#ResNet-34" class="headerlink" title="ResNet-34"></a>ResNet-34</h2><p>残差结构是这个样子，和表中可以明显的对应，也对应第一张图中的<strong>实线连接</strong>结构。</p>
+<h2 id="resnet-34"><a class="markdownIt-Anchor" href="#resnet-34"></a> ResNet-34</h2>
+<p>残差结构是这个样子，和表中可以明显的对应，也对应第一张图中的<strong>实线连接</strong>结构。</p>
 <div align="center"> 
 <img src="https://img-blog.csdnimg.cn/f225365bf1134cd8a0028e62b05ca2db.JPG" width="30%"> 
 </div> 
@@ -317,51 +319,49 @@
 <div align="center"> 
 <img src="https://img-blog.csdnimg.cn/1b7c2752e674425f8bf424cbed3b05ae.JPG" width="30%"> 
 </div> 
-
-<h3 id="虚线结构"><a href="#虚线结构" class="headerlink" title="虚线结构"></a>虚线结构</h3><p>比如ResNet34的Conv2_x的第一个卷积块，这里直接记为Conv3_1。它的输入是[56,56,64]（可根据conv2_x的输出[112,112,64]计算得到），但是Conv3_1的输出是[28,28,128]，<strong>维度不相等没有办直接相加，因此，添加了一个卷积层</strong>。</p>
+<h3 id="虚线结构"><a class="markdownIt-Anchor" href="#虚线结构"></a> 虚线结构</h3>
+<p>比如ResNet34的Conv2_x的第一个卷积块，这里直接记为Conv3_1。它的输入是[56,56,64]（可根据conv2_x的输出[112,112,64]计算得到），但是Conv3_1的输出是[28,28,128]，<strong>维度不相等没有办直接相加，因此，添加了一个卷积层</strong>。</p>
 <div align="center"> 
 <img src="https://img-blog.csdnimg.cn/a15d7abc931943cabcd5dbae7a65c733.JPG" width="30%"> 
 </div> 
-
 <p>具体一点，</p>
 <div align="center"> 
 <img src="https://img-blog.csdnimg.cn/2f3b7e4320ed4680beed05dd8e5a5b3a.png" width="50%"> 
 </div> 
-
-
 <p>有这两个结构以后就可以搭建整个网络了。</p>
 <div align="center"> 
 <img src="https://img-blog.csdnimg.cn/1aa45ad308144357b3fc800f521c3c22.png" width="50%"> 
 </div> 
-
-
-<h2 id="ResNet-50"><a href="#ResNet-50" class="headerlink" title="ResNet-50"></a>ResNet-50</h2><p>有了ResNet34的分析，再看这个就简单了。但是有一个不同在于一个残差单元内，ResNet50的维度发生了变化，比如从64到128。所以出现了三种不同的结构。</p>
-<h3 id="第一种：只用于conv2-1"><a href="#第一种：只用于conv2-1" class="headerlink" title="第一种：只用于conv2_1"></a>第一种：只用于conv2_1</h3><div align="center"> 
+<h2 id="resnet-50"><a class="markdownIt-Anchor" href="#resnet-50"></a> ResNet-50</h2>
+<p>有了ResNet34的分析，再看这个就简单了。但是有一个不同在于一个残差单元内，ResNet50的维度发生了变化，比如从64到128。所以出现了三种不同的结构。</p>
+<h3 id="第一种只用于conv2_1"><a class="markdownIt-Anchor" href="#第一种只用于conv2_1"></a> 第一种：只用于conv2_1</h3>
+<div align="center"> 
 <img src="https://img-blog.csdnimg.cn/939faf6fec624e5faa2c90f06544901c.JPG" width="40%"> 
 </div> 
-
-<h3 id="第二种：所有的Block中的非第一个"><a href="#第二种：所有的Block中的非第一个" class="headerlink" title="第二种：所有的Block中的非第一个"></a>第二种：所有的Block中的非第一个</h3><p>以Conv2_2为例</p>
+<h3 id="第二种所有的block中的非第一个"><a class="markdownIt-Anchor" href="#第二种所有的block中的非第一个"></a> 第二种：所有的Block中的非第一个</h3>
+<p>以Conv2_2为例</p>
 <div align="center"> 
 <img src="https://img-blog.csdnimg.cn/e670a6a908a24e6ea0fc00fe3d053467.png" width="40%"> 
 </div> 
-
-<h3 id="第三种：conv3-1和conv4-1和conv5-1"><a href="#第三种：conv3-1和conv4-1和conv5-1" class="headerlink" title="第三种：conv3_1和conv4_1和conv5_1"></a>第三种：conv3_1和conv4_1和conv5_1</h3><p>相当于ResNet34的虚线结构，以conv3_1为例。此处以代码实现版本为准。需要同时处理尺度和维度的变化。</p>
+<h3 id="第三种conv3_1和conv4_1和conv5_1"><a class="markdownIt-Anchor" href="#第三种conv3_1和conv4_1和conv5_1"></a> 第三种：conv3_1和conv4_1和conv5_1</h3>
+<p>相当于ResNet34的虚线结构，以conv3_1为例。此处以代码实现版本为准。需要同时处理尺度和维度的变化。</p>
 <div align="center"> 
 <img src="https://img-blog.csdnimg.cn/d7fd508a72b04f9296fa1b92c4c3794e.JPG" width="60%"> 
 </div> 
-以下是代码作者的注释
-
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">注意：原论文中，在虚线残差结构的主分支上，第一个1x1卷积层的步距是<span class="token number">2</span>，第二个3x3卷积层步距是<span class="token number">1</span>。
-    但在pytorch官方实现过程中是第一个1x1卷积层的步距是<span class="token number">1</span>，第二个3x3卷积层步距是<span class="token number">2</span>，
-    这么做的好处是能够在top1上提升大概<span class="token number">0.5</span><span class="token operator">%</span>的准确率。
-    可参考Resnet v1<span class="token punctuation">.</span><span class="token number">5</span> 
-    https<span class="token punctuation">:</span><span class="token operator">//</span>ngc<span class="token punctuation">.</span>nvidia<span class="token punctuation">.</span>com<span class="token operator">/</span>catalog<span class="token operator">/</span>modelscripts<span class="token operator">/</span>nvidia<span class="token punctuation">:</span>resnet_50_v1_5_for_pytorch<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ul>
+<p>以下是代码作者的注释</p>
+<p>注意：原论文中，在虚线残差结构的主分支上，第一个1x1卷积层的步距是2，第二个3x3卷积层步距是1。<br />
+但在pytorch官方实现过程中是第一个1x1卷积层的步距是1，第二个3x3卷积层步距是2，<br />
+这么做的好处是能够在top1上提升大概0.5%的准确率。可参考Resnet v1.5<br />
+<a target="_blank" rel="noopener" href="https://ngc.nvidia.com/catalog/modelscripts/nvidia:resnet_50_v1_5_for_pytorch">https://ngc.nvidia.com/catalog/modelscripts/nvidia:resnet_50_v1_5_for_pytorch</a></p>
+<h1 id="总结"><a class="markdownIt-Anchor" href="#总结"></a> 总结</h1>
+<ul>
 <li>当通道需要增加或者H和W需要减半时，残差连接中是有卷积层的，卷积核1*1，步长为2，填充为0。</li>
-<li>整个网络，无论主分支还是残差连接，在进行H和W减半时，是依赖的stride&#x3D;2完成的。而padding只是负责当stride&#x3D;1时，保证输入输出H和W相等。</li>
+<li>整个网络，无论主分支还是残差连接，在进行H和W减半时，是依赖的stride=2完成的。而padding只是负责当stride=1时，保证输入输出H和W相等。</li>
 <li>回过头来看那张表，至少隐去了残差连接中的卷积层等相关信息，变成了笼统的将一个结构复制几遍。padding，stride，in_channel，out_channel等重要信息，需要自行补充后，才能搭建网络。</li>
 </ul>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>基本上就是按照<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1T7411T7wa?spm_id_from=333.999.0.0%E5%88%86%E6%9E%90%E7%9A%84">https://www.bilibili.com/video/BV1T7411T7wa?spm_id_from=333.999.0.0分析的</a><br>代码来源<a target="_blank" rel="noopener" href="https://github.com/WZMIAOMIAO/deep-learning-for-image-processing%EF%BC%8C%E4%B9%9F%E6%98%AF%E8%BF%99%E4%BD%8DUP%E4%B8%BB%E7%9A%84%E3%80%82">https://github.com/WZMIAOMIAO/deep-learning-for-image-processing，也是这位UP主的。</a></p>
+<h1 id="参考"><a class="markdownIt-Anchor" href="#参考"></a> 参考</h1>
+<p>基本上就是按照https://www.bilibili.com/video/BV1T7411T7wa?spm_id_from=333.999.0.0分析的<br />
+代码来源https://github.com/WZMIAOMIAO/deep-learning-for-image-processing，也是这位UP主的。</p>
 <p>感谢这位UP带我走出了很多误区！</p>
 
     </div>
@@ -500,8 +500,7 @@ setInterval("createtime()",250);
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
-<script src="/js/third-party/math/mathjax.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha256-94CNZ/bJtwrBYZrXhCOBvpB4rZUzBnvAsirFv31TMGo=" crossorigin="anonymous">
 
 
 

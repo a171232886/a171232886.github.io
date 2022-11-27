@@ -149,7 +149,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%86%E5%89%B2%E4%BB%BB%E5%8A%A1"><span class="nav-text">分割任务</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E9%9B%86%E6%A0%87%E6%B3%A8%E6%96%B9%E5%BC%8F"><span class="nav-text">数据集标注方式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A0%87%E6%B3%A8%E5%B7%A5%E5%85%B7"><span class="nav-text">标注工具</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%84%E4%BB%B7%E6%8C%87%E6%A0%87"><span class="nav-text">评价指标</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%96%B9%E5%BC%8F"><span class="nav-text">计算方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%B7%E6%B7%86%E7%9F%A9%E9%98%B5"><span class="nav-text">混淆矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Global-Acc"><span class="nav-text">Global Acc</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Mean-Acc"><span class="nav-text">Mean Acc</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Mean-IoU"><span class="nav-text">Mean IoU</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-text">参考</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%86%E5%89%B2%E4%BB%BB%E5%8A%A1"><span class="nav-text"> 分割任务</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E9%9B%86%E6%A0%87%E6%B3%A8%E6%96%B9%E5%BC%8F"><span class="nav-text"> 数据集标注方式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A0%87%E6%B3%A8%E5%B7%A5%E5%85%B7"><span class="nav-text"> 标注工具</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%84%E4%BB%B7%E6%8C%87%E6%A0%87"><span class="nav-text"> 评价指标</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-text"> 定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%96%B9%E5%BC%8F"><span class="nav-text"> 计算方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%B7%E6%B7%86%E7%9F%A9%E9%98%B5"><span class="nav-text"> 混淆矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#global-acc"><span class="nav-text"> Global Acc</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mean-acc"><span class="nav-text"> Mean Acc</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mean-iou"><span class="nav-text"> Mean IoU</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text"> 总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-text"> 参考</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -290,60 +290,70 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>这是我看大佬讲<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1ev411P7dR?spm_id_from=333.999.0.0">语义分割前言</a>记的笔记。如果对这块内容有需要，建议直接看他视频。</p>
+        <h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
+<p>这是我看大佬讲<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1ev411P7dR?spm_id_from=333.999.0.0">语义分割前言</a>记的笔记。如果对这块内容有需要，建议直接看他视频。</p>
 <p>这是他B站主页，<a target="_blank" rel="noopener" href="https://space.bilibili.com/18161609">https://space.bilibili.com/18161609</a></p>
 <span id="more"></span>
-
-<h1 id="分割任务"><a href="#分割任务" class="headerlink" title="分割任务"></a>分割任务</h1><p>语义分割：区分类别<br>实例分割：区分同一类别的不同个体<br>全景分割：在实例分割的基础上，区分背景（如天空，草地）</p>
+<h1 id="分割任务"><a class="markdownIt-Anchor" href="#分割任务"></a> 分割任务</h1>
+<p>语义分割：区分类别<br />
+实例分割：区分同一类别的不同个体<br />
+全景分割：在实例分割的基础上，区分背景（如天空，草地）</p>
 <div align="center"> 
 <img src="https://img-blog.csdnimg.cn/59ea9173187e4e73b9f13876c3b39928.png#pic_center=80%x80%" width="80%"> 
 </div> 
-
-<h1 id="数据集标注方式"><a href="#数据集标注方式" class="headerlink" title="数据集标注方式"></a>数据集标注方式</h1><div align="center"> 
+<h1 id="数据集标注方式"><a class="markdownIt-Anchor" href="#数据集标注方式"></a> 数据集标注方式</h1>
+<div align="center"> 
 <img src="https://img-blog.csdnimg.cn/81870c6733164629bf87a2dea942aaa2.png#pic_center=80%x80%" width="80%"> 
 </div> 
 COCO针对目标标注若干个点，用点之间的连线把目标圈出来
 <div align="center"> 
 <img src="https://img-blog.csdnimg.cn/224a27e90c7642bca350a9c226d6307a.png#pic_center=80%x80%" width="80%"> 
 </div> 
-
-<h1 id="标注工具"><a href="#标注工具" class="headerlink" title="标注工具"></a>标注工具</h1><p>只记了一个半自动的工具</p>
+<h1 id="标注工具"><a class="markdownIt-Anchor" href="#标注工具"></a> 标注工具</h1>
+<p>只记了一个半自动的工具</p>
 <div align="center"> 
 <img src="https://img-blog.csdnimg.cn/3cfc81411eaa4cb7a858c826e6442437.png#pic_center=80%x80%" width="80%"> 
 </div> 
-
-
-<h1 id="评价指标"><a href="#评价指标" class="headerlink" title="评价指标"></a>评价指标</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>和下边的计算方式结合看，效果更好。</p>
+<h1 id="评价指标"><a class="markdownIt-Anchor" href="#评价指标"></a> 评价指标</h1>
+<h2 id="定义"><a class="markdownIt-Anchor" href="#定义"></a> 定义</h2>
+<p>和下边的计算方式结合看，效果更好。</p>
 <div align="center"> 
 <img src="https://img-blog.csdnimg.cn/7cec7d802a9c40a4a2e9c556a7172da3.png#pic_center=80%x80%" width="80%"> 
 </div> 
-
-<h2 id="计算方式"><a href="#计算方式" class="headerlink" title="计算方式"></a>计算方式</h2><h3 id="混淆矩阵"><a href="#混淆矩阵" class="headerlink" title="混淆矩阵"></a>混淆矩阵</h3><p>语义分割本质上是对每个像素点的分类。因此，可以构建一个矩阵，矩阵的值为该像素点对应的类别。可得到真是标签的矩阵和预测标签的矩阵。</p>
+<h2 id="计算方式"><a class="markdownIt-Anchor" href="#计算方式"></a> 计算方式</h2>
+<h3 id="混淆矩阵"><a class="markdownIt-Anchor" href="#混淆矩阵"></a> 混淆矩阵</h3>
+<p>语义分割本质上是对每个像素点的分类。因此，可以构建一个矩阵，矩阵的值为该像素点对应的类别。可得到真是标签的矩阵和预测标签的矩阵。</p>
 <p>然后，构建一个矩阵，横坐标是真实标签，纵坐标是预测标签。矩阵第(i,j)个值代表，真实标签为j的被预测为i的个数。此时，这个矩阵叫混淆矩阵，对角线是正确分类的个数。</p>
 <p>插句题外话：对角线元素相当于TP，所在行之和减去对角线元素相当于FP，所在列之和减去对角线元素相当于FN，矩阵的其他行列元素之和对该类别而言为TN</p>
 <div align="center"> 
 <img src="https://img-blog.csdnimg.cn/e9ddefb6916144aa94f30e6f01fcd66c.png#pic_center=80%x80%" width="80%"> 
 </div> 
-
-<h3 id="Global-Acc"><a href="#Global-Acc" class="headerlink" title="Global Acc"></a>Global Acc</h3><p>对角线上所有元素之和&#x3D;所有类别正确分类的元素数<br>n个类别所属像素的总数&#x3D;全图像素数&#x3D;混淆矩阵所有元素之和</p>
+<h3 id="global-acc"><a class="markdownIt-Anchor" href="#global-acc"></a> Global Acc</h3>
+<p>对角线上所有元素之和=所有类别正确分类的元素数<br />
+n个类别所属像素的总数=全图像素数=混淆矩阵所有元素之和</p>
 <div align="center"> 
 <img src="https://img-blog.csdnimg.cn/6d9bc20c6a3640519900d1577340cb8c.png#pic_center=80%x80%" width="80%"> 
 </div> 
-
-<h3 id="Mean-Acc"><a href="#Mean-Acc" class="headerlink" title="Mean Acc"></a>Mean Acc</h3><p>每个类别的所属像素总数&#x3D;每列元素总数<br>由此可得每个类别的分类精确度，然后再求平均</p>
+<h3 id="mean-acc"><a class="markdownIt-Anchor" href="#mean-acc"></a> Mean Acc</h3>
+<p>每个类别的所属像素总数=每列元素总数<br />
+由此可得每个类别的分类精确度，然后再求平均</p>
 <div align="center"> 
 <img src="https://img-blog.csdnimg.cn/f68ba2380c8840dfbcac8d3bb2873373.png#pic_center=80%x80%" width="80%"> 
 </div> 
-
-<h3 id="Mean-IoU"><a href="#Mean-IoU" class="headerlink" title="Mean IoU"></a>Mean IoU</h3><p>以第零个类别为例，<br>正确分类像素数&#x3D;16<br>真实所属第零类像素数&#x3D;第一列元素和&#x3D;20<br>预测所属第零类像素数&#x3D;第一行元素和&#x3D;18</p>
-<p>于是第零个类别的iou&#x3D;16&#x2F;(20+18)</p>
+<h3 id="mean-iou"><a class="markdownIt-Anchor" href="#mean-iou"></a> Mean IoU</h3>
+<p>以第零个类别为例，<br />
+正确分类像素数=16<br />
+真实所属第零类像素数=第一列元素和=20<br />
+预测所属第零类像素数=第一行元素和=18</p>
+<p>于是第零个类别的iou=16/(20+18)</p>
 <p>然后多个类别再平均</p>
 <div align="center"> 
 <img src="https://img-blog.csdnimg.cn/ad0b949c93b844ff91881cd2c1abcb24.png#pic_center=80%x80%" width="80%"> 
 </div> 
-
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>混淆矩阵真是个好东西</p>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+<h1 id="总结"><a class="markdownIt-Anchor" href="#总结"></a> 总结</h1>
+<p>混淆矩阵真是个好东西</p>
+<h1 id="参考"><a class="markdownIt-Anchor" href="#参考"></a> 参考</h1>
+<ol>
 <li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1ev411P7dR?spm_id_from=333.999.0.0">https://www.bilibili.com/video/BV1ev411P7dR?spm_id_from=333.999.0.0</a></li>
 </ol>
 
@@ -483,8 +493,7 @@ setInterval("createtime()",250);
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
-<script src="/js/third-party/math/mathjax.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha256-94CNZ/bJtwrBYZrXhCOBvpB4rZUzBnvAsirFv31TMGo=" crossorigin="anonymous">
 
 
 

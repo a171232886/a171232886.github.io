@@ -149,7 +149,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-text">代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9trackers-ini%E6%96%87%E4%BB%B6"><span class="nav-text">修改trackers.ini文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C"><span class="nav-text">实验</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E6%9E%9C"><span class="nav-text">结果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E6%9E%90"><span class="nav-text">分析</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-text"> 代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9trackersini%E6%96%87%E4%BB%B6"><span class="nav-text"> 修改trackers.ini文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C"><span class="nav-text"> 实验</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%93%E6%9E%9C"><span class="nav-text"> 结果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E6%9E%90"><span class="nav-text"> 分析</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -290,13 +290,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>能点进来看这个文章的，想必都是行内人士，那就直接讲重点。</p>
+        <h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
+<p>能点进来看这个文章的，想必都是行内人士，那就直接讲重点。</p>
 <p>其实人家pysot已经内置了vot数据集的测试和分析，其结果已经广泛用于各种paper上。比如SiamRPN++在VOT2016上的EAO是0.464。</p>
 <p>但pysot只能运行VOT2016,2018,2019的数据集。因为pysot只提供了关于这几个的配置信息。于是我想把pysot和vot-toolkit结合起来。</p>
 <p>关于vot-toolkit-python的使用，可以看我的上一篇博客<a target="_blank" rel="noopener" href="https://blog.csdn.net/a171232886/article/details/122575852">vot-toolkit-python的使用</a>。</p>
 <span id="more"></span>
-
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><p>这是pysot和vot-toolkit结合的python脚本，我将其命名为<code>test_vot.py</code>。<br><font face="黑体"  color=#FF0000 size=4> 注意，这个文件放在<code>pysot-master</code>下面，而不是<code>pysot-master/tools</code>下面。</font>这样可回避pysot复杂的环境变量设置。</p>
+<h1 id="代码"><a class="markdownIt-Anchor" href="#代码"></a> 代码</h1>
+<p>这是pysot和vot-toolkit结合的python脚本，我将其命名为<code>test_vot.py</code>。<br />
+<font face="黑体"  color=#FF0000 size=4> 注意，这个文件放在<code>pysot-master</code>下面，而不是<code>pysot-master/tools</code>下面。</font>这样可回避pysot复杂的环境变量设置。</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Copyright (c) SenseTime. All Rights Reserved.</span>
 
 <span class="token keyword">from</span> __future__ <span class="token keyword">import</span> absolute_import
@@ -379,20 +381,22 @@ os<span class="token punctuation">.</span>environ<span class="token punctuation"
 
 <span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
     main<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h1 id="修改trackers-ini文件"><a href="#修改trackers-ini文件" class="headerlink" title="修改trackers.ini文件"></a>修改trackers.ini文件</h1><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>SiamRPNpp<span class="token punctuation">]</span>
+<h1 id="修改trackersini文件"><a class="markdownIt-Anchor" href="#修改trackersini文件"></a> 修改trackers.ini文件</h1>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>SiamRPNpp<span class="token punctuation">]</span>
 label <span class="token operator">=</span> SiamRPNpp
 protocol <span class="token operator">=</span> traxpython  
 <span class="token builtin class-name">command</span> <span class="token operator">=</span> test_vot 
 paths <span class="token operator">=</span> /media/HardDisk_new/wh/others/pysot-master/
 env_PATH <span class="token operator">=</span> /home/wh/anaconda3/envs/others/bin/python<span class="token punctuation">;</span><span class="token variable">$&#123;<span class="token environment constant">PATH</span>&#125;</span>   
 restart <span class="token operator">=</span> <span class="token boolean">true</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h1 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h1><h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><ol>
-<li>pysot运行的SiamRPN++在VOT2016上的EAO&#x3D;0.464；vot-toolkit的结果为0.430</li>
-<li>将vot-toolkit的运行结果用pysot的<code>eval.py</code>分析EAO&#x3D;0.439；vot-toolkit分析pysot的运行结果为EAO&#x3D;0.454。</li>
+<h1 id="实验"><a class="markdownIt-Anchor" href="#实验"></a> 实验</h1>
+<h2 id="结果"><a class="markdownIt-Anchor" href="#结果"></a> 结果</h2>
+<ol>
+<li>pysot运行的SiamRPN++在VOT2016上的EAO=0.464；vot-toolkit的结果为0.430</li>
+<li>将vot-toolkit的运行结果用pysot的<code>eval.py</code>分析EAO=0.439；vot-toolkit分析pysot的运行结果为EAO=0.454。</li>
 </ol>
-<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>pysot和vot-toolkit的差距很有可能是，pysot在计算EAO时直接自定义了帧数考虑范围，代码如下（<code>./tookilt/evaluation/eao_benchmark.py</code>）</p>
+<h2 id="分析"><a class="markdownIt-Anchor" href="#分析"></a> 分析</h2>
+<p>pysot和vot-toolkit的差距很有可能是，pysot在计算EAO时直接自定义了帧数考虑范围，代码如下（<code>./tookilt/evaluation/eao_benchmark.py</code>）</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># NOTE we not use gmm to generate low, high, peak value</span>
 <span class="token keyword">if</span> dataset<span class="token punctuation">.</span>name <span class="token operator">==</span> <span class="token string">'VOT2019'</span><span class="token punctuation">:</span>
     self<span class="token punctuation">.</span>low <span class="token operator">=</span> <span class="token number">46</span>
@@ -406,7 +410,6 @@ restart <span class="token operator">=</span> <span class="token boolean">true</
     self<span class="token punctuation">.</span>low <span class="token operator">=</span> <span class="token number">108</span>
     self<span class="token punctuation">.</span>high <span class="token operator">=</span> <span class="token number">371</span>
     self<span class="token punctuation">.</span>peak <span class="token operator">=</span> <span class="token number">168</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>vot-toolkit-python的高级python语法的大量使用，阻止了我继续分析。只要肯花时间，这是肯定能研究清楚的。但我见过的论文，都是以pysot的0.464为准。什么时候真正要用vot-toolkit-python什么时候再继续分析吧。</p>
 
     </div>
@@ -545,8 +548,7 @@ setInterval("createtime()",250);
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
-<script src="/js/third-party/math/mathjax.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha256-94CNZ/bJtwrBYZrXhCOBvpB4rZUzBnvAsirFv31TMGo=" crossorigin="anonymous">
 
 
 

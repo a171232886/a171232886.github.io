@@ -149,7 +149,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9B%B4%E6%8D%A2%E6%BA%90"><span class="nav-text">更换源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8E%9F%E5%A7%8B%E9%85%8D%E7%BD%AE"><span class="nav-text">原始配置</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9B%B4%E6%8D%A2%E6%BA%90"><span class="nav-text"> 更换源</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8E%9F%E5%A7%8B%E9%85%8D%E7%BD%AE"><span class="nav-text"> 原始配置</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -290,17 +290,23 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>因为默认下载源在国外，有时候会出现下载失败的问题。可更换国内源。</p>
+        <h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
+<p>因为默认下载源在国外，有时候会出现下载失败的问题。可更换国内源。</p>
 <p>其实就是几条命令</p>
 <span id="more"></span>
-
-<h1 id="更换源"><a href="#更换源" class="headerlink" title="更换源"></a>更换源</h1><ol>
-<li><p>备份</p>
- <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">cp</span> <span class="token parameter variable">-v</span> /etc/apt/sources.list /etc/apt/sources.list.backup<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>修改权限并编辑</p>
+<h1 id="更换源"><a class="markdownIt-Anchor" href="#更换源"></a> 更换源</h1>
+<ol>
+<li>
+<p>备份</p>
+ <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">cp</span> <span class="token parameter variable">-v</span> /etc/apt/sources.list /etc/apt/sources.list.backup<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>
+<p>修改权限并编辑</p>
  <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">chmod</span> <span class="token number">777</span> /etc/apt/sources.list
-<span class="token function">sudo</span> gedit /etc/apt/sources.list<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
-<li><p>原有配置替换为阿里源</p>
+<span class="token function">sudo</span> gedit /etc/apt/sources.list<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li>
+<p>原有配置替换为阿里源</p>
  <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">deb http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse
 
 deb http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse
@@ -320,7 +326,7 @@ deb-src http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe
 deb-src http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse
 
 deb-src http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p> 或者阿里源</p>
+<p>或者阿里源</p>
  <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">deb http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse
 
 deb http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse
@@ -340,12 +346,16 @@ deb-src http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe
 deb-src http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse
 
 deb-src http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
-<li><p>更新</p>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>
+<p>更新</p>
  <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> update
-<span class="token function">sudo</span> <span class="token function">apt</span> upgrade<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+<span class="token function">sudo</span> <span class="token function">apt</span> upgrade<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
 </ol>
-<h1 id="原始配置"><a href="#原始配置" class="headerlink" title="原始配置"></a>原始配置</h1><p>附：source.list的原始文件</p>
+<h1 id="原始配置"><a class="markdownIt-Anchor" href="#原始配置"></a> 原始配置</h1>
+<p>附：source.list的原始文件</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#deb cdrom:[Ubuntu 20.04.3 LTS _Focal Fossa_ - Release amd64 (20210819)]/ focal main restricted</span>
 
 <span class="token comment"># See http://help.ubuntu.com/community/UpgradeNotes for how to upgrade to</span>
@@ -540,8 +550,7 @@ setInterval("createtime()",250);
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
-<script src="/js/third-party/math/mathjax.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha256-94CNZ/bJtwrBYZrXhCOBvpB4rZUzBnvAsirFv31TMGo=" crossorigin="anonymous">
 
 
 

@@ -149,7 +149,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Numpy"><span class="nav-text">Numpy</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#numpy-random-%E7%94%9F%E6%88%90%E9%9A%8F%E6%9C%BA%E6%95%B0"><span class="nav-text">numpy.random 生成随机数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A8%E8%8D%90%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="nav-text">推荐使用方式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#numpy-random-choice-%E9%9A%8F%E6%9C%BA%E6%8C%91%E9%80%89"><span class="nav-text">numpy.random.choice 随机挑选</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#numpy-random-shuffle-%E6%89%93%E4%B9%B1%E9%A1%BA%E5%BA%8F"><span class="nav-text">numpy.random.shuffle 打乱顺序</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Pytorch"><span class="nav-text">Pytorch</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%9F%E6%88%90%E9%9A%8F%E6%9C%BAtensor"><span class="nav-text">生成随机tensor</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-text">参考</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#numpy"><span class="nav-text"> Numpy</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#numpyrandom-%E7%94%9F%E6%88%90%E9%9A%8F%E6%9C%BA%E6%95%B0"><span class="nav-text"> numpy.random 生成随机数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A8%E8%8D%90%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="nav-text"> 推荐使用方式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#numpyrandomchoice-%E9%9A%8F%E6%9C%BA%E6%8C%91%E9%80%89"><span class="nav-text"> numpy.random.choice 随机挑选</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#numpyrandomshuffle-%E6%89%93%E4%B9%B1%E9%A1%BA%E5%BA%8F"><span class="nav-text"> numpy.random.shuffle 打乱顺序</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#pytorch"><span class="nav-text"> Pytorch</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%9F%E6%88%90%E9%9A%8F%E6%9C%BAtensor"><span class="nav-text"> 生成随机tensor</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-text"> 参考</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -290,28 +290,30 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>作为测试用例，生成随机矩阵或者tensor很重要。可这个操作在numpy和Pytorch中略有区别。故在此处整理出。</p>
+        <h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
+<p>作为测试用例，生成随机矩阵或者tensor很重要。可这个操作在numpy和Pytorch中略有区别。故在此处整理出。</p>
 <span id="more"></span>
-
-<h1 id="Numpy"><a href="#Numpy" class="headerlink" title="Numpy"></a>Numpy</h1><h2 id="numpy-random-生成随机数"><a href="#numpy-random-生成随机数" class="headerlink" title="numpy.random 生成随机数"></a>numpy.random 生成随机数</h2><p>如<code>numpy.random.rand(2,3)</code></p>
+<h1 id="numpy"><a class="markdownIt-Anchor" href="#numpy"></a> Numpy</h1>
+<h2 id="numpyrandom-生成随机数"><a class="markdownIt-Anchor" href="#numpyrandom-生成随机数"></a> numpy.random 生成随机数</h2>
+<p>如<code>numpy.random.rand(2,3)</code></p>
 <div align="center"> 
 <img src="https://img-blog.csdnimg.cn/725d0aa8a8064b4fa9e279f9f90e7c55.png" width="80%"> 
 </div> 
 <div align="center"> 
 <img src="https://img-blog.csdnimg.cn/23cf39f844f943feb5761203faa86335.png" width="80%"> 
 </div> 
-
-<h3 id="推荐使用方式"><a href="#推荐使用方式" class="headerlink" title="推荐使用方式"></a>推荐使用方式</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 带键值对的方式，好记</span>
+<h3 id="推荐使用方式"><a class="markdownIt-Anchor" href="#推荐使用方式"></a> 推荐使用方式</h3>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 带键值对的方式，好记</span>
 a <span class="token operator">=</span> np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>uniform<span class="token punctuation">(</span>low<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>high<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">,</span>size<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">255</span><span class="token punctuation">,</span><span class="token number">255</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
 a <span class="token operator">=</span> np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>normal<span class="token punctuation">(</span>loc<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>scale<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">,</span>size<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">255</span><span class="token punctuation">,</span><span class="token number">255</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
 <span class="token comment"># 若需要改变类型</span>
 a<span class="token punctuation">.</span>astype<span class="token punctuation">(</span>np<span class="token punctuation">.</span><span class="token builtin">int</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="numpy-random-choice-随机挑选"><a href="#numpy-random-choice-随机挑选" class="headerlink" title="numpy.random.choice 随机挑选"></a>numpy.random.choice 随机挑选</h2><p>注意，这是对一维数据<br><code>random.choice(a, size=None, replace=True, p=None)</code></p>
+<h2 id="numpyrandomchoice-随机挑选"><a class="markdownIt-Anchor" href="#numpyrandomchoice-随机挑选"></a> numpy.random.choice 随机挑选</h2>
+<p>注意，这是对一维数据<br />
+<code>random.choice(a, size=None, replace=True, p=None)</code></p>
 <div align="center"> 
 <img src="https://img-blog.csdnimg.cn/326a0779f6e84523808e3397c3a016c5.JPG" width="80%"> 
 </div> 
-
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span>np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>choice<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
 array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">)</span> 
 
@@ -322,8 +324,8 @@ array<span class="token punctuation">(</span><span class="token punctuation">[</
 
 np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>choice<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> p<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">0.1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0.3</span><span class="token punctuation">,</span> <span class="token number">0.6</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
 array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="numpy-random-shuffle-打乱顺序"><a href="#numpy-random-shuffle-打乱顺序" class="headerlink" title="numpy.random.shuffle 打乱顺序"></a>numpy.random.shuffle 打乱顺序</h2><ol>
+<h2 id="numpyrandomshuffle-打乱顺序"><a class="markdownIt-Anchor" href="#numpyrandomshuffle-打乱顺序"></a> numpy.random.shuffle 打乱顺序</h2>
+<ol>
 <li>只对最外侧维度进行，内层不变</li>
 <li><strong>没有返回值</strong></li>
 </ol>
@@ -337,27 +339,41 @@ array<span class="token punctuation">(</span><span class="token punctuation">[</
 array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
        <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
        <span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-<h1 id="Pytorch"><a href="#Pytorch" class="headerlink" title="Pytorch"></a>Pytorch</h1><h2 id="生成随机tensor"><a href="#生成随机tensor" class="headerlink" title="生成随机tensor"></a>生成随机tensor</h2><ol>
-<li><p>torch.rand</p>
-<p> 在[0,1)上均匀分布，一般这个就够用了。</p>
-<p> <code>torch.rand(*size, out=None, dtype=None, layout=torch.strided, device=None, requires_grad=False) → Tensor</code></p>
- <pre class="line-numbers language-python" data-language="python"><code class="language-python">a <span class="token operator">=</span> torch<span class="token punctuation">.</span>rand<span class="token punctuation">(</span>size<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>torch.rand_like<br> 返回和某个tensor一样size的tensor，在[0,1)上均匀分布，并且dtype、device、layout相同。</p>
-<p> <code>torch.rand_like(input, dtype=None, layout=None, device=None, requires_grad=False) → Tensor</code></p>
+<h1 id="pytorch"><a class="markdownIt-Anchor" href="#pytorch"></a> Pytorch</h1>
+<h2 id="生成随机tensor"><a class="markdownIt-Anchor" href="#生成随机tensor"></a> 生成随机tensor</h2>
+<ol>
+<li>
+<p>torch.rand</p>
+<p>在[0,1)上均匀分布，一般这个就够用了。</p>
+<p><code>torch.rand(*size, out=None, dtype=None, layout=torch.strided, device=None, requires_grad=False) → Tensor</code></p>
+ <pre class="line-numbers language-python" data-language="python"><code class="language-python">a <span class="token operator">=</span> torch<span class="token punctuation">.</span>rand<span class="token punctuation">(</span>size<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>
+<p>torch.rand_like<br />
+返回和某个tensor一样size的tensor，在[0,1)上均匀分布，并且dtype、device、layout相同。</p>
+<p><code>torch.rand_like(input, dtype=None, layout=None, device=None, requires_grad=False) → Tensor</code></p>
  <pre class="line-numbers language-python" data-language="python"><code class="language-python">a <span class="token operator">=</span> torch<span class="token punctuation">.</span>tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">3.</span><span class="token punctuation">,</span> <span class="token number">4.</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-b <span class="token operator">=</span> torch<span class="token punctuation">.</span>rand_like<span class="token punctuation">(</span>a<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
-<li><p>torch.randn<br> 标准正态分布，~N(0,1)</p>
-<p> <code>torch.randn(*size, out=None, dtype=None, layout=torch.strided, device=None, requires_grad=False) → Tensor</code></p>
- <pre class="line-numbers language-python" data-language="python"><code class="language-python">c <span class="token operator">=</span> torch<span class="token punctuation">.</span>randn<span class="token punctuation">(</span>size<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>torch.randint<br> 指定范围的均匀分布，并且是返回整数类型</p>
-<p> <code>torch.randint(low=0, high, size, *, generator=None, out=None, dtype=None, layout=torch.strided, device=None, requires_grad=False) → Tensor</code></p>
- <pre class="line-numbers language-python" data-language="python"><code class="language-python">c <span class="token operator">=</span> torch<span class="token punctuation">.</span>randint<span class="token punctuation">(</span>low<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span>high<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">,</span>size<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-<li><p>类似的<br> 类似于torch.rand_like，还有torch.randn_like和torch.randint_like</p>
+b <span class="token operator">=</span> torch<span class="token punctuation">.</span>rand_like<span class="token punctuation">(</span>a<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li>
+<p>torch.randn<br />
+标准正态分布，~N(0,1)</p>
+<p><code>torch.randn(*size, out=None, dtype=None, layout=torch.strided, device=None, requires_grad=False) → Tensor</code></p>
+ <pre class="line-numbers language-python" data-language="python"><code class="language-python">c <span class="token operator">=</span> torch<span class="token punctuation">.</span>randn<span class="token punctuation">(</span>size<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>
+<p>torch.randint<br />
+指定范围的均匀分布，并且是返回整数类型</p>
+<p><code>torch.randint(low=0, high, size, *, generator=None, out=None, dtype=None, layout=torch.strided, device=None, requires_grad=False) → Tensor</code></p>
+ <pre class="line-numbers language-python" data-language="python"><code class="language-python">c <span class="token operator">=</span> torch<span class="token punctuation">.</span>randint<span class="token punctuation">(</span>low<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span>high<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">,</span>size<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>
+<p>类似的<br />
+类似于torch.rand_like，还有torch.randn_like和torch.randint_like</p>
 </li>
 </ol>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+<h1 id="参考"><a class="markdownIt-Anchor" href="#参考"></a> 参考</h1>
+<ol>
 <li>Python数据分析与展示 - 北京理工大学</li>
 <li><a target="_blank" rel="noopener" href="https://numpy.org/doc/stable/reference/index.html">https://numpy.org/doc/stable/reference/index.html</a></li>
 <li><a target="_blank" rel="noopener" href="https://pytorch.org/docs/1.4.0/">https://pytorch.org/docs/1.4.0/</a></li>
@@ -499,8 +515,7 @@ setInterval("createtime()",250);
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
-<script src="/js/third-party/math/mathjax.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha256-94CNZ/bJtwrBYZrXhCOBvpB4rZUzBnvAsirFv31TMGo=" crossorigin="anonymous">
 
 
 

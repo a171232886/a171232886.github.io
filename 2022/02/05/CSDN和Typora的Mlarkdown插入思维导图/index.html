@@ -149,7 +149,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9C%A8Markdown%E4%B8%AD%E7%94%BB%EF%BC%88%E6%B5%81%E7%A8%8B%EF%BC%89%E5%9B%BE"><span class="nav-text">在Markdown中画（流程）图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Mermaid%E6%8F%92%E4%BB%B6"><span class="nav-text">Mermaid插件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Sequence-Diagrams%EF%BC%88UML%E5%9B%BE%EF%BC%89"><span class="nav-text">Sequence Diagrams（UML图）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Flowcharts"><span class="nav-text">Flowcharts</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%A6%E4%B8%80%E7%A7%8DFlowcharts"><span class="nav-text">另一种Flowcharts</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Gantt%E5%9B%BE%EF%BC%88%E7%94%98%E7%89%B9%E5%9B%BE%EF%BC%89"><span class="nav-text">Gantt图（甘特图）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Class%E5%9B%BE%EF%BC%88%E7%B1%BB%E5%9B%BE%EF%BC%89"><span class="nav-text">Class图（类图）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#State-%E5%9B%BE"><span class="nav-text">State 图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A5%BC%E5%9B%BE"><span class="nav-text">饼图</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-text">参考文献</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9C%A8markdown%E4%B8%AD%E7%94%BB%E6%B5%81%E7%A8%8B%E5%9B%BE"><span class="nav-text"> 在Markdown中画（流程）图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mermaid%E6%8F%92%E4%BB%B6"><span class="nav-text"> Mermaid插件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#sequence-diagramsuml%E5%9B%BE"><span class="nav-text"> Sequence Diagrams（UML图）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#flowcharts"><span class="nav-text"> Flowcharts</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%A6%E4%B8%80%E7%A7%8Dflowcharts"><span class="nav-text"> 另一种Flowcharts</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gantt%E5%9B%BE%E7%94%98%E7%89%B9%E5%9B%BE"><span class="nav-text"> Gantt图（甘特图）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#class%E5%9B%BE%E7%B1%BB%E5%9B%BE"><span class="nav-text"> Class图（类图）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#state-%E5%9B%BE"><span class="nav-text"> State 图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A5%BC%E5%9B%BE"><span class="nav-text"> 饼图</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-text"> 参考文献</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -290,24 +290,26 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>因为打算使用Markdown做笔记，想找一种方法可在Markdown中插入思维导图。这种方法必须满足三点：（1）免费（2）简单（3）插入导图可编辑。网上一通找，在见到各种千奇百怪的方法之后，看见人家Typora官方给出了方法，而CSDN的帮助文档也有简单教程插入Mermaid流程图。&#x3D;&#x3D;按照<a target="_blank" rel="noopener" href="https://support.typora.io/Draw-Diagrams-With-Markdown/">Typora官方的方法</a>，在CSDN上测试发现基本没问题&#x3D;&#x3D;。于是，我把它翻译成中文放在这里，示例代码已经过改良。</p>
+        <h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
+<p>因为打算使用Markdown做笔记，想找一种方法可在Markdown中插入思维导图。这种方法必须满足三点：（1）免费（2）简单（3）插入导图可编辑。网上一通找，在见到各种千奇百怪的方法之后，看见人家Typora官方给出了方法，而CSDN的帮助文档也有简单教程插入Mermaid流程图。<mark>按照<a target="_blank" rel="noopener" href="https://support.typora.io/Draw-Diagrams-With-Markdown/">Typora官方的方法</a>，在CSDN上测试发现基本没问题</mark>。于是，我把它翻译成中文放在这里，示例代码已经过改良。</p>
 <p>想直接看思维导图的，直接看目录中的<code>另一种Flowcharts</code>即可。</p>
 <span id="more"></span>
-
-<h1 id="在Markdown中画（流程）图"><a href="#在Markdown中画（流程）图" class="headerlink" title="在Markdown中画（流程）图"></a>在Markdown中画（流程）图</h1><p>Typora集成了几种画（流程）图的方法，在设置中启用即可。但Typora仍推荐使用插入图片的方法插流程图。因为Markdown像其他格式文件转换可能会出现问题。（但我们就用Markdown，所以这个问题不存在。）</p>
-<h1 id="Mermaid插件"><a href="#Mermaid插件" class="headerlink" title="Mermaid插件"></a>Mermaid插件</h1><p><a target="_blank" rel="noopener" href="https://mermaid-js.github.io/mermaid/#/">Mermaid官网</a>除了Sequence图和Flowcharts两种，还支持Gantt图，class图，state图和饼图。</p>
-<h2 id="Sequence-Diagrams（UML图）"><a href="#Sequence-Diagrams（UML图）" class="headerlink" title="Sequence Diagrams（UML图）"></a>Sequence Diagrams（UML图）</h2><p>使用了<a target="_blank" rel="noopener" href="https://bramp.github.io/js-sequence-diagrams/">js-sequence</a>，按照代码生成一个渲染后的图表。CSDN和Typora可直接使用。</p>
+<h1 id="在markdown中画流程图"><a class="markdownIt-Anchor" href="#在markdown中画流程图"></a> 在Markdown中画（流程）图</h1>
+<p>Typora集成了几种画（流程）图的方法，在设置中启用即可。但Typora仍推荐使用插入图片的方法插流程图。因为Markdown像其他格式文件转换可能会出现问题。（但我们就用Markdown，所以这个问题不存在。）</p>
+<h1 id="mermaid插件"><a class="markdownIt-Anchor" href="#mermaid插件"></a> Mermaid插件</h1>
+<p><a target="_blank" rel="noopener" href="https://mermaid-js.github.io/mermaid/#/">Mermaid官网</a>除了Sequence图和Flowcharts两种，还支持Gantt图，class图，state图和饼图。</p>
+<h2 id="sequence-diagramsuml图"><a class="markdownIt-Anchor" href="#sequence-diagramsuml图"></a> Sequence Diagrams（UML图）</h2>
+<p>使用了<a target="_blank" rel="noopener" href="https://bramp.github.io/js-sequence-diagrams/">js-sequence</a>，按照代码生成一个渲染后的图表。CSDN和Typora可直接使用。</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">sequenceDiagram
 Alice-<span class="token operator">>></span>Bob: Hello Bob, how are you?
 Note right of Bob: Bob thinks
 Bob--<span class="token operator">>></span>Alice: I am good thanks<span class="token operator">!</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
 <pre class="mermaid">sequenceDiagram
 Alice->>Bob: Hello Bob, how are you?
 Note right of Bob: Bob thinks
 Bob-->>Alice: I am good thanks!</pre>
-
-<h2 id="Flowcharts"><a href="#Flowcharts" class="headerlink" title="Flowcharts"></a>Flowcharts</h2><p>使用<a target="_blank" rel="noopener" href="http://flowchart.js.org/">flowchart.js</a></p>
+<h2 id="flowcharts"><a class="markdownIt-Anchor" href="#flowcharts"></a> Flowcharts</h2>
+<p>使用<a target="_blank" rel="noopener" href="http://flowchart.js.org/">flowchart.js</a></p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">flowchat
 <span class="token assign-left variable">st</span><span class="token operator">=</span><span class="token operator">></span>start: Start
 <span class="token assign-left variable">op</span><span class="token operator">=</span><span class="token operator">></span>operation: Your Operation
@@ -318,21 +320,21 @@ st-<span class="token operator">></span>op-<span class="token operator">></span>
 cond<span class="token punctuation">(</span>yes<span class="token punctuation">)</span>-<span class="token operator">></span>e
 cond<span class="token punctuation">(</span>no<span class="token punctuation">)</span>-<span class="token operator">></span>op<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>不推荐的原因：CSDN、Typora、Hexo互不相同！</p>
-<h2 id="另一种Flowcharts"><a href="#另一种Flowcharts" class="headerlink" title="另一种Flowcharts"></a>另一种Flowcharts</h2><p><font face="黑体"  color=#FF0000 size=4><strong>个人推荐，可用做思维导图</strong>。</font></p>
+<h2 id="另一种flowcharts"><a class="markdownIt-Anchor" href="#另一种flowcharts"></a> 另一种Flowcharts</h2>
+<p><font face="黑体"  color=#FF0000 size=4><strong>个人推荐，可用做思维导图</strong>。</font></p>
 <pre class="line-numbers language-Bash" data-language="Bash"><code class="language-Bash">graph LR
 A[Hard edge] --&gt;B(Round edge)
 B --&gt; C&#123;Decision&#125;
 C --&gt;|One| D[Result one]
 C --&gt;|Two| E[Result two]
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <pre class="mermaid">	graph LR
-    A[Hard edge] -->B(Round edge)
+	A[Hard edge] -->B(Round edge)
     B --> C{Decision}
     C -->|One| D[Result one]
     C -->|Two| E[Result two]</pre>
-
-<h2 id="Gantt图（甘特图）"><a href="#Gantt图（甘特图）" class="headerlink" title="Gantt图（甘特图）"></a>Gantt图（甘特图）</h2><p>可参考<a target="_blank" rel="noopener" href="https://mermaid-js.github.io/mermaid/#/gantt">Gantt diagrams</a></p>
+<h2 id="gantt图甘特图"><a class="markdownIt-Anchor" href="#gantt图甘特图"></a> Gantt图（甘特图）</h2>
+<p>可参考<a target="_blank" rel="noopener" href="https://mermaid-js.github.io/mermaid/#/gantt">Gantt diagrams</a></p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">gantt
 dateFormat  YYYY-MM-DD
 title Adding GANTT diagram functionality to mermaid
@@ -360,7 +362,6 @@ section Last section
 Describe gantt syntax               :after doc1, 3d
 Add gantt diagram to demo page      <span class="token builtin class-name">:</span> 20h
 Add another diagram to demo page    <span class="token builtin class-name">:</span> 48h<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <pre class="mermaid">        gantt
         dateFormat  YYYY-MM-DD
         title Adding GANTT diagram functionality to mermaid
@@ -388,9 +389,8 @@ Add another diagram to demo page    <span class="token builtin class-name">:</sp
         Describe gantt syntax               :after doc1, 3d
         Add gantt diagram to demo page      : 20h
         Add another diagram to demo page    : 48h</pre>
-
-
-<h2 id="Class图（类图）"><a href="#Class图（类图）" class="headerlink" title="Class图（类图）"></a>Class图（类图）</h2><p>可参考<a target="_blank" rel="noopener" href="https://mermaid-js.github.io/mermaid/#/classDiagram">Class diagrams</a></p>
+<h2 id="class图类图"><a class="markdownIt-Anchor" href="#class图类图"></a> Class图（类图）</h2>
+<p>可参考<a target="_blank" rel="noopener" href="https://mermaid-js.github.io/mermaid/#/classDiagram">Class diagrams</a></p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">classDiagram
       Animal <span class="token operator">&lt;</span><span class="token operator">|</span>-- Duck
       Animal <span class="token operator">&lt;</span><span class="token operator">|</span>-- Fish
@@ -413,8 +413,6 @@ Add another diagram to demo page    <span class="token builtin class-name">:</sp
           +run<span class="token punctuation">(</span><span class="token punctuation">)</span>
       <span class="token punctuation">&#125;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
 <pre class="mermaid">classDiagram
       Animal <|-- Duck
       Animal <|-- Fish
@@ -436,8 +434,8 @@ Add another diagram to demo page    <span class="token builtin class-name">:</sp
           +bool is_wild
           +run()
       }</pre>
-
-<h2 id="State-图"><a href="#State-图" class="headerlink" title="State 图"></a>State 图</h2><p>这个图CSDN帮助文档中没有引入，但实际上可以生成，只是大小不能控制。此处效果图为Tpyora截图。</p>
+<h2 id="state-图"><a class="markdownIt-Anchor" href="#state-图"></a> State 图</h2>
+<p>这个图CSDN帮助文档中没有引入，但实际上可以生成，只是大小不能控制。此处效果图为Tpyora截图。</p>
 <p>而Tpyora(v0.11.18)不支持<code>direction LR</code>选项。</p>
 <p>但这个State图如果开发好的话，是比Flowcharts好的。</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">stateDiagram
@@ -450,20 +448,18 @@ Add another diagram to demo page    <span class="token builtin class-name">:</sp
         a --<span class="token operator">></span> b
     <span class="token punctuation">&#125;</span>
     B --<span class="token operator">></span> D<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
 <pre class="mermaid">	stateDiagram
-    [*] --> A
-    A --> B
-    B --> C
-        
-    state B {
-        direction LR
-        a --> b
-    }
-    B --> D</pre>
-
-<h2 id="饼图"><a href="#饼图" class="headerlink" title="饼图"></a>饼图</h2><pre><code><pre class="line-numbers language-none"><code class="language-none">pie
+	[*] --> A
+	A --> B
+	B --> C
+	    
+	state B {
+	    direction LR
+	    a --> b
+	}
+	B --> D</pre>
+<h2 id="饼图"><a class="markdownIt-Anchor" href="#饼图"></a> 饼图</h2>
+<pre><code><pre class="line-numbers language-none"><code class="language-none">pie
     title Pie Chart
     &quot;Dogs&quot; : 386
     &quot;Cats&quot; : 85
@@ -474,8 +470,8 @@ Add another diagram to demo page    <span class="token builtin class-name">:</sp
     "Dogs" : 386
     "Cats" : 85
     "Rats" : 150</pre>
-
-<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><ol>
+<h1 id="参考文献"><a class="markdownIt-Anchor" href="#参考文献"></a> 参考文献</h1>
+<ol>
 <li><a target="_blank" rel="noopener" href="https://support.typora.io/Draw-Diagrams-With-Markdown/">Typora官方的方法</a></li>
 <li><a target="_blank" rel="noopener" href="https://mermaid-js.github.io/mermaid/">mermaid</a></li>
 </ol>
@@ -616,8 +612,7 @@ setInterval("createtime()",250);
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
-<script src="/js/third-party/math/mathjax.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha256-94CNZ/bJtwrBYZrXhCOBvpB4rZUzBnvAsirFv31TMGo=" crossorigin="anonymous">
 
 
 

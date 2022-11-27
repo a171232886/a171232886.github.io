@@ -149,7 +149,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85samba"><span class="nav-text">安装samba</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="nav-text">设置共享文件夹</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E8%AE%BF%E9%97%AE%E8%B4%A6%E5%8F%B7"><span class="nav-text">设置访问账号</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Win10%E8%AE%BF%E9%97%AE"><span class="nav-text">Win10访问</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Ubuntu%E8%AE%BF%E9%97%AE"><span class="nav-text">Ubuntu访问</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%9A%E8%AF%B4%E4%B8%80%E7%82%B9"><span class="nav-text">多说一点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%80%E5%90%8E"><span class="nav-text">最后</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-text">参考</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85samba"><span class="nav-text"> 安装samba</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="nav-text"> 设置共享文件夹</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E8%AE%BF%E9%97%AE%E8%B4%A6%E5%8F%B7"><span class="nav-text"> 设置访问账号</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#win10%E8%AE%BF%E9%97%AE"><span class="nav-text"> Win10访问</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ubuntu%E8%AE%BF%E9%97%AE"><span class="nav-text"> Ubuntu访问</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%9A%E8%AF%B4%E4%B8%80%E7%82%B9"><span class="nav-text"> 多说一点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%80%E5%90%8E"><span class="nav-text"> 最后</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-text"> 参考</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -290,26 +290,26 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>预想达到的效果：多台Ubuntu之间，Ubuntu和win10之间，只用ip地址就可可以进行&#x3D;&#x3D;图形化界面文件共享&#x3D;&#x3D;。比如以下效果，看上去就是一个特殊的文件夹。</p>
+        <h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
+<p>预想达到的效果：多台Ubuntu之间，Ubuntu和win10之间，只用ip地址就可可以进行<mark>图形化界面文件共享</mark>。比如以下效果，看上去就是一个特殊的文件夹。</p>
 <div align="center"> 
 <img src="https://img-blog.csdnimg.cn/641fb644abc7430d98e6dc36c1c188af.png" width="80%"> 
 </div> 
-
 <p>这样的效果对于含多台ubuntu服务器的实验室来说是很有帮助的，<strong>既可以免去用硬盘在多服务器上拷贝数据的痛苦，又可以用自己的win10电脑轻易查看服务器文件</strong>。</p>
-<p>我们使用的插件是samba，<strong>只需在ubuntu上进行安装</strong>，即可实现上述效果。<br>官方要求Ubuntu16.04，<strong>实测Ubuntu18.04,Ubuntu20.04也可以</strong>。</p>
+<p>我们使用的插件是samba，<strong>只需在ubuntu上进行安装</strong>，即可实现上述效果。<br />
+官方要求Ubuntu16.04，<strong>实测Ubuntu18.04,Ubuntu20.04也可以</strong>。</p>
 <span id="more"></span>
-
 <p>其实你完全可以按照<a target="_blank" rel="noopener" href="https://ubuntu.com/tutorials/install-and-configure-samba#4-setting-up-user-accounts-and-connecting-to-share">官方教程</a>来操作，官方写的挺好的没有坑。这本是去年这个时候在实验室里倒腾明白的东西，现在毕业了才突然想起来写篇博客。</p>
-<h1 id="安装samba"><a href="#安装samba" class="headerlink" title="安装samba"></a>安装samba</h1><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> update
+<h1 id="安装samba"><a class="markdownIt-Anchor" href="#安装samba"></a> 安装samba</h1>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> update
 <span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> samba<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
 <p>检测一下是否安装正确，</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">whereis</span> samba<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>应该返回</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">samba: /usr/sbin/samba /usr/lib/samba /etc/samba /usr/share/samba /usr/share/man/man7/samba.7.gz /usr/share/man/man8/samba.8.gz<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h1 id="设置共享文件夹"><a href="#设置共享文件夹" class="headerlink" title="设置共享文件夹"></a>设置共享文件夹</h1><p>可新建一个用于共享的文件夹，这个文件夹下面的文件，都可以远程读写。也可以直接用已有的文件夹。</p>
+<h1 id="设置共享文件夹"><a class="markdownIt-Anchor" href="#设置共享文件夹"></a> 设置共享文件夹</h1>
+<p>可新建一个用于共享的文件夹，这个文件夹下面的文件，都可以远程读写。也可以直接用已有的文件夹。</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">mkdir</span> /home/ubuntu/sambashare/<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <p>编辑samba文件</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">nano</span> /etc/samba/smb.conf<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>在最后添加以下代码，</p>
@@ -325,15 +325,12 @@
 sudo service smbd restart<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>防火墙相关设置</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> ufw allow samba<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
 <p>附：（1）上述代码说明</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>share<span class="token punctuation">]</span> <span class="token comment"># 远程访问时共享文件夹的名字，官方是sambashare</span>
     comment <span class="token operator">=</span> Samba on Ubuntu
     path <span class="token operator">=</span> /media/  <span class="token comment"># 共享文件夹路径，比如将整个media文件夹共享</span>
     <span class="token builtin class-name">read</span> only <span class="token operator">=</span> no  <span class="token comment"># 此时允许远程修改文件</span>
     browsable <span class="token operator">=</span> <span class="token function">yes</span> <span class="token comment"># Ubuntu中共享文件夹可在文件管理器中出现在左侧栏</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>（2）如果你用的是<code>vim</code>文本编辑器(<code>sudo nano /etc/samba/smb.conf</code>)：</p>
 <ul>
 <li>先输入<code>i</code>然后回车,在最后添加代码，</li>
@@ -341,36 +338,38 @@ sudo service smbd restart<span aria-hidden="true" class="line-numbers-rows"><spa
 <li>输入<code>:wq</code>保存推迟</li>
 </ul>
 <p>还是建议使用<code>nano</code>，一是有操作提示，二是提示还是中文的。如果你用的<code>gedit</code>那就更方便了。</p>
-<h1 id="设置访问账号"><a href="#设置访问账号" class="headerlink" title="设置访问账号"></a>设置访问账号</h1><p>samba使用&#x3D;&#x3D;ubuntu中已有的登录账号&#x3D;&#x3D;，比如设置用户名为ubuntu的账号</p>
+<h1 id="设置访问账号"><a class="markdownIt-Anchor" href="#设置访问账号"></a> 设置访问账号</h1>
+<p>samba使用<mark>ubuntu中已有的登录账号</mark>，比如设置用户名为ubuntu的账号</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> smbpasswd <span class="token parameter variable">-a</span> ubuntu<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>如果一个服务器多账户，建议每个账户都设置一遍。</p>
-<h1 id="Win10访问"><a href="#Win10访问" class="headerlink" title="Win10访问"></a>Win10访问</h1><p>在文件管理器地址栏，输入<code>\\ip地址\\共享文件夹显示名</code>，比如<code>\\192.168.193.121\share</code>。（&#x3D;&#x3D;注意斜线方向&#x3D;&#x3D;）弹出对话框，输入账户密码，确定。</p>
+<h1 id="win10访问"><a class="markdownIt-Anchor" href="#win10访问"></a> Win10访问</h1>
+<p>在文件管理器地址栏，输入<code>\\ip地址\\共享文件夹显示名</code>，比如<code>\\192.168.193.121\share</code>。（<mark>注意斜线方向</mark>）弹出对话框，输入账户密码，确定。</p>
 <div align="center"> 
 <img src="https://img-blog.csdnimg.cn/ba467fada8554ffa96152e05c4ce2f7c.png#pic_center =50%x50%" width="40%"> 
 </div> 
 <div align="center"> 
 <img src="https://img-blog.csdnimg.cn/ecc3c93021b9457e81e4c84bced5c1e5.png#pic_center =80%x80%" width="80%"> 
 </div> 
-
-<h1 id="Ubuntu访问"><a href="#Ubuntu访问" class="headerlink" title="Ubuntu访问"></a>Ubuntu访问</h1><p>在文件管理器地址栏，输入<code>smb://ip地址/共享文件夹显示名</code>，比如<code>smb://192.168.193.200/share</code>。输入账户密码，确定。</p>
+<h1 id="ubuntu访问"><a class="markdownIt-Anchor" href="#ubuntu访问"></a> Ubuntu访问</h1>
+<p>在文件管理器地址栏，输入<code>smb://ip地址/共享文件夹显示名</code>，比如<code>smb://192.168.193.200/share</code>。输入账户密码，确定。</p>
 <div align="center"> 
 <img src="https://img-blog.csdnimg.cn/7a5c8d02a5d245608e2986d5f1b52fd2.png#pic_center =50%x50%" width="30%"> 
 </div> 
-
 <p>注意左下角，如果上面选择“记到注销之前”或者“永远记住”，是会保留的。</p>
 <div align="center"> 
 <img src="https://img-blog.csdnimg.cn/d39ea531a1a2420db4fe4b7cbb8301d5.png#pic_center =80%x80%" width="80%"> 
 </div> 
-
-<h1 id="多说一点"><a href="#多说一点" class="headerlink" title="多说一点"></a>多说一点</h1><p>如果在远程文件夹中打开终端，会发现有一串地址，比如</p>
+<h1 id="多说一点"><a class="markdownIt-Anchor" href="#多说一点"></a> 多说一点</h1>
+<p>如果在远程文件夹中打开终端，会发现有一串地址，比如</p>
 <div align="center"> 
 <img src="https://img-blog.csdnimg.cn/9abb8e561aa64e11ac0f45c17a0c2e33.png" width="80%"> 
 </div> 
 这个地址（蓝色部分）甚至可以在Python程序中使用，完成对文件的远程读写。读写速度主要取决于网速。
-
-<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>写了这么多，真正要执行的只有六条核心命令，其余都是验证性或辅助性的。</p>
+<h1 id="最后"><a class="markdownIt-Anchor" href="#最后"></a> 最后</h1>
+<p>写了这么多，真正要执行的只有六条核心命令，其余都是验证性或辅助性的。</p>
 <p>既然已经毕业了，这应该是小王关于实验室服务器管理写的最后一篇博客吧。回过头来看，管理实验室服务器固然事情繁杂琐碎，但是也得到了很多东西，有技术上的，更有技术之外的感动和收获。总结起来，实验室服务器管理更像是非代码技术，因为管理的核心是管理使用服务器的人。</p>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+<h1 id="参考"><a class="markdownIt-Anchor" href="#参考"></a> 参考</h1>
+<ol>
 <li><a target="_blank" rel="noopener" href="https://ubuntu.com/tutorials/install-and-configure-samba#1-overview">install-and-configure-samba</a></li>
 </ol>
 
@@ -510,8 +509,7 @@ setInterval("createtime()",250);
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
-<script src="/js/third-party/math/mathjax.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha256-94CNZ/bJtwrBYZrXhCOBvpB4rZUzBnvAsirFv31TMGo=" crossorigin="anonymous">
 
 
 

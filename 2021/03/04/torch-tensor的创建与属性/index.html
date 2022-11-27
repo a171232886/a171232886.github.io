@@ -149,7 +149,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81tensor%E7%9A%84%E5%88%9B%E5%BB%BA"><span class="nav-text">一、tensor的创建</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81tensor%E7%9A%84%E5%B1%9E%E6%80%A7"><span class="nav-text">二、tensor的属性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89is-leaf%EF%BC%8Cgrad%EF%BC%8Cgrad-fn"><span class="nav-text">（一）is_leaf，grad，grad_fn</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9B%E8%A1%8C%E5%8F%8D%E5%90%91%E4%BC%A0%E6%92%AD"><span class="nav-text">进行反向传播</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89shape%E5%92%8Cndim"><span class="nav-text">（二）shape和ndim</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E4%B8%89%EF%BC%89Tensor-data-Tensor-detach-%E5%92%8CTensor-detach"><span class="nav-text">（三）Tensor.data, Tensor.detach()和Tensor.detach_()</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA"><span class="nav-text">结论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B7%E4%BD%93%E6%9D%A5%E8%AF%B4%EF%BC%8C%E4%B8%89%E8%80%85%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF"><span class="nav-text">具体来说，三者的区别是</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E6%A2%AF%E5%BA%A6%E6%88%AA%E6%96%AD"><span class="nav-text">如何梯度截断</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E5%9B%9B%EF%BC%89layout"><span class="nav-text">（四）layout</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80-tensor%E7%9A%84%E5%88%9B%E5%BB%BA"><span class="nav-text"> 一、tensor的创建</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C-tensor%E7%9A%84%E5%B1%9E%E6%80%A7"><span class="nav-text"> 二、tensor的属性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80is_leafgradgrad_fn"><span class="nav-text"> （一）is_leaf，grad，grad_fn</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9B%E8%A1%8C%E5%8F%8D%E5%90%91%E4%BC%A0%E6%92%AD"><span class="nav-text"> 进行反向传播</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8Cshape%E5%92%8Cndim"><span class="nav-text"> （二）shape和ndim</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89tensordata-tensordetach%E5%92%8Ctensordetach_"><span class="nav-text"> （三）Tensor.data, Tensor.detach()和Tensor.detach_()</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E8%AE%BA"><span class="nav-text"> 结论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B7%E4%BD%93%E6%9D%A5%E8%AF%B4%E4%B8%89%E8%80%85%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF"><span class="nav-text"> 具体来说，三者的区别是</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E6%A2%AF%E5%BA%A6%E6%88%AA%E6%96%AD"><span class="nav-text"> 如何梯度截断</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9Blayout"><span class="nav-text"> （四）layout</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -292,86 +292,101 @@
     <div class="post-body" itemprop="articleBody">
         <p>代码写着写着，发现要学习一下基础的知识。这里只举最简单的例子，以便说明各属性的功能。</p>
 <span id="more"></span>
-
-<h1 id="一、tensor的创建"><a href="#一、tensor的创建" class="headerlink" title="一、tensor的创建"></a>一、tensor的创建</h1><p>按<a target="_blank" rel="noopener" href="https://pytorch.org/docs/1.4.0/torch.html?highlight=tensor#torch.tensor">官方的教程</a></p>
-<p><code>torch.tensor(data, dtype=None, device=None, requires_grad=False, pin_memory=False) → Tensor </code></p>
+<h1 id="一-tensor的创建"><a class="markdownIt-Anchor" href="#一-tensor的创建"></a> 一、tensor的创建</h1>
+<p>按<a target="_blank" rel="noopener" href="https://pytorch.org/docs/1.4.0/torch.html?highlight=tensor#torch.tensor">官方的教程</a></p>
+<p><code>torch.tensor(data, dtype=None, device=None, requires_grad=False, pin_memory=False) → Tensor</code></p>
 <div align="center"> 
 <img src="https://img-blog.csdnimg.cn/20210304170258162.PNG?x-oss-process=image" width="80%"> 
 </div> 
 注：
-
 <ol>
-<li><p>data就是数据，若输入1，创建标量，若输入[1], 创建向量</p>
+<li>
+<p>data就是数据，若输入1，创建标量，若输入[1], 创建向量</p>
 </li>
-<li><p>dtype：输入数据若是整数，dtype默认为torch.int64;输入小数，dtype默认torch.float（torch.float32和torch.float相同）。可以指定数据类型，按照<a target="_blank" rel="noopener" href="https://pytorch.org/docs/1.4.0/tensor_attributes.html#tensor-attributes-doc">torch.dtype</a></p>
+<li>
+<p>dtype：输入数据若是整数，dtype默认为torch.int64;输入小数，dtype默认torch.float（torch.float32和torch.float相同）。可以指定数据类型，按照<a target="_blank" rel="noopener" href="https://pytorch.org/docs/1.4.0/tensor_attributes.html#tensor-attributes-doc">torch.dtype</a></p>
 </li>
-<li><p>device，默认cpu，可以写‘cpu’，‘cuda’(默认0卡)，‘cuda:0’。按照<a target="_blank" rel="noopener" href="https://pytorch.org/docs/1.4.0/tensor_attributes.html#tensor-attributes-doc">torch.device</a></p>
+<li>
+<p>device，默认cpu，可以写‘cpu’，‘cuda’(默认0卡)，‘cuda:0’。按照<a target="_blank" rel="noopener" href="https://pytorch.org/docs/1.4.0/tensor_attributes.html#tensor-attributes-doc">torch.device</a></p>
 </li>
-<li><p>requires_grad, 这个tensor是否要求梯度，默认False</p>
+<li>
+<p>requires_grad, 这个tensor是否要求梯度，默认False</p>
 </li>
 </ol>
-<h1 id="二、tensor的属性"><a href="#二、tensor的属性" class="headerlink" title="二、tensor的属性"></a>二、tensor的属性</h1><p>创建完之后，结果调试一看：“嚯，这都什么玩意！”。</p>
+<h1 id="二-tensor的属性"><a class="markdownIt-Anchor" href="#二-tensor的属性"></a> 二、tensor的属性</h1>
+<p>创建完之后，结果调试一看：“嚯，这都什么玩意！”。</p>
 <p>其实这里面好多都是 <a target="_blank" rel="noopener" href="https://pytorch.org/docs/1.4.0/autograd.html#tensor-autograd-functions">autograd</a>重的东西，挑几个重要的（用过的）研究了一下。因为涉及一些其他重要概念，所以这一部分会多一些。</p>
 <div align="center"> 
 <img src="https://img-blog.csdnimg.cn/20210304171356356.PNG?x-oss-process=image" width="50%"> 
 </div> 
-
-<h2 id="（一）is-leaf，grad，grad-fn"><a href="#（一）is-leaf，grad，grad-fn" class="headerlink" title="（一）is_leaf，grad，grad_fn"></a>（一）is_leaf，grad，grad_fn</h2><p>假设最简单的情况，<br>$$<br>y&#x3D;wx \<br>z&#x3D;y+b<br>$$</p>
+<h2 id="一is_leafgradgrad_fn"><a class="markdownIt-Anchor" href="#一is_leafgradgrad_fn"></a> （一）is_leaf，grad，grad_fn</h2>
+<p>假设最简单的情况，</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>y</mi><mo>=</mo><mi>w</mi><mi>x</mi><mspace linebreak="newline"></mspace><mi>z</mi><mo>=</mo><mi>y</mi><mo>+</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">y=wx \\
+z=y+b
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mord mathdefault">x</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.04398em;">z</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.7777700000000001em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">b</span></span></span></span></span></p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">x <span class="token operator">=</span> torch<span class="token punctuation">.</span>tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">2.</span><span class="token punctuation">,</span><span class="token number">1.</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
 w <span class="token operator">=</span> torch<span class="token punctuation">.</span>tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1.0</span><span class="token punctuation">,</span><span class="token number">1.0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> requires_grad<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
 b <span class="token operator">=</span> torch<span class="token punctuation">.</span>tensor<span class="token punctuation">(</span><span class="token number">2.0</span><span class="token punctuation">,</span> requires_grad<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
 y <span class="token operator">=</span> w<span class="token operator">*</span>x
 z <span class="token operator">=</span> y <span class="token operator">+</span> b<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>构成一张前项计算图。</p>
 <div align="center"> 
 <img src="https://img-blog.csdnimg.cn/20210306195340703.PNG?x-oss-process=image#pic_center" width="30%"> 
 </div> 
-
 <center>
-
 <p><a target="_blank" rel="noopener" href="https://github.com/chenyuntc/pytorch-book/blob/master/chapter03-tensor_and_autograd/imgs/com_graph.svg">图片引用来源</a></p>
 </center>
-
-
-
 <ol>
-<li><p>其中w，x，b称为leaf node，所以这几个tensor的<strong>is_leaf&#x3D;True</strong>,而z称为根节点。</p>
+<li>
+<p>其中w，x，b称为leaf node，所以这几个tensor的<strong>is_leaf=True</strong>,而z称为根节点。</p>
 </li>
-<li><p>z和y因为是在w,b的基础上进行计算，他们的requires_grad自动为True</p>
+<li>
+<p>z和y因为是在w,b的基础上进行计算，他们的requires_grad自动为True</p>
 </li>
 </ol>
-<h3 id="进行反向传播"><a href="#进行反向传播" class="headerlink" title="进行反向传播"></a>进行反向传播</h3><p><strong>backward()只能对标量进行</strong></p>
+<h3 id="进行反向传播"><a class="markdownIt-Anchor" href="#进行反向传播"></a> 进行反向传播</h3>
+<p><strong>backward()只能对标量进行</strong></p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">z<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>backward<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <ol>
-<li><p>我们可以输出那些<strong>is_leaf&#x3D;True</strong>，<strong>requires_grad&#x3D;True</strong>的梯度信息,比如w的梯度。</p>
+<li>
+<p>我们可以输出那些<strong>is_leaf=True</strong>，<strong>requires_grad=True</strong>的梯度信息,比如w的梯度。</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span>w<span class="token punctuation">.</span>grad<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>输出：tensor(2.) ，注意，这是z对x的梯度。</p>
 </li>
-<li><p>非leaf node的z和y，<strong>grad_fn</strong>不为None，grad_fn表示求导函数，比如z.grad_fn为&lt;AddBackward0 object at 0x7fb6b8991290&gt;</p>
+<li>
+<p>非leaf node的z和y，<strong>grad_fn</strong>不为None，grad_fn表示求导函数，比如z.grad_fn为&lt;AddBackward0 object at 0x7fb6b8991290&gt;</p>
 </li>
-<li><p><strong>如果只运行z.backward()，只能看为leaf node的grad，而不能看非leaf node的grad。grad_fn只有非leaf node的节点才不为None。</strong></p>
+<li>
+<p><strong>如果只运行z.backward()，只能看为leaf node的grad，而不能看非leaf node的grad。grad_fn只有非leaf node的节点才不为None。</strong></p>
 </li>
 </ol>
 <p><strong>那如果要是想看z对y求的梯度呢? 可以如下操作</strong></p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span>torch<span class="token punctuation">.</span>autograd<span class="token punctuation">.</span>grad<span class="token punctuation">(</span>z<span class="token punctuation">,</span>y<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h2 id="（二）shape和ndim"><a href="#（二）shape和ndim" class="headerlink" title="（二）shape和ndim"></a>（二）shape和ndim</h2><p>只有一点需要注意：<br>若是标量，<br>shape为torch.Size([])，ndim为0</p>
+<h2 id="二shape和ndim"><a class="markdownIt-Anchor" href="#二shape和ndim"></a> （二）shape和ndim</h2>
+<p>只有一点需要注意：<br />
+若是标量，<br />
+shape为torch.Size([])，ndim为0</p>
 <p>若是向量（矩阵），shape就是维度比如torch.Size([1, 3, 127, 127])，ndim是维度数，比如4</p>
-<h2 id="（三）Tensor-data-Tensor-detach-和Tensor-detach"><a href="#（三）Tensor-data-Tensor-detach-和Tensor-detach" class="headerlink" title="（三）Tensor.data, Tensor.detach()和Tensor.detach_()"></a>（三）Tensor.data, Tensor.detach()和Tensor.detach_()</h2><h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><ol>
-<li><p>三者的作用类似，都常用于梯度截断。</p>
+<h2 id="三tensordata-tensordetach和tensordetach_"><a class="markdownIt-Anchor" href="#三tensordata-tensordetach和tensordetach_"></a> （三）Tensor.data, Tensor.detach()和Tensor.detach_()</h2>
+<h3 id="结论"><a class="markdownIt-Anchor" href="#结论"></a> 结论</h3>
+<ol>
+<li>
+<p>三者的作用类似，都常用于梯度截断。</p>
 </li>
-<li><p>只要不需要对tensor原内容更改，三个都可以。但推荐detach()</p>
+<li>
+<p>只要不需要对tensor原内容更改，三个都可以。但推荐detach()</p>
 </li>
 </ol>
 <ul>
 <li>下面这种，就不是对原内容更改 <pre class="line-numbers language-python" data-language="python"><code class="language-python">y1<span class="token operator">=</span>y<span class="token punctuation">.</span>detach<span class="token punctuation">(</span><span class="token punctuation">)</span>
-y1<span class="token operator">=</span>y1<span class="token operator">+</span><span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+y1<span class="token operator">=</span>y1<span class="token operator">+</span><span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
 <li>下面这种写法，才会对原内容产生影响 <pre class="line-numbers language-python" data-language="python"><code class="language-python">y1<span class="token operator">=</span>y<span class="token punctuation">.</span>detach<span class="token punctuation">(</span><span class="token punctuation">)</span>
-y1<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token operator">=</span>y1<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token operator">+</span><span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+y1<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token operator">=</span>y1<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token operator">+</span><span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
 </ul>
-<h3 id="具体来说，三者的区别是"><a href="#具体来说，三者的区别是" class="headerlink" title="具体来说，三者的区别是"></a>具体来说，三者的区别是</h3><p>   参考于<a target="_blank" rel="noopener" href="https://www.cnblogs.com/wanghui-garcia/p/10677071.html">pytorch .detach() .detach_() 和 .data用于切断反向传播</a></p>
+<h3 id="具体来说三者的区别是"><a class="markdownIt-Anchor" href="#具体来说三者的区别是"></a> 具体来说，三者的区别是</h3>
+<p>参考于<a target="_blank" rel="noopener" href="https://www.cnblogs.com/wanghui-garcia/p/10677071.html">pytorch .detach() .detach_() 和 .data用于切断反向传播</a></p>
 <ol>
 <li>detach()</li>
 </ol>
@@ -389,9 +404,11 @@ y1<span class="token punctuation">[</span><span class="token punctuation">:</spa
 <li>然后会将m的requires_grad设置为False，这样对y进行backward()时就不会求m的梯度</li>
 </ul>
 <ol start="3">
-<li>data<br>与detach的不同之处：当使用.data ，对原内容进行更改时，backward()尽管不会报错但输出的数据却是错误的。</li>
+<li>data<br />
+与detach的不同之处：当使用.data ，对原内容进行更改时，backward()尽管不会报错但输出的数据却是错误的。</li>
 </ol>
-<h3 id="如何梯度截断"><a href="#如何梯度截断" class="headerlink" title="如何梯度截断"></a>如何梯度截断</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#前期处理过程</span>
+<h3 id="如何梯度截断"><a class="markdownIt-Anchor" href="#如何梯度截断"></a> 如何梯度截断</h3>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#前期处理过程</span>
 x <span class="token operator">=</span> torch<span class="token punctuation">.</span>tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">2.</span><span class="token punctuation">,</span><span class="token number">1.</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
 w <span class="token operator">=</span> torch<span class="token punctuation">.</span>tensor<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1.0</span><span class="token punctuation">,</span><span class="token number">1.0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> requires_grad<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
 b <span class="token operator">=</span> torch<span class="token punctuation">.</span>tensor<span class="token punctuation">(</span><span class="token number">2.0</span><span class="token punctuation">,</span> requires_grad<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
@@ -405,8 +422,11 @@ c2 <span class="token operator">=</span> c<span class="token operator">*</span>d
 c2<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>backward<span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>x<span class="token punctuation">.</span>grad<span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>d<span class="token punctuation">.</span>grad<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>输出：<br>None<br>tensor([2., 1.])</p>
-<h2 id="（四）layout"><a href="#（四）layout" class="headerlink" title="（四）layout"></a>（四）layout</h2><p>Memory layout：中文叫做内存布局，是告诉你这个tensor是怎么在内存中排列的</p>
+<p>输出：<br />
+None<br />
+tensor([2., 1.])</p>
+<h2 id="四layout"><a class="markdownIt-Anchor" href="#四layout"></a> （四）layout</h2>
+<p>Memory layout：中文叫做内存布局，是告诉你这个tensor是怎么在内存中排列的</p>
 <p>参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/Li7819559/article/details/104295023">Pytorch中torch.layout到底是个什么东西</a></p>
 
     </div>
@@ -545,8 +565,7 @@ setInterval("createtime()",250);
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
-<script src="/js/third-party/math/mathjax.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha256-94CNZ/bJtwrBYZrXhCOBvpB4rZUzBnvAsirFv31TMGo=" crossorigin="anonymous">
 
 
 

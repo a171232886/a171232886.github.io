@@ -149,7 +149,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E5%92%8C%E5%AE%89%E8%A3%85"><span class="nav-text">下载和安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%87%E7%94%A8%E6%96%B9%E6%A1%88"><span class="nav-text">备用方案</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E5%AE%98%E6%96%B9%E7%9A%84%E6%A0%B7%E4%BE%8Btracker"><span class="nav-text">测试官方的样例tracker</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#initialize"><span class="nav-text">initialize</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E6%96%87%E4%BB%B6%E5%A4%B9%E5%92%8C%E4%B8%8B%E8%BD%BD%E6%95%B0%E6%8D%AE%E9%9B%86"><span class="nav-text">初始化文件夹和下载数据集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9trackers-ini%E6%96%87%E4%BB%B6"><span class="nav-text">修改trackers.ini文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#test"><span class="nav-text">test</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#evaluate"><span class="nav-text">evaluate</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#analysis"><span class="nav-text">analysis</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-text">参考</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-text"> 前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E5%92%8C%E5%AE%89%E8%A3%85"><span class="nav-text"> 下载和安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%87%E7%94%A8%E6%96%B9%E6%A1%88"><span class="nav-text"> 备用方案</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E5%AE%98%E6%96%B9%E7%9A%84%E6%A0%B7%E4%BE%8Btracker"><span class="nav-text"> 测试官方的样例tracker</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#initialize"><span class="nav-text"> initialize</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E6%96%87%E4%BB%B6%E5%A4%B9%E5%92%8C%E4%B8%8B%E8%BD%BD%E6%95%B0%E6%8D%AE%E9%9B%86"><span class="nav-text"> 初始化文件夹和下载数据集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9trackersini%E6%96%87%E4%BB%B6"><span class="nav-text"> 修改trackers.ini文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#test"><span class="nav-text"> test</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#evaluate"><span class="nav-text"> evaluate</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#analysis"><span class="nav-text"> analysis</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-text"> 参考</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -290,23 +290,29 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>可能<a target="_blank" rel="noopener" href="https://www.votchallenge.net/">VOT官方</a>心里是这么想的：你们这群连工具都配不好的菜鸡，不配使用我们的数据集。就你们这个技术，更不必参与比赛。</p>
+        <h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
+<p>可能<a target="_blank" rel="noopener" href="https://www.votchallenge.net/">VOT官方</a>心里是这么想的：你们这群连工具都配不好的菜鸡，不配使用我们的数据集。就你们这个技术，更不必参与比赛。</p>
 <p>这个数据集的<a target="_blank" rel="noopener" href="https://www.votchallenge.net/howto/tutorial_python.html">Python版教程</a>，一个是写的过于简略，一个没有及时更新，一些东西已经不对应了。不过人家最开始的Matlab教程写的还挺好，但现在Python兴起，用Matlab研究跟踪的人越来越少了。</p>
 <p>下面内容，没必要指出和官方的区别在哪。我直接写一份正确的教程。标红的地方，都是我踩过的坑。</p>
 <span id="more"></span>
-
-<h1 id="下载和安装"><a href="#下载和安装" class="headerlink" title="下载和安装"></a>下载和安装</h1><p>假设你的电脑可以翻墙或者现在恰好可以畅通无阻的访问Github，那我推荐你直接执行以下命令，确实是下载安装一条龙服务</p>
+<h1 id="下载和安装"><a class="markdownIt-Anchor" href="#下载和安装"></a> 下载和安装</h1>
+<p>假设你的电脑可以翻墙或者现在恰好可以畅通无阻的访问Github，那我推荐你直接执行以下命令，确实是下载安装一条龙服务</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip <span class="token function">install</span> git+https://github.com/votchallenge/vot-toolkit-python<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h2 id="备用方案"><a href="#备用方案" class="headerlink" title="备用方案"></a>备用方案</h2><p><font face="黑体"  color=#FF0000 size=4> 那要这台电脑连不到Github呢？</font><br>也就是如何离线安装。达到和<code>pip install git+url</code>同样的效果，需要分三步：</p>
+<h2 id="备用方案"><a class="markdownIt-Anchor" href="#备用方案"></a> 备用方案</h2>
+<p><font face="黑体"  color=#FF0000 size=4> 那要这台电脑连不到Github呢？</font><br />
+也就是如何离线安装。达到和<code>pip install git+url</code>同样的效果，需要分三步：</p>
 <ol>
 <li>想办法下载<a target="_blank" rel="noopener" href="https://github.com/votchallenge/toolkit">官方工具包</a>，拷贝到当前电脑（服务器）上 <pre class="line-numbers language-Download" data-language="Download"><div class="caption"><span>Zip```或者</span></div><code class="language-Download">&#96;&#96;&#96;bash
-git clone https:&#x2F;&#x2F;github.com&#x2F;votchallenge&#x2F;toolkit.git<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
-<li>安装所需环境<br> 进入文件夹目录下（文件夹我重命名为“vot_toolkit”） <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> vot_toolkit
-pip <span class="token function">install</span> <span class="token parameter variable">-r</span> requirements.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+git clone https:&#x2F;&#x2F;github.com&#x2F;votchallenge&#x2F;toolkit.git<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li>安装所需环境<br />
+进入文件夹目录下（文件夹我重命名为“vot_toolkit”） <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> vot_toolkit
+pip <span class="token function">install</span> <span class="token parameter variable">-r</span> requirements.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
 <li>安装这个库 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">python setup.py <span class="token function">install</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-附：如果你以这种方式，可以查看<code>./build/lib/vot/utilities/cli.py</code>下面的输入参数的含义。<font face="黑体"  color=#FF0000 size=4> 这是vot-toolkit定义输入参数的地方。</font></li>
+</li>
 </ol>
+<p>附：如果你以这种方式，可以查看<code>./build/lib/vot/utilities/cli.py</code>下面的输入参数的含义。<font face="黑体"  color=#FF0000 size=4> 这是vot-toolkit定义输入参数的地方。</font></p>
 <p>为了方便，我粘贴出来放在这</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">parser <span class="token operator">=</span> argparse<span class="token punctuation">.</span>ArgumentParser<span class="token punctuation">(</span>description<span class="token operator">=</span><span class="token string">'VOT Toolkit Command Line Utility'</span><span class="token punctuation">,</span> prog<span class="token operator">=</span><span class="token string">"vot"</span><span class="token punctuation">)</span>
 parser<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"--debug"</span><span class="token punctuation">,</span> <span class="token string">"-d"</span><span class="token punctuation">,</span> default<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> <span class="token builtin">help</span><span class="token operator">=</span><span class="token string">"Backup backend"</span><span class="token punctuation">,</span> required<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> action<span class="token operator">=</span><span class="token string">'store_true'</span><span class="token punctuation">)</span>
@@ -342,13 +348,15 @@ analysis_parser<span class="token punctuation">.</span>add_argument<span class="
 pack_parser <span class="token operator">=</span> subparsers<span class="token punctuation">.</span>add_parser<span class="token punctuation">(</span><span class="token string">'pack'</span><span class="token punctuation">,</span> <span class="token builtin">help</span><span class="token operator">=</span><span class="token string">'Package results for submission'</span><span class="token punctuation">)</span>
 pack_parser<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"--workspace"</span><span class="token punctuation">,</span> default<span class="token operator">=</span>os<span class="token punctuation">.</span>getcwd<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">help</span><span class="token operator">=</span><span class="token string">'Workspace path'</span><span class="token punctuation">)</span>
 pack_parser<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"tracker"</span><span class="token punctuation">,</span> <span class="token builtin">help</span><span class="token operator">=</span><span class="token string">'Tracker identifier'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h1 id="测试官方的样例tracker"><a href="#测试官方的样例tracker" class="headerlink" title="测试官方的样例tracker"></a>测试官方的样例tracker</h1><p>分为四步，主要难在initialize：</p>
-<h2 id="initialize"><a href="#initialize" class="headerlink" title="initialize"></a>initialize</h2><p>初始化环境，并进行配置，以vot2016为例</p>
-<h3 id="初始化文件夹和下载数据集"><a href="#初始化文件夹和下载数据集" class="headerlink" title="初始化文件夹和下载数据集"></a>初始化文件夹和下载数据集</h3><ol>
+<h1 id="测试官方的样例tracker"><a class="markdownIt-Anchor" href="#测试官方的样例tracker"></a> 测试官方的样例tracker</h1>
+<p>分为四步，主要难在initialize：</p>
+<h2 id="initialize"><a class="markdownIt-Anchor" href="#initialize"></a> initialize</h2>
+<p>初始化环境，并进行配置，以vot2016为例</p>
+<h3 id="初始化文件夹和下载数据集"><a class="markdownIt-Anchor" href="#初始化文件夹和下载数据集"></a> 初始化文件夹和下载数据集</h3>
+<ol>
 <li>任意地方新建一个空文件夹，比如名为<code>vot-test</code>，进入 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> vot-test
 vot initialize vot2016<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
- 此时或自动初始化该文件夹并下载数据集。文件结构为</li>
+此时或自动初始化该文件夹并下载数据集。文件结构为</li>
 </ol>
 <div align="center"> 
 <img src="https://img-blog.csdnimg.cn/d2dc168a03564806aa31cf44005d4b27.png#pic_center =50%x50%" width="40%"> 
@@ -357,33 +365,39 @@ sequences```文件夹下就是对应的vot2016视频序列，每个视频对应�
 <div align="center"> 
 <img src="https://img-blog.csdnimg.cn/563397b907b04f49affc45f295b15560.png#pic_center =80%x80%" width="80%"> 
 </div> 
-    <font  face="黑体"  color=#FF0000 size=4> 因此每个initialize只能对应一个数据集。</font> 
-    
+	<font  face="黑体"  color=#FF0000 size=4> 因此每个initialize只能对应一个数据集。</font> 
 <ol start="2">
-<li><p>如果之前已经下载好了数据集，在初始化文件夹时执行以下命令，不再重复下载数据集。</p>
+<li>
+<p>如果之前已经下载好了数据集，在初始化文件夹时执行以下命令，不再重复下载数据集。</p>
  <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> vot-test
 vot initialize vot2016 <span class="token parameter variable">--nodownload</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p> 按照上文&#96;&#96;&#96;</p>
+<p>按照上文<code>sequences</code>的文件夹格式重命名数据集。<br />
+<font  face="黑体"  color=#FF0000 size=4> 注意大小写，VOT2016和vot2016不同</font></p>
 </li>
 </ol>
-<p>sequences&#96;&#96;&#96;的文件夹格式重命名数据集。<br><font  face="黑体"  color=#FF0000 size=4> 注意大小写，VOT2016和vot2016不同</font> </p>
-<h3 id="修改trackers-ini文件"><a href="#修改trackers-ini文件" class="headerlink" title="修改trackers.ini文件"></a>修改trackers.ini文件</h3><p>相当于告诉vot关于tracker的信息</p>
+<h3 id="修改trackersini文件"><a class="markdownIt-Anchor" href="#修改trackersini文件"></a> 修改trackers.ini文件</h3>
+<p>相当于告诉vot关于tracker的信息</p>
 <ol>
-<li><p>下载<a target="_blank" rel="noopener" href="https://github.com/votchallenge/integration">官方样例</a>，我们只用python文件夹下面的<code>python_ncc.py</code>和<code>vot.py</code></p>
-<p> <font  face="黑体"  color=#FF0000 size=4> 需要把<code>vot.py</code>重命名，否则和已安装的vot工具包冲突</font> </p>
-<p> 比如重命名为<code>vot_py.py</code><br> 同时把python_ncc.py中的<code>import vot</code>改为<code>import vot_py as vot</code></p>
+<li>
+<p>下载<a target="_blank" rel="noopener" href="https://github.com/votchallenge/integration">官方样例</a>，我们只用python文件夹下面的<code>python_ncc.py</code>和<code>vot.py</code></p>
+<p><font  face="黑体"  color=#FF0000 size=4> 需要把<code>vot.py</code>重命名，否则和已安装的vot工具包冲突</font></p>
+<p>比如重命名为<code>vot_py.py</code><br />
+同时把python_ncc.py中的<code>import vot</code>改为<code>import vot_py as vot</code></p>
 </li>
-<li><p>配置trackers.init<br> 严格按照以下格式写</p>
+<li>
+<p>配置trackers.init<br />
+严格按照以下格式写</p>
  <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>pytest<span class="token punctuation">]</span>
 label <span class="token operator">=</span> pytest
 protocol <span class="token operator">=</span> traxpython  
 <span class="token builtin class-name">command</span> <span class="token operator">=</span> python_ncc.py     
 paths <span class="token operator">=</span> /media/HardDisk_new/wh/others/pysot-master/vot-test/   
 env_PATH <span class="token operator">=</span> /home/wh/anaconda3/envs/others/bin/python<span class="token punctuation">;</span><span class="token variable">$&#123;<span class="token environment constant">PATH</span>&#125;</span>  <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p> <font  face="黑体"  color=#FF0000 size=4> 千万不要在每行后加注释，会报错。<code>command</code>后面不要加‘.py’，在文件结构复杂情况下会报错。</font></p>
+<p><font  face="黑体"  color=#FF0000 size=4> 千万不要在每行后加注释，会报错。<code>command</code>后面不要加‘.py’，在文件结构复杂情况下会报错。</font></p>
 </li>
 </ol>
-<h2 id="test"><a href="#test" class="headerlink" title="test"></a>test</h2><p>执行</p>
+<h2 id="test"><a class="markdownIt-Anchor" href="#test"></a> test</h2>
+<p>执行</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">vot <span class="token builtin class-name">test</span> pytest<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>会看到以下信息（结尾部分），恭喜你测试成功！</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Updating on frame <span class="token number">49</span>/49
@@ -392,16 +406,19 @@ env_PATH <span class="token operator">=</span> /home/wh/anaconda3/envs/others/bi
 Stopping tracker
 @@TRAX:quit 
 Test concluded successfuly<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>如果只能测一轮，并看到</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Error during tracker execution: Server terminated the session<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>在trackers.ini中添加下面一行，即可解决<br><code>restart = true</code></p>
-<h2 id="evaluate"><a href="#evaluate" class="headerlink" title="evaluate"></a>evaluate</h2><p>一般来说测试成功后，vot-toolkit和代码的配置就没问题了。执行，在vot2016上进行评估</p>
+<p>在trackers.ini中添加下面一行，即可解决<br />
+<code>restart = true</code></p>
+<h2 id="evaluate"><a class="markdownIt-Anchor" href="#evaluate"></a> evaluate</h2>
+<p>一般来说测试成功后，vot-toolkit和代码的配置就没问题了。执行，在vot2016上进行评估</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">vot evaluate pytest<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>运行结束后会得到一个<code>results</code>的文件夹</p>
-<h2 id="analysis"><a href="#analysis" class="headerlink" title="analysis"></a>analysis</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">vot analysis pytest <span class="token parameter variable">--nocache</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="analysis"><a class="markdownIt-Anchor" href="#analysis"></a> analysis</h2>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">vot analysis pytest <span class="token parameter variable">--nocache</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>运行结束后会得到一个<code>analysis</code>的文件夹，包含刚运行的分析结果文件夹，找到<code>report.html</code>，即为结果。</p>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+<h1 id="参考"><a class="markdownIt-Anchor" href="#参考"></a> 参考</h1>
+<ol>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_33890822/article/details/112379934">vot-toolkit-python运行</a></li>
 </ol>
 
@@ -541,8 +558,7 @@ setInterval("createtime()",250);
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
-<script src="/js/third-party/math/mathjax.js"></script>
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha256-94CNZ/bJtwrBYZrXhCOBvpB4rZUzBnvAsirFv31TMGo=" crossorigin="anonymous">
 
 
 

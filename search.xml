@@ -3474,9 +3474,18 @@ TypeError: Object.fromEntries is not a <span class="token keyword">function</spa
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-g</span> n
 <span class="token function">sudo</span> n stable<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>网络原因，可能需要尝试几次。然后重新执行2.1的命令</p>
-<h1 id="3-参考"><a class="markdownIt-Anchor" href="#3-参考"></a> 3. 参考</h1>
+<h1 id="3-更换markdown-render"><a class="markdownIt-Anchor" href="#3-更换markdown-render"></a> 3. 更换markdown-render</h1>
+<p>为了使用<code>==高亮==</code><mark>高亮</mark>和<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>K</mi><mi>a</mi><mi>t</mi><mi>e</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">Katex</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">K</span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mord mathdefault">e</span><span class="mord mathdefault">x</span></span></span></span>公式</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">npm</span> uninstall hexo-renderer-marked <span class="token parameter variable">--save</span>
+<span class="token function">sudo</span> <span class="token function">npm</span> i @upupming/hexo-renderer-markdown-it-plus <span class="token parameter variable">--save</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h1 id="4-vscode中的使用效果"><a class="markdownIt-Anchor" href="#4-vscode中的使用效果"></a> 4. vscode中的使用效果</h1>
+<p>（这里使用了ssh连接到了ubutnu虚拟机）<br />
+左侧编辑，右侧预览，也能在win10中的浏览器打开预览版的网页，只是地址变成了<code>http://localhost:4001/</code>。</p>
+<img src="/images/Ubutnu20.04搭建Hexo环境/image-20221127143421614.png" alt="image-20221127143421614" style="zoom:80%;" />
+<h1 id="5-参考"><a class="markdownIt-Anchor" href="#5-参考"></a> 5. 参考</h1>
 <ol>
 <li><a href="https://jiangyao-zh.github.io/posts/hexo-new-page-fatal-typeerror-object-fromentries-is-not-a-function/">https://jiangyao-zh.github.io/posts/hexo-new-page-fatal-typeerror-object-fromentries-is-not-a-function/</a></li>
+<li><a href="https://blog.csdn.net/qq_36667170/article/details/105846999">https://blog.csdn.net/qq_36667170/article/details/105846999</a></li>
 </ol>
 ]]></content>
       <categories>

@@ -164,13 +164,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">41</span>
+          <span class="site-state-item-count">48</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">16</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
   </nav>
@@ -257,7 +257,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-11-27 10:43:37" itemprop="dateModified" datetime="2022-11-27T10:43:37+08:00">2022-11-27</time>
+      <time title="修改时间：2023-12-22 16:10:08" itemprop="dateModified" datetime="2023-12-22T16:10:08+08:00">2023-12-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -296,13 +296,13 @@
 <h2 id="首先看resnet34的对比图"><a class="markdownIt-Anchor" href="#首先看resnet34的对比图"></a> 首先看ResNet34的对比图</h2>
 <p>不用看细节，也不用自己数。</p>
 <div align="center"> 
-<img src="https://img-blog.csdnimg.cn/49c75f083d2a4ea4b53d6f05238b296d.JPG" width="30%"> 
+<img src="/images/ResNet结构详解/0.png" width="30%"> 
 </div> 
 <p>这里的34层实际上是指左面的“34-layer-plain”中有34个层需要有可训练参数（卷积层和全连接层）。那么直接对比过来，ResNet34是指<strong>除去残差连接中的卷积层</strong>中的卷积层和全连接层。</p>
 <p>你可能会问，残差连接不就一条线吗，哪来的可训练参数？但事实是，实线处没有，虚线处是有卷积层的，为了保证尺度相等。</p>
 <h2 id="然后再看这个表"><a class="markdownIt-Anchor" href="#然后再看这个表"></a> 然后再看这个表</h2>
 <div align="center"> 
-<img src="https://img-blog.csdnimg.cn/c39c2f6e76da405294ffbff21139bca1.JPG#pic_center=100%x100%" width="80%"> 
+<img src="/images/ResNet结构详解/1.png" width="80%"> 
 </div> 
 以34为例，34=1+2*（3+4+6+3）+1。
 也就是，最上面的多少层是在**不考虑残差连接层中的卷积层**下，数出来“plain结构”中的可训练网络层，包含卷积层和全连接层；**而不是ResNet中所有的可训练网络层**。
@@ -313,40 +313,40 @@
 <h2 id="resnet-34"><a class="markdownIt-Anchor" href="#resnet-34"></a> ResNet-34</h2>
 <p>残差结构是这个样子，和表中可以明显的对应，也对应第一张图中的<strong>实线连接</strong>结构。</p>
 <div align="center"> 
-<img src="https://img-blog.csdnimg.cn/f225365bf1134cd8a0028e62b05ca2db.JPG" width="30%"> 
+<img src="/images/ResNet结构详解/2.png" width="30%"> 
 </div> 
 让我们具体一点，紫色代表卷积层。这里为了通用性，没有画输入输出通道数。
 <div align="center"> 
-<img src="https://img-blog.csdnimg.cn/1b7c2752e674425f8bf424cbed3b05ae.JPG" width="30%"> 
+<img src="/images/ResNet结构详解/3.png" width="30%"> 
 </div> 
 <h3 id="虚线结构"><a class="markdownIt-Anchor" href="#虚线结构"></a> 虚线结构</h3>
 <p>比如ResNet34的Conv2_x的第一个卷积块，这里直接记为Conv3_1。它的输入是[56,56,64]（可根据conv2_x的输出[112,112,64]计算得到），但是Conv3_1的输出是[28,28,128]，<strong>维度不相等没有办直接相加，因此，添加了一个卷积层</strong>。</p>
 <div align="center"> 
-<img src="https://img-blog.csdnimg.cn/a15d7abc931943cabcd5dbae7a65c733.JPG" width="30%"> 
+<img src="/images/ResNet结构详解/4.png" width="30%"> 
 </div> 
 <p>具体一点，</p>
 <div align="center"> 
-<img src="https://img-blog.csdnimg.cn/2f3b7e4320ed4680beed05dd8e5a5b3a.png" width="50%"> 
+<img src="/images/ResNet结构详解/5.png" width="50%"> 
 </div> 
 <p>有这两个结构以后就可以搭建整个网络了。</p>
 <div align="center"> 
-<img src="https://img-blog.csdnimg.cn/1aa45ad308144357b3fc800f521c3c22.png" width="50%"> 
+<img src="/images/ResNet结构详解/6.png" width="50%"> 
 </div> 
 <h2 id="resnet-50"><a class="markdownIt-Anchor" href="#resnet-50"></a> ResNet-50</h2>
 <p>有了ResNet34的分析，再看这个就简单了。但是有一个不同在于一个残差单元内，ResNet50的维度发生了变化，比如从64到128。所以出现了三种不同的结构。</p>
 <h3 id="第一种只用于conv2_1"><a class="markdownIt-Anchor" href="#第一种只用于conv2_1"></a> 第一种：只用于conv2_1</h3>
 <div align="center"> 
-<img src="https://img-blog.csdnimg.cn/939faf6fec624e5faa2c90f06544901c.JPG" width="40%"> 
+<img src="/images/ResNet结构详解/7.png" width="40%"> 
 </div> 
 <h3 id="第二种所有的block中的非第一个"><a class="markdownIt-Anchor" href="#第二种所有的block中的非第一个"></a> 第二种：所有的Block中的非第一个</h3>
 <p>以Conv2_2为例</p>
 <div align="center"> 
-<img src="https://img-blog.csdnimg.cn/e670a6a908a24e6ea0fc00fe3d053467.png" width="40%"> 
+<img src="/images/ResNet结构详解/8.png" width="40%"> 
 </div> 
 <h3 id="第三种conv3_1和conv4_1和conv5_1"><a class="markdownIt-Anchor" href="#第三种conv3_1和conv4_1和conv5_1"></a> 第三种：conv3_1和conv4_1和conv5_1</h3>
 <p>相当于ResNet34的虚线结构，以conv3_1为例。此处以代码实现版本为准。需要同时处理尺度和维度的变化。</p>
 <div align="center"> 
-<img src="https://img-blog.csdnimg.cn/d7fd508a72b04f9296fa1b92c4c3794e.JPG" width="60%"> 
+<img src="/images/ResNet结构详解/9.png" width="60%"> 
 </div> 
 <p>以下是代码作者的注释</p>
 <p>注意：原论文中，在虚线残差结构的主分支上，第一个1x1卷积层的步距是2，第二个3x3卷积层步距是1。<br />
@@ -428,7 +428,7 @@
 
 <div class="copyright">
   &copy; 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

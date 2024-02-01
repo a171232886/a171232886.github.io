@@ -164,13 +164,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">41</span>
+          <span class="site-state-item-count">48</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">16</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
   </nav>
@@ -257,7 +257,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-02-17 23:47:36" itemprop="dateModified" datetime="2022-02-17T23:47:36+08:00">2022-02-17</time>
+      <time title="修改时间：2023-12-22 16:10:08" itemprop="dateModified" datetime="2023-12-22T16:10:08+08:00">2023-12-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -321,15 +321,16 @@
 内核和发行版本之间的关系，类似于原生安卓和华为/小米系统之间关系。</p>
 </li>
 </ol>
-<pre class="mermaid">graph LR
-Linux-->Redhat系列
-Redhat系列-->RHEL
-Redhat系列-->CentOS
-Redhat系列-->Fedora
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">graph LR
+   Linux--<span class="token operator">></span>Redhat系列
+   Redhat系列--<span class="token operator">></span>RHEL
+   Redhat系列--<span class="token operator">></span>CentOS
+   Redhat系列--<span class="token operator">></span>Fedora
 
-Linux-->Debian系列
-Debian系列-->Debian
-Debian系列-->Ubuntu</pre>
+   Linux--<span class="token operator">></span>Debian系列
+   Debian系列--<span class="token operator">></span>Debian
+   Debian系列--<span class="token operator">></span>Ubuntu<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>（Hexo对mermaid支持不友好）</p>
 <h1 id="二-linux基础"><a class="markdownIt-Anchor" href="#二-linux基础"></a> 二、Linux基础</h1>
 <h2 id="一文件结构"><a class="markdownIt-Anchor" href="#一文件结构"></a> （一）文件结构</h2>
 <ol>
@@ -425,7 +426,7 @@ Debian系列-->Ubuntu</pre>
 </ul>
 <p>不太重要的提示</p>
 <div align="center"> 
-<img src="https://img-blog.csdnimg.cn/0efbb43c17ae4c85acb5237ef2d50260.png" width="80%"> 
+<img src="/images/Linux学习笔记/0.png" width="80%"> 
 </div> 
 <h3 id="8mv移动命令剪切和重命名"><a class="markdownIt-Anchor" href="#8mv移动命令剪切和重命名"></a> 8.mv移动命令（剪切）和重命名，</h3>
 <p>可直接参考cp命令，包含-f，-i，-v</p>
@@ -494,7 +495,7 @@ drwxrwxr-x <span class="token number">2</span> wh wh <span class="token number">
 <h3 id="2-硬链接随时同步的备份"><a class="markdownIt-Anchor" href="#2-硬链接随时同步的备份"></a> 2. 硬链接（随时同步的备份）</h3>
 <p><code>ln 1.txt 1_hard</code>给1.txt创建一个名为1_hard的快捷方式，但保存内容。</p>
 <div align="center"> 
-<img src="https://img-blog.csdnimg.cn/f377bc5d65864b6f9ef9fd874f8cc7e7.png" width="80%"> 
+<img src="/images/Linux学习笔记/1.png" width="60%"> 
 </div> 
 <p>注意：</p>
 <ul>
@@ -507,14 +508,14 @@ drwxrwxr-x <span class="token number">2</span> wh wh <span class="token number">
 <li><code>grep hello 1.txt</code>在1.txt中寻找&quot;hello’’</li>
 </ul>
 <div align="center"> 
-<img src="https://img-blog.csdnimg.cn/74af5e2888f44b5abb726d8a3f018b25.png" width="80%"> 
+<img src="/images/Linux学习笔记/2.png" width="80%"> 
 </div> 
 <ul>
 <li><code>grep hello a -r</code>在文件夹a下的所有文件中寻找&quot;hello’’</li>
 <li><code>grep -n ^h 1.txt</code>查找以h开头的，<code>grep -n h$ 1.txt</code>查找以h结尾的。<mark>空格也算字符。</mark></li>
 </ul>
 <div align="center"> 
-<img src="https://img-blog.csdnimg.cn/0bc6ab110f624d048f8b482d4c55030d.png" width="80%"> 
+<img src="/images/Linux学习笔记/3.png" width="80%"> 
 </div> 
 <h3 id="4-find找文件"><a class="markdownIt-Anchor" href="#4-find找文件"></a> 4. find找文件</h3>
 <p><code>find a -name 1.txt</code>在目录a下查找1.txt</p>
@@ -528,7 +529,7 @@ drwxrwxr-x <span class="token number">2</span> wh wh <span class="token number">
 <li><code>tar -xf txt.tar -C t2</code>将文件解包到t2文件夹中（但必须现有t2文件夹）</li>
 </ul>
 <div align="center"> 
-<img src="https://img-blog.csdnimg.cn/6746b71c1afd46bebd8e0deb6d979c08.png" width="80%"> 
+<img src="/images/Linux学习笔记/4.png" width="80%"> 
 </div> 
 <p>注意:</p>
 <ul>
@@ -606,7 +607,7 @@ drwxrwxr-x <span class="token number">2</span> wh wh <span class="token number">
 </li>
 </ol>
 <div align="center"> 
-<img src="https://img-blog.csdnimg.cn/5fcfaca9ec6844fbb492d9507702b4ed.png" width="80%"> 
+<img src="/images/Linux学习笔记/5.png" width="80%"> 
 </div> 
 <p>​	一般来说就是用<code>sudo reboot</code></p>
 <h2 id="七vim记事本"><a class="markdownIt-Anchor" href="#七vim记事本"></a> （七）vim记事本</h2>
@@ -657,8 +658,8 @@ drwxrwxr-x <span class="token number">2</span> wh wh <span class="token number">
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2022/11/27/Ubuntu20.04%E6%90%AD%E5%BB%BAHexo%E7%8E%AF%E5%A2%83/" rel="next" title="Ubuntu20.04搭建Hexo环境">
-                  Ubuntu20.04搭建Hexo环境 <i class="fa fa-chevron-right"></i>
+                <a href="/2022/11/27/VSCode%E4%BD%BF%E7%94%A8SSH%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95%E8%BF%9C%E7%A8%8B%E4%B8%BB%E6%9C%BA/" rel="next" title="VSCode使用SSH免密登录远程主机">
+                  VSCode使用SSH免密登录远程主机 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -681,7 +682,7 @@ drwxrwxr-x <span class="token number">2</span> wh wh <span class="token number">
 
 <div class="copyright">
   &copy; 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

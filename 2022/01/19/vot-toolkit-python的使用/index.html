@@ -164,13 +164,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">41</span>
+          <span class="site-state-item-count">48</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">16</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
   </nav>
@@ -257,7 +257,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-02-14 19:54:17" itemprop="dateModified" datetime="2022-02-14T19:54:17+08:00">2022-02-14</time>
+      <time title="修改时间：2023-12-22 16:10:08" itemprop="dateModified" datetime="2023-12-22T16:10:08+08:00">2023-12-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -302,17 +302,23 @@
 <p><font face="黑体"  color=#FF0000 size=4> 那要这台电脑连不到Github呢？</font><br />
 也就是如何离线安装。达到和<code>pip install git+url</code>同样的效果，需要分三步：</p>
 <ol>
-<li>想办法下载<a target="_blank" rel="noopener" href="https://github.com/votchallenge/toolkit">官方工具包</a>，拷贝到当前电脑（服务器）上 <pre class="line-numbers language-Download" data-language="Download"><div class="caption"><span>Zip```或者</span></div><code class="language-Download">&#96;&#96;&#96;bash
-git clone https:&#x2F;&#x2F;github.com&#x2F;votchallenge&#x2F;toolkit.git<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<li>
+<p>想办法下载<a target="_blank" rel="noopener" href="https://github.com/votchallenge/toolkit">官方工具包</a>，拷贝到当前电脑（服务器）上<br />
+<code>Download Zip</code>或者</p>
+ <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> clone https://github.com/votchallenge/toolkit.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
-<li>安装所需环境<br />
-进入文件夹目录下（文件夹我重命名为“vot_toolkit”） <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> vot_toolkit
+<li>
+<p>安装所需环境<br />
+进入文件夹目录下（文件夹我重命名为“vot_toolkit”）</p>
+ <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> vot_toolkit
 pip <span class="token function">install</span> <span class="token parameter variable">-r</span> requirements.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 </li>
-<li>安装这个库 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">python setup.py <span class="token function">install</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<li>
+<p>安装这个库</p>
+ <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">python setup.py <span class="token function">install</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>附：如果你以这种方式，可以查看<code>./build/lib/vot/utilities/cli.py</code>下面的输入参数的含义。<font face="黑体"  color=#FF0000 size=4> 这是vot-toolkit定义输入参数的地方。</font></p>
 </li>
 </ol>
-<p>附：如果你以这种方式，可以查看<code>./build/lib/vot/utilities/cli.py</code>下面的输入参数的含义。<font face="黑体"  color=#FF0000 size=4> 这是vot-toolkit定义输入参数的地方。</font></p>
 <p>为了方便，我粘贴出来放在这</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">parser <span class="token operator">=</span> argparse<span class="token punctuation">.</span>ArgumentParser<span class="token punctuation">(</span>description<span class="token operator">=</span><span class="token string">'VOT Toolkit Command Line Utility'</span><span class="token punctuation">,</span> prog<span class="token operator">=</span><span class="token string">"vot"</span><span class="token punctuation">)</span>
 parser<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"--debug"</span><span class="token punctuation">,</span> <span class="token string">"-d"</span><span class="token punctuation">,</span> default<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> <span class="token builtin">help</span><span class="token operator">=</span><span class="token string">"Backup backend"</span><span class="token punctuation">,</span> required<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> action<span class="token operator">=</span><span class="token string">'store_true'</span><span class="token punctuation">)</span>
@@ -354,24 +360,26 @@ pack_parser<span class="token punctuation">.</span>add_argument<span class="toke
 <p>初始化环境，并进行配置，以vot2016为例</p>
 <h3 id="初始化文件夹和下载数据集"><a class="markdownIt-Anchor" href="#初始化文件夹和下载数据集"></a> 初始化文件夹和下载数据集</h3>
 <ol>
-<li>任意地方新建一个空文件夹，比如名为<code>vot-test</code>，进入 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> vot-test
+<li>
+<p>任意地方新建一个空文件夹，比如名为<code>vot-test</code>，进入</p>
+ <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> vot-test
 vot initialize vot2016<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-此时或自动初始化该文件夹并下载数据集。文件结构为</li>
-</ol>
-<div align="center"> 
-<img src="https://img-blog.csdnimg.cn/d2dc168a03564806aa31cf44005d4b27.png#pic_center =50%x50%" width="40%"> 
-</div> 
-sequences```文件夹下就是对应的vot2016视频序列，每个视频对应一个文件夹
-<div align="center"> 
-<img src="https://img-blog.csdnimg.cn/563397b907b04f49affc45f295b15560.png#pic_center =80%x80%" width="80%"> 
-</div> 
-	<font  face="黑体"  color=#FF0000 size=4> 因此每个initialize只能对应一个数据集。</font> 
-<ol start="2">
+<p>此时或自动初始化该文件夹并下载数据集。文件结构为</p>
+ <div align="center"> 
+ <img src="/images/vot-toolkit-python的使用/0.png" width="40%"> 
+ </div> 
+<p><code>sequences</code>文件夹下就是对应的vot2016视频序列，每个视频对应一个文件夹</p>
+ <div align="center"> 
+ <img src="/images/vot-toolkit-python的使用/1.png" width="80%"> 
+ </div> 
+ <font  face="黑体"  color=#FF0000 size=4> 因此每个initialize只能对应一个数据集。</font> 
+</li>
 <li>
 <p>如果之前已经下载好了数据集，在初始化文件夹时执行以下命令，不再重复下载数据集。</p>
  <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> vot-test
 vot initialize vot2016 <span class="token parameter variable">--nodownload</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>按照上文<code>sequences</code>的文件夹格式重命名数据集。<br />
+<p>按照上文<br />
+<code>sequences</code>的文件夹格式重命名数据集。<br />
 <font  face="黑体"  color=#FF0000 size=4> 注意大小写，VOT2016和vot2016不同</font></p>
 </li>
 </ol>
@@ -486,7 +494,7 @@ Test concluded successfuly<span aria-hidden="true" class="line-numbers-rows"><sp
 
 <div class="copyright">
   &copy; 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

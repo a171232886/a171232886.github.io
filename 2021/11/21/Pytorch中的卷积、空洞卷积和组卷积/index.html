@@ -164,13 +164,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">41</span>
+          <span class="site-state-item-count">48</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">16</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
   </nav>
@@ -257,7 +257,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-11-27 10:21:14" itemprop="dateModified" datetime="2022-11-27T10:21:14+08:00">2022-11-27</time>
+      <time title="修改时间：2023-12-22 16:10:08" itemprop="dateModified" datetime="2023-12-22T16:10:08+08:00">2023-12-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -293,7 +293,7 @@
         <h1 id="标准卷积conv2d"><a class="markdownIt-Anchor" href="#标准卷积conv2d"></a> 标准卷积Conv2d</h1>
 <p>最基础的卷积。下面图虽然丑了点，但足够说明问题了。</p>
 <div align="center"> 
-<img src="https://img-blog.csdnimg.cn/eca4f622ceaf4ba6a6e98fc5aa733200.JPG" width="80%"> 
+<img src="/images/Pytorch中的卷积、空洞卷积和组卷积/0.png" width="80%"> 
 </div> 
 注：
 	（1） kernel的值在初始化中是随机生成的，可以每个值之间都不一样。				   
@@ -320,7 +320,7 @@ y <span class="token operator">=</span> a<span class="token punctuation">(</span
 <p>缺点也很明显，跳过了一些信息。</p>
 <p>先来一张示意图（图来自于网络）。</p>
 <div align="center"> 
-<img src="https://img-blog.csdnimg.cn/8b216cc0908d4e8a85bfedc8fe729e33.gif" width="30%"> 
+<img src="/images/Pytorch中的卷积、空洞卷积和组卷积/1.gif" width="30%"> 
 </div> 
 上图表明：当kernel_size=3时，如果将dilation=2，就可以获得相当于kernel_size=5的感受野效果。dilation=3，相当于kernel_size=7。。。通过上面的公式计算，也可以验证。
 <p>关于dilation的值可以这么理解，<strong>（dilation-1）就是两个卷积核的点之间插入的空格数</strong>。<br />
@@ -334,7 +334,7 @@ y <span class="token operator">=</span> a<span class="token punctuation">(</span
 <li>
 <p>groups = 2 分组卷积 ，相当于有两个卷积层，每一层的输入为原来输入通道数的一半，输出也为原来输出的一半，然后再连接：</p>
 <div align="center"> 
-<img src="https://img-blog.csdnimg.cn/473a62d211f844d4aeac7b50c5073a20.jpg" width="80%"> 
+<img src="/images/Pytorch中的卷积、空洞卷积和组卷积/2.png" width="80%"> 
 </div> 
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">x <span class="token operator">=</span> torch<span class="token punctuation">.</span>ones<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
 a1 <span class="token operator">=</span> torch<span class="token punctuation">.</span>nn<span class="token punctuation">.</span>Conv2d<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span>groups<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">,</span>bias<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
@@ -424,7 +424,7 @@ y <span class="token operator">=</span> a1<span class="token punctuation">(</spa
 
 <div class="copyright">
   &copy; 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

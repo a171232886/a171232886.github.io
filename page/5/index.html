@@ -163,13 +163,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">41</span>
+          <span class="site-state-item-count">48</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">16</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
   </nav>
@@ -224,7 +224,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://a171232886.github.io/2021/11/22/Pytorch%E4%B8%AD%E7%9A%84Conv1d%E5%92%8CConv3d/">
+    <link itemprop="mainEntityOfPage" href="https://a171232886.github.io/2021/12/16/ResNet%E7%BB%93%E6%9E%84%E8%AF%A6%E8%A7%A3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/header.jpg">
@@ -237,7 +237,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/11/22/Pytorch%E4%B8%AD%E7%9A%84Conv1d%E5%92%8CConv3d/" class="post-title-link" itemprop="url">Pytorch中的Conv1d和Conv3d</a>
+          <a href="/2021/12/16/ResNet%E7%BB%93%E6%9E%84%E8%AF%A6%E8%A7%A3/" class="post-title-link" itemprop="url">ResNet结构详解</a>
         </h2>
 
         <div class="post-meta-container">
@@ -248,14 +248,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2021-11-22 22:45:27" itemprop="dateCreated datePublished" datetime="2021-11-22T22:45:27+08:00">2021-11-22</time>
+      <time title="创建时间：2021-12-16 16:20:58" itemprop="dateCreated datePublished" datetime="2021-12-16T16:20:58+08:00">2021-12-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-11-27 10:23:16" itemprop="dateModified" datetime="2022-11-27T10:23:16+08:00">2022-11-27</time>
+      <time title="修改时间：2023-12-22 16:10:08" itemprop="dateModified" datetime="2023-12-22T16:10:08+08:00">2023-12-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -281,12 +281,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="conv1d"><a class="markdownIt-Anchor" href="#conv1d"></a> Conv1d</h1>
-<p><code>torch.nn.Conv1d(in_channels, out_channels, kernel_size, stride=1, padding=0, dilation=1, groups=1, bias=True, padding_mode='zeros')</code></p>
-<p>和Conv2d处理<code>[N,C,H,W]</code>相比，只是处理处理的数据为<code>[N,C,L]</code>，其余相同。</p>
+          <h1 id="resnet的层数3450101到底指什么"><a class="markdownIt-Anchor" href="#resnet的层数3450101到底指什么"></a> ResNet的层数34,50,101到底指什么？</h1>
+<p>答案并不直接，得分两步来看。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2021/11/22/Pytorch%E4%B8%AD%E7%9A%84Conv1d%E5%92%8CConv3d/#more" rel="contents">
+              <a class="btn" href="/2021/12/16/ResNet%E7%BB%93%E6%9E%84%E8%AF%A6%E8%A7%A3/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -317,7 +316,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://a171232886.github.io/2021/11/22/Pytorch%E4%B8%AD%E7%9A%84%E8%BD%AC%E7%BD%AE%E5%8D%B7%E7%A7%AF/">
+    <link itemprop="mainEntityOfPage" href="https://a171232886.github.io/2021/12/07/VOC2012%E6%95%B0%E6%8D%AE%E9%9B%86%E5%92%8ClabelImg%E6%A0%87%E6%B3%A8%E5%B7%A5%E5%85%B7/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/header.jpg">
@@ -330,7 +329,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/11/22/Pytorch%E4%B8%AD%E7%9A%84%E8%BD%AC%E7%BD%AE%E5%8D%B7%E7%A7%AF/" class="post-title-link" itemprop="url">Pytorch中的转置卷积</a>
+          <a href="/2021/12/07/VOC2012%E6%95%B0%E6%8D%AE%E9%9B%86%E5%92%8ClabelImg%E6%A0%87%E6%B3%A8%E5%B7%A5%E5%85%B7/" class="post-title-link" itemprop="url">VOC2012数据集和labelImg标注工具</a>
         </h2>
 
         <div class="post-meta-container">
@@ -341,14 +340,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2021-11-22 19:56:58" itemprop="dateCreated datePublished" datetime="2021-11-22T19:56:58+08:00">2021-11-22</time>
+      <time title="创建时间：2021-12-07 19:21:58" itemprop="dateCreated datePublished" datetime="2021-12-07T19:21:58+08:00">2021-12-07</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-03-29 17:01:01" itemprop="dateModified" datetime="2022-03-29T17:01:01+08:00">2022-03-29</time>
+      <time title="修改时间：2023-12-22 16:10:08" itemprop="dateModified" datetime="2023-12-22T16:10:08+08:00">2023-12-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -360,7 +359,7 @@
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%AC%94%E8%AE%B0/Python%EF%BC%8CNumpy%E5%92%8CPytorch/" itemprop="url" rel="index"><span itemprop="name">Python，Numpy和Pytorch</span></a>
+          <a href="/categories/%E7%AC%94%E8%AE%B0/%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B/" itemprop="url" rel="index"><span itemprop="name">目标检测</span></a>
         </span>
     </span>
 
@@ -374,18 +373,13 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="转置卷积transposed-convolution"><a class="markdownIt-Anchor" href="#转置卷积transposed-convolution"></a> 转置卷积(Transposed Convolution)</h1>
-<p>又称为转置卷积。</p>
-<p><code>torch.nn.ConvTranspose2d(in_channels, out_channels, kernel_size, stride=1, padding=0, output_padding=0, groups=1, bias=True, dilation=1, padding_mode='zeros')</code></p>
-<h1 id="输出大小计算"><a class="markdownIt-Anchor" href="#输出大小计算"></a> 输出大小计算</h1>
-<p>先说结论</p>
-<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>o</mi><mo mathvariant="normal">′</mo></msup><mo>=</mo><mo stretchy="false">(</mo><msup><mi>i</mi><mo mathvariant="normal">′</mo></msup><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo><mi>s</mi><mo>+</mo><mi>k</mi><mo>−</mo><mn>2</mn><mi>p</mi><mo>+</mo><msup><mi>p</mi><mo mathvariant="normal">′</mo></msup></mrow><annotation encoding="application/x-tex">o&#x27; = (i&#x27; - 1)s + k - 2p+p&#x27;
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.801892em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">o</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.801892em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.051892em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">i</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.801892em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">)</span><span class="mord mathdefault">s</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">2</span><span class="mord mathdefault">p</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.996332em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault">p</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.801892em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span></span></span></span></span></p>
-<p><strong><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>p</mi><mo mathvariant="normal">′</mo></msup></mrow><annotation encoding="application/x-tex">p&#x27;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.946332em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault">p</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span></span></span></span>是<code>output_padding</code>，后面一直是在分析这个式子是怎么来的。</strong><br />
-注：当有空洞卷积时，k=dilation[0]×(kernel_size[0]−1)+1</p>
+          <h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
+<p>实际上就是看<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1kV411k7D8?spm_id_from=333.999.0.0">PASCAL VOC2012数据集讲解与制作自己的数据集</a>的一点笔记，把重点的记下来了。</p>
+<h1 id="voc2012"><a class="markdownIt-Anchor" href="#voc2012"></a> VOC2012</h1>
+<p>数据集官方地址：<a target="_blank" rel="noopener" href="http://host.robots.ox.ac.uk/pascal/VOC/voc2012/index.html">http://host.robots.ox.ac.uk/pascal/VOC/voc2012/index.html</a></p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2021/11/22/Pytorch%E4%B8%AD%E7%9A%84%E8%BD%AC%E7%BD%AE%E5%8D%B7%E7%A7%AF/#more" rel="contents">
+              <a class="btn" href="/2021/12/07/VOC2012%E6%95%B0%E6%8D%AE%E9%9B%86%E5%92%8ClabelImg%E6%A0%87%E6%B3%A8%E5%B7%A5%E5%85%B7/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -416,7 +410,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://a171232886.github.io/2021/11/21/Pytorch%E4%B8%AD%E7%9A%84%E5%8D%B7%E7%A7%AF%E3%80%81%E7%A9%BA%E6%B4%9E%E5%8D%B7%E7%A7%AF%E5%92%8C%E7%BB%84%E5%8D%B7%E7%A7%AF/">
+    <link itemprop="mainEntityOfPage" href="https://a171232886.github.io/2021/11/23/Pytorch%E4%B8%AD%E7%9A%84BatchNorm/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/header.jpg">
@@ -429,7 +423,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/11/21/Pytorch%E4%B8%AD%E7%9A%84%E5%8D%B7%E7%A7%AF%E3%80%81%E7%A9%BA%E6%B4%9E%E5%8D%B7%E7%A7%AF%E5%92%8C%E7%BB%84%E5%8D%B7%E7%A7%AF/" class="post-title-link" itemprop="url">Pytorch中的卷积、空洞卷积和组卷积</a>
+          <a href="/2021/11/23/Pytorch%E4%B8%AD%E7%9A%84BatchNorm/" class="post-title-link" itemprop="url">Pytorch中的BatchNorm</a>
         </h2>
 
         <div class="post-meta-container">
@@ -440,204 +434,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2021-11-21 18:56:58" itemprop="dateCreated datePublished" datetime="2021-11-21T18:56:58+08:00">2021-11-21</time>
+      <time title="创建时间：2021-11-24 00:06:58" itemprop="dateCreated datePublished" datetime="2021-11-24T00:06:58+08:00">2021-11-24</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-11-27 10:21:14" itemprop="dateModified" datetime="2022-11-27T10:21:14+08:00">2022-11-27</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%AC%94%E8%AE%B0/Python%EF%BC%8CNumpy%E5%92%8CPytorch/" itemprop="url" rel="index"><span itemprop="name">Python，Numpy和Pytorch</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="标准卷积conv2d"><a class="markdownIt-Anchor" href="#标准卷积conv2d"></a> 标准卷积Conv2d</h1>
-<p>最基础的卷积。下面图虽然丑了点，但足够说明问题了。</p>
-<div align="center"> 
-<img src="https://img-blog.csdnimg.cn/eca4f622ceaf4ba6a6e98fc5aa733200.JPG" width="80%"> 
-</div> 
-注：
-	（1） kernel的值在初始化中是随机生成的，可以每个值之间都不一样。				   
-	（2）每个通道只对应一个bias值。
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/11/21/Pytorch%E4%B8%AD%E7%9A%84%E5%8D%B7%E7%A7%AF%E3%80%81%E7%A9%BA%E6%B4%9E%E5%8D%B7%E7%A7%AF%E5%92%8C%E7%BB%84%E5%8D%B7%E7%A7%AF/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://a171232886.github.io/2021/11/21/python-numpy-Pytorch%E4%B8%AD%E7%9A%84%E7%B4%A2%E5%BC%95%E6%96%B9%E5%BC%8F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/header.jpg">
-      <meta itemprop="name" content="小王同学">
-      <meta itemprop="description" content="进步源于记录">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小王同学">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/11/21/python-numpy-Pytorch%E4%B8%AD%E7%9A%84%E7%B4%A2%E5%BC%95%E6%96%B9%E5%BC%8F/" class="post-title-link" itemprop="url">Python、Numpy、Pytorch中的索引方式</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-11-21 17:56:58" itemprop="dateCreated datePublished" datetime="2021-11-21T17:56:58+08:00">2021-11-21</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-11-27 10:18:29" itemprop="dateModified" datetime="2022-11-27T10:18:29+08:00">2022-11-27</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%AC%94%E8%AE%B0/Python%EF%BC%8CNumpy%E5%92%8CPytorch/" itemprop="url" rel="index"><span itemprop="name">Python，Numpy和Pytorch</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>能用索引方式过多，不止下标索引。自己写程序还好，关键是看人家写的程序，有时候会晕掉，不知所云。故在此总结。</p>
-<p>首先对Numpy的下标索引、切片索引、布尔索引和花式索引进行介绍和分析，然后研究Python和Pytorch中的索引方式是否包括以上四种。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/11/21/python-numpy-Pytorch%E4%B8%AD%E7%9A%84%E7%B4%A2%E5%BC%95%E6%96%B9%E5%BC%8F/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://a171232886.github.io/2021/11/21/numpy%E9%9A%8F%E6%9C%BA%E5%92%8CPytorch%E9%9A%8F%E6%9C%BA/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/header.jpg">
-      <meta itemprop="name" content="小王同学">
-      <meta itemprop="description" content="进步源于记录">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小王同学">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/11/21/numpy%E9%9A%8F%E6%9C%BA%E5%92%8CPytorch%E9%9A%8F%E6%9C%BA/" class="post-title-link" itemprop="url">在Numpy和Pytorch中的random</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-11-21 16:15:30" itemprop="dateCreated datePublished" datetime="2021-11-21T16:15:30+08:00">2021-11-21</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-02-14 17:52:56" itemprop="dateModified" datetime="2022-02-14T17:52:56+08:00">2022-02-14</time>
+      <time title="修改时间：2023-12-22 16:10:08" itemprop="dateModified" datetime="2023-12-22T16:10:08+08:00">2023-12-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -664,10 +468,212 @@
     
     <div class="post-body" itemprop="articleBody">
           <h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
-<p>作为测试用例，生成随机矩阵或者tensor很重要。可这个操作在numpy和Pytorch中略有区别。故在此处整理出。</p>
+<p>首先放一张四种归一化的对比</p>
+<div align="center"> 
+<img src="/images/Pytorch中的BatchNorm/0.png" width="80%"> 
+</div>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2021/11/21/numpy%E9%9A%8F%E6%9C%BA%E5%92%8CPytorch%E9%9A%8F%E6%9C%BA/#more" rel="contents">
+              <a class="btn" href="/2021/11/23/Pytorch%E4%B8%AD%E7%9A%84BatchNorm/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://a171232886.github.io/2021/11/23/Pytorch%E4%B8%ADtorch.nn.functional.conv2d%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%8F%AF%E5%88%86%E7%A6%BB%E5%8D%B7%E7%A7%AF%E5%92%8C%E6%A0%87%E5%87%86%E5%8D%B7%E7%A7%AF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="小王同学">
+      <meta itemprop="description" content="进步源于记录">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小王同学">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/11/23/Pytorch%E4%B8%ADtorch.nn.functional.conv2d%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%8F%AF%E5%88%86%E7%A6%BB%E5%8D%B7%E7%A7%AF%E5%92%8C%E6%A0%87%E5%87%86%E5%8D%B7%E7%A7%AF/" class="post-title-link" itemprop="url">Pytorch中的torch.nn.functional.conv2d与深度可分离卷积和标准卷积</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-11-24 00:06:58" itemprop="dateCreated datePublished" datetime="2021-11-24T00:06:58+08:00">2021-11-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-12-22 16:10:08" itemprop="dateModified" datetime="2023-12-22T16:10:08+08:00">2023-12-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AC%94%E8%AE%B0/Python%EF%BC%8CNumpy%E5%92%8CPytorch/" itemprop="url" rel="index"><span itemprop="name">Python，Numpy和Pytorch</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
+<p>是在研究训练过程中遇到的</p>
+<h1 id="fconv2d与nnconv2d"><a class="markdownIt-Anchor" href="#fconv2d与nnconv2d"></a> F.conv2d与nn.Conv2d</h1>
+<p>也就是torch.nn.functional.conv2d实际上是torch.nn.Conv2d的另一个用法，<strong>可以直接指定卷积核和偏置的值。</strong> 这在通常情况下是用不到的，因为卷积核的值都是训练得到的。但在一些相关运算（correlation）时，需要指定卷积核的值。首先回顾一下nn.Conv2d</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Conv2d的用法</span>
+<span class="token keyword">import</span> torch
+x1 <span class="token operator">=</span> torch<span class="token punctuation">.</span>rand<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">256</span><span class="token punctuation">,</span><span class="token number">255</span><span class="token punctuation">,</span><span class="token number">255</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+conv <span class="token operator">=</span> torch<span class="token punctuation">.</span>nn<span class="token punctuation">.</span>Conv2d<span class="token punctuation">(</span>in_channels<span class="token operator">=</span><span class="token number">256</span><span class="token punctuation">,</span>
+                       out_channels<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>
+                       kernel_size<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">)</span>
+out <span class="token operator">=</span> conv<span class="token punctuation">(</span>x1<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/11/23/Pytorch%E4%B8%ADtorch.nn.functional.conv2d%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%8F%AF%E5%88%86%E7%A6%BB%E5%8D%B7%E7%A7%AF%E5%92%8C%E6%A0%87%E5%87%86%E5%8D%B7%E7%A7%AF/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://a171232886.github.io/2021/11/23/CNN%E4%B8%AD%E6%84%9F%E5%8F%97%E9%87%8E%E7%9A%84%E8%AE%A1%E7%AE%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="小王同学">
+      <meta itemprop="description" content="进步源于记录">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小王同学">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/11/23/CNN%E4%B8%AD%E6%84%9F%E5%8F%97%E9%87%8E%E7%9A%84%E8%AE%A1%E7%AE%97/" class="post-title-link" itemprop="url">CNN中感受野的计算</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-11-23 11:09:58" itemprop="dateCreated datePublished" datetime="2021-11-23T11:09:58+08:00">2021-11-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-12-22 16:10:08" itemprop="dateModified" datetime="2023-12-22T16:10:08+08:00">2023-12-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AC%94%E8%AE%B0/Python%EF%BC%8CNumpy%E5%92%8CPytorch/" itemprop="url" rel="index"><span itemprop="name">Python，Numpy和Pytorch</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="概念"><a class="markdownIt-Anchor" href="#概念"></a> 概念</h1>
+<p>感受野 (receptive field, RF)是卷积神经网络每一层输出的特征图上的像素点在<strong>原始图像</strong>上映射的区域大小。</p>
+<p>在网上看到了一张很好的图，可以表示整个关系。</p>
+<div align="center"> 
+<img src="/images/CNN中感受野的计算/0.png" width="40%"> 
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/objectDetect/p/5947169.html">图片来源</a></p>
+</div> 
+<p>注意：计算感受野大小时，忽略了图像边缘的影响，即<strong>不考虑padding的大小</strong>。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/11/23/CNN%E4%B8%AD%E6%84%9F%E5%8F%97%E9%87%8E%E7%9A%84%E8%AE%A1%E7%AE%97/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -691,7 +697,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 </div>
@@ -703,7 +709,7 @@
 
 <div class="copyright">
   &copy; 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

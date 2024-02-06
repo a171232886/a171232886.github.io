@@ -163,7 +163,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">48</span>
+          <span class="site-state-item-count">50</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -215,6 +215,199 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://a171232886.github.io/2021/11/23/Pytorch%E4%B8%AD%E7%9A%84BatchNorm/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="小王同学">
+      <meta itemprop="description" content="进步源于记录">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小王同学">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/11/23/Pytorch%E4%B8%AD%E7%9A%84BatchNorm/" class="post-title-link" itemprop="url">Pytorch中的BatchNorm</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-11-24 00:06:58" itemprop="dateCreated datePublished" datetime="2021-11-24T00:06:58+08:00">2021-11-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-12-22 16:10:08" itemprop="dateModified" datetime="2023-12-22T16:10:08+08:00">2023-12-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AC%94%E8%AE%B0/Python%EF%BC%8CNumpy%E5%92%8CPytorch/" itemprop="url" rel="index"><span itemprop="name">Python，Numpy和Pytorch</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
+<p>首先放一张四种归一化的对比</p>
+<div align="center"> 
+<img src="/images/Pytorch中的BatchNorm/0.png" width="80%"> 
+</div>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/11/23/Pytorch%E4%B8%AD%E7%9A%84BatchNorm/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://a171232886.github.io/2021/11/23/CNN%E4%B8%AD%E6%84%9F%E5%8F%97%E9%87%8E%E7%9A%84%E8%AE%A1%E7%AE%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="小王同学">
+      <meta itemprop="description" content="进步源于记录">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小王同学">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/11/23/CNN%E4%B8%AD%E6%84%9F%E5%8F%97%E9%87%8E%E7%9A%84%E8%AE%A1%E7%AE%97/" class="post-title-link" itemprop="url">CNN中感受野的计算</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-11-23 11:09:58" itemprop="dateCreated datePublished" datetime="2021-11-23T11:09:58+08:00">2021-11-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-12-22 16:10:08" itemprop="dateModified" datetime="2023-12-22T16:10:08+08:00">2023-12-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AC%94%E8%AE%B0/Python%EF%BC%8CNumpy%E5%92%8CPytorch/" itemprop="url" rel="index"><span itemprop="name">Python，Numpy和Pytorch</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="概念"><a class="markdownIt-Anchor" href="#概念"></a> 概念</h1>
+<p>感受野 (receptive field, RF)是卷积神经网络每一层输出的特征图上的像素点在<strong>原始图像</strong>上映射的区域大小。</p>
+<p>在网上看到了一张很好的图，可以表示整个关系。</p>
+<div align="center"> 
+<img src="/images/CNN中感受野的计算/0.png" width="40%"> 
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/objectDetect/p/5947169.html">图片来源</a></p>
+</div> 
+<p>注意：计算感受野大小时，忽略了图像边缘的影响，即<strong>不考虑padding的大小</strong>。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/11/23/CNN%E4%B8%AD%E6%84%9F%E5%8F%97%E9%87%8E%E7%9A%84%E8%AE%A1%E7%AE%97/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -484,190 +677,6 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/11/21/Pytorch%E4%B8%AD%E7%9A%84%E5%8D%B7%E7%A7%AF%E3%80%81%E7%A9%BA%E6%B4%9E%E5%8D%B7%E7%A7%AF%E5%92%8C%E7%BB%84%E5%8D%B7%E7%A7%AF/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://a171232886.github.io/2021/11/21/python-numpy-Pytorch%E4%B8%AD%E7%9A%84%E7%B4%A2%E5%BC%95%E6%96%B9%E5%BC%8F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/header.jpg">
-      <meta itemprop="name" content="小王同学">
-      <meta itemprop="description" content="进步源于记录">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小王同学">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/11/21/python-numpy-Pytorch%E4%B8%AD%E7%9A%84%E7%B4%A2%E5%BC%95%E6%96%B9%E5%BC%8F/" class="post-title-link" itemprop="url">Python、Numpy、Pytorch中的索引方式</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-11-21 17:56:58" itemprop="dateCreated datePublished" datetime="2021-11-21T17:56:58+08:00">2021-11-21</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-12-22 16:10:08" itemprop="dateModified" datetime="2023-12-22T16:10:08+08:00">2023-12-22</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%AC%94%E8%AE%B0/Python%EF%BC%8CNumpy%E5%92%8CPytorch/" itemprop="url" rel="index"><span itemprop="name">Python，Numpy和Pytorch</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>能用索引方式过多，不止下标索引。自己写程序还好，关键是看人家写的程序，有时候会晕掉，不知所云。故在此总结。</p>
-<p>首先对Numpy的下标索引、切片索引、布尔索引和花式索引进行介绍和分析，然后研究Python和Pytorch中的索引方式是否包括以上四种。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/11/21/python-numpy-Pytorch%E4%B8%AD%E7%9A%84%E7%B4%A2%E5%BC%95%E6%96%B9%E5%BC%8F/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://a171232886.github.io/2021/11/21/numpy%E9%9A%8F%E6%9C%BA%E5%92%8CPytorch%E9%9A%8F%E6%9C%BA/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/header.jpg">
-      <meta itemprop="name" content="小王同学">
-      <meta itemprop="description" content="进步源于记录">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小王同学">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/11/21/numpy%E9%9A%8F%E6%9C%BA%E5%92%8CPytorch%E9%9A%8F%E6%9C%BA/" class="post-title-link" itemprop="url">在Numpy和Pytorch中的random</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-11-21 16:15:30" itemprop="dateCreated datePublished" datetime="2021-11-21T16:15:30+08:00">2021-11-21</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-12-22 16:10:08" itemprop="dateModified" datetime="2023-12-22T16:10:08+08:00">2023-12-22</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%AC%94%E8%AE%B0/Python%EF%BC%8CNumpy%E5%92%8CPytorch/" itemprop="url" rel="index"><span itemprop="name">Python，Numpy和Pytorch</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h1>
-<p>作为测试用例，生成随机矩阵或者tensor很重要。可这个操作在numpy和Pytorch中略有区别。故在此处整理出。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/11/21/numpy%E9%9A%8F%E6%9C%BA%E5%92%8CPytorch%E9%9A%8F%E6%9C%BA/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>

@@ -163,7 +163,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">51</span>
+          <span class="site-state-item-count">52</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -232,6 +232,26 @@
     <div class="collection-year">
       <span class="collection-header">2022</span>
     </div>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2022-02-14T12:49:29+08:00"
+              content="2022-02-14">
+          02-14
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2022/02/14/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url">
+            <span itemprop="name">Linux学习笔记</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
 
   <article itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
@@ -416,26 +436,6 @@
     </header>
   </article>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-12-29T21:39:11+08:00"
-              content="2021-12-29">
-          12-29
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/12/29/pytorch%E4%B8%AD%E7%9A%84Relu%E5%AF%B9%E6%A2%AF%E5%BA%A6%E7%9A%84%E5%BD%B1%E5%93%8D/" itemprop="url">
-            <span itemprop="name">Pytorch中的Relu对梯度的影响</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
     </div>
   </div>
   
@@ -501,6 +501,16 @@
 setInterval("createtime()",250);
 </script>
 </div>
+
+
+<!-- 引入Mermaid -->
+<script src="https://unpkg.com/mermaid@latest/dist/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({
+    startOnLoad: true,
+    // 这里可以设置Mermaid的一些选项
+  });
+</script>
     </div>
   </footer>
 
